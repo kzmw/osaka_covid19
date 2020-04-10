@@ -128,3 +128,9 @@ p.margin {margin: 5px;}
 text-decoration:none;
 color:#000;
 }
+
+.itemContent table,
+.itemContent th,
+.itemContent td { 
+	border:solid 1px #000;/*グレーの枠線の指定*/
+}
