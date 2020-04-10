@@ -342,40 +342,51 @@
 		<td></td>
 	</tr>
 </table>
-	  <script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPVNPdDVXQnlNTXd0eiZzPWNvbnN1bWVyc2VjcmV0Jng9OGQ-"></script>
-<div id="map" style="width:100%; height: 800px;"></div>
-	  <script>var map = new Y.Map('map');
-map.addControl(new Y.LayerSetControl());
-map.addControl(new Y.SliderZoomControlHorizontal());
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+	
+.area {
+    fill: silver;
+    stroke: white;
+}
+.popup {
+    fill: black;
+    font-size: 10pt;
+}
 
-// 白地図レイヤーを作成
-var blankmap = new Y.BlankMapLayer();
-var style = {
-    area: {
-        default: 'dcdcdc',
-        '01205': 'ffff22',
-        '01208': 'ffff22',
-        '01210': 'ff4444',
-        '01233': '44ff44'
-    },
-    label: {
-        default : '696969'
-    },
-    border: {
-        default : 'aaa'
-    },
-    bg: 'b0c4de'
-};
-blankmap.setStyle(style, true);
+	(function(fn) {
+    if (document.readyState !== 'loading'){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+})(function() {
+    var WIDTH = 1000, HEIGHT = 800;
 
-// レイヤーセットを作成
-var layerset = new Y.LayerSet('白地図', [blankmap], {maxZoom: 20, minZoom: 9});
-// Mapオブジェクトにレイヤーセットを追加
-map.addLayerSet('blankmap', layerset);
-// 地図を描画します。
-map.drawMap(new Y.LatLng(36.2, 136.73100), 9, Y.LayerSetId.NORMAL);
-// 表示を白地図にする
-map.setLayerSet('blankmap');</sctipt>
+    var svg = d3.selectAll("#map")
+        .attr("width", WIDTH)
+        .attr("height", HEIGHT);
+
+    var g = svg.append("g");
+
+    d3.json('/osaka.json').then(function(json) {
+        var projection = d3.geoMercator()
+            .scale(34000)
+            .center(d3.geoCentroid(json))
+            .translate([WIDTH / 2, HEIGHT / 2]);
+
+        var path = d3.geoPath()
+            .projection(projection);
+
+        g.selectAll('path')
+            .data(json.features)
+            .enter()
+            .append('path')
+            .attr('d', path)
+            .attr('class', 'area'));
+    });
+});</script>
+<svg id="map"></svg>
   </div>
 	
 </body>
