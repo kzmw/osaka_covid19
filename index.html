@@ -342,6 +342,41 @@
 		<td></td>
 	</tr>
 </table>
+	  <script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=APIキー"></script>
+<div id="map" style="width:100%; height: 800px;"></div>
+	  <script>var map = new Y.Map('map');
+map.addControl(new Y.LayerSetControl());
+map.addControl(new Y.SliderZoomControlHorizontal());
+
+// 白地図レイヤーを作成
+var blankmap = new Y.BlankMapLayer();
+var style = {
+    area: {
+        default: 'dcdcdc',
+        '01205': 'ffff22',
+        '01208': 'ffff22',
+        '01210': 'ff4444',
+        '01233': '44ff44'
+    },
+    label: {
+        default : '696969'
+    },
+    border: {
+        default : 'aaa'
+    },
+    bg: 'b0c4de'
+};
+blankmap.setStyle(style, true);
+
+// レイヤーセットを作成
+var layerset = new Y.LayerSet('白地図', [blankmap], {maxZoom: 20, minZoom: 9});
+// Mapオブジェクトにレイヤーセットを追加
+map.addLayerSet('blankmap', layerset);
+// 地図を描画します。
+map.drawMap(new Y.LatLng(36.2, 136.73100), 9, Y.LayerSetId.NORMAL);
+// 表示を白地図にする
+map.setLayerSet('blankmap');</sctipt>
   </div>
+	
 </body>
 </html>
