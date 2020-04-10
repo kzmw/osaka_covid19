@@ -129,8 +129,8 @@ text-decoration:none;
 color:#000;
 }
 
-.itemContent table,
-.itemContent th,
-.itemContent td { 
+table,
+th,
+td { 
 	border:solid 1px #000;/*グレーの枠線の指定*/
 }
