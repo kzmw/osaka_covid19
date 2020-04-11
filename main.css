@@ -3,20 +3,6 @@ body {
 	font-family: 'Noto Sans Japanese', sans-serif;
 	background:#f0f0f0;
 }
-h1 {
-  position: relative;
-  background: #00aeff;
-  padding: 5px;
-  color: #fff;
-}
-h1::after {
-  position: absolute;
-  left:  0;
-  top: 100%;
-  content: " ";
-  border-bottom: 15px solid transparent;
-  border-right: 20px solid #acacac;
-}
 header{
   background:#6495ed;
   box-shadow:0 2px 5px rgba(0,0,0,.7);
@@ -146,4 +132,47 @@ table,
 th,
 td { 
 	border:solid 1px #000;/*グレーの枠線の指定*/
+}
+
+.important_ul{
+background:#FFF;
+margin-top: 12px;
+padding:0px;
+box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+}
+
+.important_li{
+height:auto;
+list-style: none;
+}
+
+.news_title{
+display: table-cell;
+background-color:#DE3E29;
+color:#FFFFFF;
+padding:10px;
+text-align:center;
+white-space: nowrap;
+	vertical-align: middle;}
+
+.important_content{
+padding-left:5px;
+display: table-cell;
+vertical-align: middle;
+}
+	
+.table-wrap{overflow: scroll;}
+h1 {
+  position: relative;
+  background: #00aeff;
+  padding: 5px;
+  color: #fff;
+}
+h1::after {
+  position: absolute;
+  left:  0;
+  top: 100%;
+  content: " ";
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid #acacac;
 }
