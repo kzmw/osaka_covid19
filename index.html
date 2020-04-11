@@ -366,7 +366,7 @@
         document.addEventListener('DOMContentLoaded', fn);
     }
 })(function() {
-    var WIDTH = 500, HEIGHT = 800;
+    var WIDTH = 400, HEIGHT = 600;
 
     var svg = d3.selectAll("#map")
         .attr("width", WIDTH)
@@ -376,7 +376,7 @@
 
     d3.json('/N03-19_27_190101.json').then(function(json) {
         var projection = d3.geoMercator()
-            .scale(20000)
+            .scale(25000)
             .center(d3.geoCentroid(json))
             .translate([WIDTH / 2, HEIGHT / 2]);
 
