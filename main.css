@@ -128,12 +128,6 @@ text-decoration:none;
 color:#000;
 }
 
-table,
-th,
-td { 
-	border:solid 1px #000;/*グレーの枠線の指定*/
-}
-
 .important_ul{
 background:#FFF;
 margin-top: 12px;
