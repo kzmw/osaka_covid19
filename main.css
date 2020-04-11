@@ -172,11 +172,11 @@ table {
 table th{
 background: #595959;
 color: #FFF;
-border: 1px solid #fff;
+border: 2px solid #fff;
 }
 
 table td{
 background: #d9d9d9;
 color: #000;
-border: 1px solid #fff;
+border: 2px solid #fff;
 }
