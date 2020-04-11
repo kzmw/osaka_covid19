@@ -164,6 +164,11 @@ h1 {
   color: #fff;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 table th{
 background: #595959;
 color: #FFF;
