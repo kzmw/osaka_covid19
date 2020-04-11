@@ -376,7 +376,7 @@
 
     d3.json('/N03-19_27_190101.json').then(function(json) {
         var projection = d3.geoMercator()
-            .scale(34000)
+            .scale(20000)
             .center(d3.geoCentroid(json))
             .translate([WIDTH / 2, HEIGHT / 2]);
 
