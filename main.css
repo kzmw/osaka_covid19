@@ -181,3 +181,10 @@ background: #d9d9d9;
 color: #000;
 border: 2px solid #fff;
 }
+
+.hptitle{
+margin:0px;
+font-weight:700;
+vertical-align: middle;
+font-size: calc(112.5% + 0.5vw)
+}
