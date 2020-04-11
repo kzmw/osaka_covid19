@@ -167,10 +167,3 @@ h1 {
   padding: 5px;
   color: #fff;
 }
-h1::after {
-  left:  0;
-  top: 100%;
-  content: " ";
-  border-bottom: 15px solid transparent;
-  border-right: 20px solid #acacac;
-}
