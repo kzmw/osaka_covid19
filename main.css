@@ -163,13 +163,11 @@ vertical-align: middle;
 	
 .table-wrap{overflow: scroll;}
 h1 {
-  position: relative;
-  background: #00aeff;
+  background: #000000;
   padding: 5px;
   color: #fff;
 }
 h1::after {
-  position: absolute;
   left:  0;
   top: 100%;
   content: " ";
