@@ -153,6 +153,7 @@ font-weight:700;
 padding-left:5px;
 display: table-cell;
 vertical-align: middle;
+white-space: nowrap;
 }
 	
 .table-wrap{overflow: scroll;}
