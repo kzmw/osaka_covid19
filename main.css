@@ -184,6 +184,7 @@ border: 2px solid #fff;
 
 .hptitle{
 display: table-cell;
+text-align: center;
 margin:0px;
 height:55px;
 font-weight:700;
