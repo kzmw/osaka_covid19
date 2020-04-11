@@ -3,7 +3,20 @@ body {
 	font-family: 'Noto Sans Japanese', sans-serif;
 	background:#f0f0f0;
 }
-
+h1 {
+  position: relative;
+  background: #00aeff;
+  padding: 5px;
+  color: #fff;
+}
+h1::after {
+  position: absolute;
+  left:  0;
+  top: 100%;
+  content: " ";
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid #acacac;
+}
 header{
   background:#6495ed;
   box-shadow:0 2px 5px rgba(0,0,0,.7);
