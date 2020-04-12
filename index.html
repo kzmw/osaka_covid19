@@ -349,12 +349,11 @@
 <script>
 	var width = 600,
           height = 600;
-      var scale = 1600;
+      var scale = 340000;
       d3.json("/N03-19_27_190101-2.json", createMap);
 
       function createMap(japan) {
         var aProjection = d3.geoMercator()
-            .center([ 136.0, 35.6 ])
             .translate([width/2, height/2])
             .scale(scale);
         var geoPath = d3.geoPath().projection(aProjection);
