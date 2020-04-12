@@ -387,8 +387,8 @@
             .data(json.features)
             .enter()
             .append('path')
-            .attr('d', path)
-});</script>
+            .attr("fill", function(d){ return color(d.geometry.coordinates); }); // idがないので、各県の座標リストに基づいて色を変える。
+});});</script>
 <svg id="map"></svg>
 	</div>
 	
