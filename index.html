@@ -344,40 +344,5 @@
 		<td></td>
 	</tr>
 </table>
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>    
-<script>
-	//プロジェクション設定	
-	var projection = d3
-		.geoMercator() //投影法の指定
-		.scale(16000)	//スケール（ズーム）の指定
-	
-	//パスジェネレーター生成
-	var path = d3.geoPath().projection(projection);　
-	
-	//地図用のステージ(SVGタグ)を作成
-	var map = d3.select("body")
-		.append("svg")
-		.attr("width", 960)
-		.attr("height", 500); 
-	
-	
-	//地理データ読み込み
-	d3.json("/N03-19_27_190101.json", drawMaps);
-	
-	//地図を描画
-	function drawMaps(geojson) {
-		map.selectAll("path")
-			.data(geojson.features)
-			.enter()
-			.append("path")
-			.attr("d", path)  //パスジェネレーターを使ってd属性の値を生成している
-			.attr("fill", "green")
-			.attr("fill-opacity", 0.5)
-			.attr("stroke", "#222");    
-	}
-</script>
-<svg id="map"></svg>
-	</div>
-	
-</body>
-</html>
+	  <img width="600" height="600" src="http://map.olp.yahooapis.jp/OpenLocalPlatform/V1/static?width=600&height=600&lat=35.4&lon=139.4&z=11&appid=dj00aiZpPVNPdDVXQnlNTXd0eiZzPWNvbnN1bWVyc2VjcmV0Jng9OGQ-&mode=blankmap&style=bm.p.14401:B0C4DE|bm.p.14212:DCDCDC|bm.p.14205:ADD8E6|bm.p.14207:DCDCDC|bm.p.14213:B0C4DE|bm.p.14211:DCDCDC|bm.p.14301:DCDCDC|bm.p.14203:B0C4DE|bm.p.14214:DCDCDC|bm.p.14116:B0C4DE|bm.p.14204:ADD8E6|bm.p.14130:B0C4DE|bm.p.14113:DCDCDC|bm.p.14210:DCDCDC|bm.p.14342:DCDCDC|bm.p.14103:DCDCDC|bm.p.14206:ADD8E6|bm.p.14115:DCDCDC|bm.p.14321:7FFFD4|bm.p.14118:DCDCDC|bm.p.14105:DCDCDC|bm.p.14104:87CEFA|bm.p.14101:DCDCDC|bm.p.14117:DCDCDC|bm.p.14102:B0C4DE|bm.p.14108:ADD8E6|bm.p.14100:DCDCDC|bm.p.14110:DCDCDC|bm.p.14201:B0C4DE">	</div>
+	</body></html>
