@@ -346,49 +346,44 @@
 </table>
 
 	  <script src="https://d3js.org/d3.v5.min.js"></script>
-	  <style>
-
-.area {
-    fill: silver;
-    stroke: white;
-}
-.popup {
-    fill: black;
-    font-size: 10pt;
-}
-
-</style>
 <script>
-	(function(fn) {
-    if (document.readyState !== 'loading'){
-        fn();
-    } else {
-        document.addEventListener('DOMContentLoaded', fn);
-    }
-})(function() {
-    var WIDTH = 360, HEIGHT = 600;
+	var width = 600,
+          height = 600;
+      var scale = 1600;
+      d3.json("/N03-19_27_190101-2.json", createMap);
 
-    var svg = d3.selectAll("#map")
-        .attr("width", WIDTH)
-        .attr("height", HEIGHT);
+      function createMap(japan) {
+        var aProjection = d3.geoMercator()
+            .center([ 136.0, 35.6 ])
+            .translate([width/2, height/2])
+            .scale(scale);
+        var geoPath = d3.geoPath().projection(aProjection);
+        var svg = d3.select("svg").attr("width",width).attr("height",height);
 
-    var g = svg.append("g");
+        //マップ描画
+        var map = svg.selectAll("path").data(japan.features)
+          .enter()
+          .append("path")
+            .attr("d", geoPath)
+            .style("stroke", "#ffffff")
+            .style("stroke-width", 0.1)
+            .style("fill", "#5EAFC6");
 
-    d3.json('/N03-19_27_190101-2.json').then(function(json) {
-        var projection = d3.geoMercator()
-            .scale(25000)
-            .center(d3.geoCentroid(json))
-            .translate([WIDTH / 2, HEIGHT / 2]);
+        //ズームイベント設定    
+        var zoom = d3.zoom().on('zoom', function(){
+            aProjection.scale(scale * d3.event.transform.k);
+            map.attr('d', geoPath);
+        });
+        svg.call(zoom);
 
-        var path = d3.geoPath()
-            .projection(projection);
-        var popup_text;
-        g.selectAll('path')
-            .data(json.features)
-            .enter()
-            .append('path')
-            .attr("fill", function(d){ return color(d.geometry.coordinates); }); // idがないので、各県の座標リストに基づいて色を変える。
-});});</script>
+        //ドラッグイベント設定
+        var drag = d3.drag().on('drag', function(){
+            var tl = aProjection.translate();
+            aProjection.translate([tl[0] + d3.event.dx, tl[1] + d3.event.dy]);
+            map.attr('d', geoPath);
+        });
+        map.call(drag);
+      }</script>
 <svg id="map"></svg>
 	</div>
 	
