@@ -388,8 +388,20 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('class', 'area')
-.attr('class', function(d){ return d.properties.N03_004 } )
+            .attr({
+          "d": function(d){ return path(d)},
+          "fill": baseColor,
+          "fill-opacity": 1,
+          "stroke": "black"
+        })
+        .on('mouseover', function(){
+            d3.selectAll( "."+d3.select(this).attr('class') ) //マウスオーバーしたエリアと同じclass名の要素を選択
+            .attr("fill", "red");
+        })
+        .on('mouseout', function(){
+            d3.selectAll( "."+d3.select(this).attr('class') )
+            .attr("fill", baseColor); //バグあり　あとで直す
+        });
     });
 });</script>
 <svg id="map"></svg>
