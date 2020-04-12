@@ -350,8 +350,6 @@
 	var projection = d3
 		.geoMercator() //投影法の指定
 		.scale(16000)	//スケール（ズーム）の指定
-		.rotate([-0.25, 0.25, 0]) //地図を回転する　[x,y,z]
-		.center([139.0032936, 36.3219088]); //中心の座標を指定
 	
 	//パスジェネレーター生成
 	var path = d3.geoPath().projection(projection);　
