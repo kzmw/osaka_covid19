@@ -389,6 +389,12 @@
             .append('path')
             .attr('d', path)
             .attr('class', 'area');
+	    .on('mouseover', function() {
+                this.style.fill = 'red';
+            })
+            .on('mouseout', function() {
+                this.style.fill = 'silver';
+            });
     });
 });</script>
 <svg id="map"></svg>
