@@ -344,77 +344,40 @@
 		<td></td>
 	</tr>
 </table>
-<style>
-
-.area {
-    fill: silver;
-    stroke: white;
-}
-.popup {
-    fill: black;
-    font-size: 10pt;
-}
-
-</style>
-	  <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>    
 <script>
-	(function(fn) {
-    if (document.readyState !== 'loading'){
-        fn();
-    } else {
-        document.addEventListener('DOMContentLoaded', fn);
-    }
-})(function() {
-    var WIDTH = 1000, HEIGHT = 800;
-
-    var svg = d3.selectAll("#map")
-        .attr("width", WIDTH)
-        .attr("height", HEIGHT);
-
-    var g = svg.append("g");
-
-    d3.json('/N03-19_27_190101.json').then(function(json) {
-        var projection = d3.geoMercator()
-            .scale(34000)
-            .center(d3.geoCentroid(json))
-            .translate([WIDTH / 2, HEIGHT / 2]);
-
-        var path = d3.geoPath()
-            .projection(projection);
- var popup_text;
-        g.selectAll('path')
-            .data(json.features)
-            .enter()
-            .append('path')
-            .attr('d', path)
-            .attr('class', 'area')
-	    .attr('data-address', function(d) {
-                var p = d.properties;
-                return p.N03_003 + p.N03_004;
-            })
-            .attr('data-position', function(d) {
-                var p = d3.geoCentroid(d);
-                return p[0] + "," + p[1];
-            })
-                .on('mouseover', function() {
-                this.style.fill = 'red';
-                var t = popup_text;
-                var p = projection(this.getAttribute('data-position').split(','));
-                t.text(this.getAttribute('data-address'));
-                t.attr('x', p[0]);
-                t.attr('y', p[1]);
-            })
-            .on('mouseout', function() {
-                this.style.fill = 'silver';
-                popup_text.text('');
-                t.attr('x', 0);
-                t.attr('y', 0);
-            });
-
-        popup_text = g.append('text');
-        popup_text.attr('class', 'popup');
-    });
-});</script>
+	//プロジェクション設定	
+	var projection = d3
+		.geoMercator() //投影法の指定
+		.scale(16000)	//スケール（ズーム）の指定
+		.rotate([-0.25, 0.25, 0]) //地図を回転する　[x,y,z]
+		.center([139.0032936, 36.3219088]); //中心の座標を指定
+	
+	//パスジェネレーター生成
+	var path = d3.geoPath().projection(projection);　
+	
+	//地図用のステージ(SVGタグ)を作成
+	var map = d3.select("body")
+		.append("svg")
+		.attr("width", 960)
+		.attr("height", 500); 
+	
+	
+	//地理データ読み込み
+	d3.json("/N03-19_27_190101.json", drawMaps);
+	
+	//地図を描画
+	function drawMaps(geojson) {
+		map.selectAll("path")
+			.data(geojson.features)
+			.enter()
+			.append("path")
+			.attr("d", path)  //パスジェネレーターを使ってd属性の値を生成している
+			.attr("fill", "green")
+			.attr("fill-opacity", 0.5)
+			.attr("stroke", "#222");    
+	}
+</script>
 <svg id="map"></svg>
 	</div>
 	
