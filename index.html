@@ -23,6 +23,17 @@
   </ul>   
     </div>
   </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.2/xlsx.full.min.js"></script>
+	<script>
+	//今回使用するxlsxを読み込む
+const XLSX = require("xlsx");
+//あとで使うutils;
+const Utils = XLSX.utils;
+//エクセルを指定する
+const book = XLSX.readFile("https://1drv.ms/x/s!ArmG9BehKPeVghfx4V7iqNFNtpiA?e=Npt7mF");
+//エクセル内のシート名を指定する
+const urlListsSheet = book.Sheets["Data"];
+	</script>
 	</header>
   <div style="padding-top:55px">
 <ul class="important_ul">
@@ -398,6 +409,7 @@
     });
 });</script>
 <svg id="map"></svg>
+<iframe src="https://onedrive.live.com/embed?cid=95F728A117F486B9&resid=95F728A117F486B9%21279&authkey=AAmjWNc3ds3uGNI&em=2" width="402" height="346" frameborder="0" scrolling="no"></iframe>
   </div>
 	
 </body>
