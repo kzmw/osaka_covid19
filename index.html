@@ -398,8 +398,8 @@
                 return p[0] + "," + p[1];
             })
 	    var t = popup_text;
-                var p = projection(this.getAttribute('data-position').split(','));
-                t.text(this.getAttribute('data-address'));
+                var p = projection(d.getAttribute('data-position').split(','));
+                t.text(d.getAttribute('data-address'));
                 t.attr('x', p[0]);
                 t.attr('y', p[1]);
 	    popup_text = g.append('text');
