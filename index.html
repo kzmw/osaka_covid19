@@ -372,13 +372,12 @@
     }
 })(function() {
     var WIDTH = 400, HEIGHT = 600;
-var color = d3.scale.category10();
     var svg = d3.selectAll("#map")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
 
     var g = svg.append("g");
-
+var color = d3.scale.category10();
     d3.json('/osaka.geojson').then(function(json) {
         var projection = d3.geoMercator()
             .scale(25000)
