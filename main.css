@@ -222,7 +222,7 @@ font-weight:700;
 color:#ff2f2f;
 width:25vw;
 text-align:right;
-line-height: 53px;
+line-height: 10vw;
 vertical-align: bottom;	
 white-space: nowrap;
 }
@@ -232,7 +232,7 @@ margin:0px;
 font-size:4.9vw;
 font-weight:700;
 color:#000;
-line-height: 26px;
+line-height: 4.9vw;
 vertical-align: bottom;	
 	white-space: nowrap;
 }
