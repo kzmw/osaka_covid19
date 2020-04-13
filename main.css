@@ -190,11 +190,13 @@ vertical-align: middle;
 }
 
 span#number_text{
+display:inline-block;
 margin:0px;
 font-size:30pt;
 font-weight:700;
 color:#ff2f2f;
 width:40pt;
+vertical-align: bottom;	
 }
 
 .number_title{
