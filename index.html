@@ -114,6 +114,7 @@
             .append('path')
             .attr('d', path)
             .attr('fill', "gray")
+	    .append("text")
 	    .attr('x', function(d) {
                 var p = d3.geoCentroid(d);
                 return p[0]
