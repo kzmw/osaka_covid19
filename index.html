@@ -112,12 +112,11 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', "gray")
+            .attr('fill', "gray");
 	g.selectAll("text")
 	    .data(json.features)
             .enter()
 	    .append('text')
-	    .attr('d', path)
 	    .attr('text-anchor', "middle")
 	    .attr('x', function(d) {
                 var p = d3.geoCentroid(d);
