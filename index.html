@@ -126,7 +126,8 @@ var q = projection((p[0] + "," + p[1]).split(","));
             })
 	    .attr('y', function(d) {
                 var p = d3.geoCentroid(d);
-                return projection(p[1]);
+var q = projection((p[0] + "," + p[1]).split(","));
+                return q[1];
             })
             .text(function(d) {
                 var p = d.properties;
