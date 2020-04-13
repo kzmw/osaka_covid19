@@ -105,7 +105,6 @@
             .scale(25000)
             .center(d3.geoCentroid(json))
             .translate([WIDTH / 2, HEIGHT / 2]);
-var p;
         var path = d3.geoPath()
             .projection(projection);
         g.selectAll('path')
@@ -114,14 +113,14 @@ var p;
             .append('path')
             .attr('d', path)
             .attr('fill', "gray")
-	    .append("text")
 	    .attr('x', function(d) {
-                p = d3.geoCentroid(d);
+                var p = d3.geoCentroid(d);
                 return p[0]
             })
 	    .attr('y', function(d) {
                 return p[1]
             })
+	    .append("text")
 	    .attr('text-anchor', "middle")
             .text(function(d) {
                 var p = d.properties;
