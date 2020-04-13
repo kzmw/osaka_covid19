@@ -1,7 +1,6 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
 body {
 	font-family: 'Noto Sans JP', sans-serif;
-	transform: scale(50%,50%);
 }
 header{
   background:#6495ed;
