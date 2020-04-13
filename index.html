@@ -387,14 +387,15 @@
 
         var path = d3.geoPath()
             .projection(projection);
-var t;
         g.selectAll('path')
             .data(json.features)
             .enter()
             .append('path')
             .attr('d', path)
             .attr('class', 'area');
-	t.append("text")
+	g.append("text")
+	    .attr('x', 10)
+	    .attr('y', 10)
     .text("大阪府だよー");
 	    
     });
