@@ -11,6 +11,7 @@ header{
   top:0;
   width:100%;
   height:50px;
+  z-index:2;
   border: none;
 }
 
@@ -270,17 +271,17 @@ vertical-align: bottom;
  position: relative;
  margin: 2em auto;
  padding: 1.2em;
- color: #555555; /* 文章色 */
+ color: #000; /* 文章色 */
  background-color: #fff; /* 背景色 */
- border: 1px solid #555555; /* 枠線の太さ・色 */
- width: 90%;
+ border: 3px solid #000; /* 枠線の太さ・色 */
+ width: max-content;
 }
 .title-box11 {
  position: absolute;
- padding: 0 .5em;
+ padding: 0.5em;
  left: 20px;
  top: -15px;
  font-weight: bold;
  background-color: #fff; /* タイトル背景色 */
- color: #555555; /* タイトル文字色 */
+ color: #000; /* タイトル文字色 */
 }
