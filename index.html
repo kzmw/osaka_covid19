@@ -372,7 +372,7 @@
     }
 })(function() {
     var WIDTH = 400, HEIGHT = 600;
-
+var color = d3.scale.category10();
     var svg = d3.selectAll("#map")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
@@ -392,7 +392,7 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('class', 'area');
+            .attr('fill', function(d,i) { return color(i); });
 	g.append("text")
 	    .attr('x', 200)
 	    .attr('y', 300)
