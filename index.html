@@ -117,6 +117,7 @@
 	    .data(json.features)
             .enter()
 	    .append('text')
+	    .attr('d', path)
 	    .attr('text-anchor', "middle")
 	    .attr('x', function(d) {
                 var p = d3.geoCentroid(d);
@@ -124,7 +125,7 @@
             })
 	    .attr('y', function(d) {
                 var p = d3.geoCentroid(d);
-                return p[0];
+                return p[1];
             })
             .text(function(d) {
                 var p = d.properties;
