@@ -108,7 +108,7 @@
         .attr("height", HEIGHT);
 
     var g = svg.append("g");
-    var color = ["green","red"];
+    var color = {"green","red"};
     d3.json('/osaka.geojson').then(function(json) {
         var projection = d3.geoMercator()
             .scale(25000)
