@@ -108,10 +108,10 @@
             .data(json.features)
             .enter()
             .append('path')
-            .attr('d', path)
-            .attr('fill', function(d,i) {
-                return color(i)
-            })
+            .attr('d', path);
+            function(d,i) {
+            d.style.fill = color[i]
+            }
 	g.append("text")
 	    .attr('x', 200)
 	    .attr('y', 300)
