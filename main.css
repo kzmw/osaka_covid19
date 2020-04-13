@@ -184,10 +184,24 @@ white-space: nowrap;
 .hptitle{
 display: table-cell;
 width:100%;
+font-size:35px;
 height:55px;
+font-weight:700;
+line-height: 35px;
+vertical-align: middle;
+white-space: nowrap;
+}
+@media screen and (max-width:740px) {
+.hptitle{
+display: table-cell;
+width:100%;
+font-size:4.72vw;	
+height:55px;
+line-height: 4.72vw;
 font-weight:700;
 vertical-align: middle;
 white-space: nowrap;
+}
 }
 
 span#number_text{
