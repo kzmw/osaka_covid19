@@ -192,10 +192,12 @@ vertical-align: middle;
 span#number_text{
 display:inline-block;
 margin:0px;
-font-size:30pt;
+font-size:40pt;
 font-weight:700;
 color:#ff2f2f;
-width:60pt;
+width:80pt;
+text-align:right;
+line-height: 40pt;
 vertical-align: bottom;	
 }
 
@@ -204,5 +206,6 @@ margin:0px;
 font-size:20pt;
 font-weight:700;
 color:#000;
+line-height: 20pt;
 vertical-align: bottom;	
 }
