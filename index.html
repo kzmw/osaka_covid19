@@ -395,7 +395,14 @@
             .attr('d', path)
             .attr('class', 'area');
 	g.append("text")
-    .text("1");
+    .attr({
+      // 真ん中若干下に配置されるように、文字色は白に。
+      'text-anchor': "middle",
+      'dy': ".35em",
+      'fill': "black",
+    })
+    // iは0から始まるので、+1しておく
+    .text("大阪府だよー");
     });
 });</script>
 <svg id="map"></svg><br>
