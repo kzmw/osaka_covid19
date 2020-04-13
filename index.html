@@ -112,13 +112,13 @@
             .enter()
             .append('path')
             .attr('d', path)
-	    	    .attr('x', function(d) {
-                var p = d3.geoCentroid(1);
-                return p[0]
+	    .attr('x', function(d) {
+                var p = d3.geoCentroid(d);
+                return p[0];
             })
 	    .attr('y', function(d) {
-		var p = d3.geoCentroid(1);
-                return p[1]
+                var p = d3.geoCentroid(d);
+                return p[0];
             })
             .attr('fill', "gray");
 	g.selectAll("text")
