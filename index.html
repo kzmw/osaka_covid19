@@ -108,11 +108,10 @@
             .data(json.features)
             .enter()
             .append('path')
-            .attr('d', path)
-            .attr("fill", color[0]);
+            .attr({'d', path,
+            "fill", function(d,i) { return color[i]; }});
 	g.append("text")
-	    .attr({'x' : 200,'y': 300})
-	    .attr('text-anchor', "middle")
+	    .attr({'x' : 200,'y': 300,'text-anchor', "middle"})
     .text("大阪府だよー");
 	    
     });
