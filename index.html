@@ -112,13 +112,7 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', "gray");
-	g.selectAll("text")
-	    .data(json.features)
-            .enter()
-	    .append('text')
-	    .attr('text-anchor', "middle")
-	    .attr('x', function(d) {
+	    	    .attr('x', function(d) {
                 var p = d3.geoCentroid(1);
                 return p[0]
             })
@@ -126,6 +120,12 @@
 		var p = d3.geoCentroid(1);
                 return p[1]
             })
+            .attr('fill', "gray");
+	g.selectAll("text")
+	    .data(json.features)
+            .enter()
+	    .append('text')
+	    .attr('text-anchor', "middle")
             .text(function(d) {
                 var p = d.properties;
                 return p.N03_004;
