@@ -114,15 +114,9 @@
             .attr('d', path)
             .attr('fill', "gray")
 	    .append("text")
-	    .attr('x', function(d) {
-                var p = d.geoCentroid(d);
-                return p[0]
-            })
-	    .attr('y', function(d) {
-		var p = d.geoCentroid(d);
-                return p[1]
-            })
 	    .attr('text-anchor', "middle")
+	    .attr('x', 100)
+	    .attr('y', 100)
             .text(function(d) {
                 var p = d.properties;
                 return p.N03_004;
