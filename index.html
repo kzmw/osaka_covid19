@@ -114,21 +114,19 @@
             .append('path')
             .attr('d', path)
             .attr('fill', "gray")
-	    .attr('data-address', function(d) {
+	    .attr('x', function(d) {
+                var p = d3.geoCentroid(d);
+                return p[0]
+            })
+	    .attr('y', function(d) {
+                var p = d3.geoCentroid(d);
+                return p[1]
+            })
+	    .attr('text-anchor', "middle")
+            .text(function(d) {
                 var p = d.properties;
                 return p.N03_004;
-            })
-            .attr('data-position', function(d) {
-                var p = d3.geoCentroid(d);
-                return p[0] + "," + p[1];
-            });
-	g.append("text")
-	    var p = projection(g.getAttribute('data-position').split(','))
-	    .attr('x', p[0])
-	    .attr('y', p[1])
-	    .attr('text-anchor', "middle")
-            .text(g.getAttribute('data-address'));
-	    
+            });    
     });
 });</script>
 <svg id="map"></svg><br>
