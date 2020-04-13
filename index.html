@@ -80,19 +80,6 @@
  <tr><td>阪南市</td><td>51,607</td><td>0</td><td>0</td><td></td></tr>
  <tr><td>岬町</td><td>15,040</td><td>0</td><td>0</td><td></td></tr>
 </table>
-
-<style>
-
-.area {
-    fill: silver;
-    stroke: white;
-}
-.popup {
-    fill: black;
-    font-size: 10pt;
-}
-
-</style>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script>
 (function(fn) {
@@ -108,7 +95,7 @@
         .attr("height", HEIGHT);
 
     var g = svg.append("g");
-    var color = {"green","red"};
+    var color = [ "red", "green", "blue" ];
     d3.json('/osaka.geojson').then(function(json) {
         var projection = d3.geoMercator()
             .scale(25000)
@@ -122,7 +109,7 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', function(d,i) { return color[i]; });
+            .attr('fill', function(i) { return color[i]; });
 	g.append("text")
 	    .attr('x', 200)
 	    .attr('y', 300)
