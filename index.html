@@ -377,7 +377,7 @@
         .attr("height", HEIGHT);
 
     var g = svg.append("g");
-var color = d3.scale.category10();
+    var color = ["green","red"];
     d3.json('/osaka.geojson').then(function(json) {
         var projection = d3.geoMercator()
             .scale(25000)
@@ -391,7 +391,7 @@ var color = d3.scale.category10();
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', function(d,i) { return color(i); });
+            .attr('fill', function(d,i) { return color[i]; });
 	g.append("text")
 	    .attr('x', 200)
 	    .attr('y', 300)
