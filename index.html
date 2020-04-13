@@ -112,7 +112,11 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', "gray")
+            .attr('fill', "gray");
+	    
+        g.selectAll('path')
+            .data(json.features)
+            .enter()
 	    .append('text')
 	    .attr('text-anchor', "middle")
 	    .attr('x', function(d) {
@@ -130,69 +134,7 @@
 	    .style("fill", "black");    
     });
 });</script>
-<svg id="map"></svg><br>
-	  <script>
-	  (function(fn) {
-    if (document.readyState !== 'loading'){
-        fn();
-    } else {
-        document.addEventListener('DOMContentLoaded', fn);
-    }
-})(function() {
-    var WIDTH = 1000, HEIGHT = 800;
-
-    var svg = d3.selectAll("#map2")
-        .attr("width", WIDTH)
-        .attr("height", HEIGHT);
-
-    var g = svg.append("g");
-
-    d3.json('/osaka.geojson').then(function(json) {
-        var projection = d3.geoMercator()
-            .scale(34000)
-            .center(d3.geoCentroid(json))
-            .translate([WIDTH / 2, HEIGHT / 2]);
-
-        var path = d3.geoPath()
-            .projection(projection);
-
-        var popup_text;
-
-        g.selectAll('path')
-            .data(json.features)
-            .enter()
-            .append('path')
-            .attr('d', path)
-            .attr('class', 'area')
-            .attr('data-address', function(d) {
-                var p = d.properties;
-                return p.N03_003 + p.N03_004;
-            })
-            .attr('data-position', function(d) {
-                var p = d3.geoCentroid(d);
-                return p[0] + "," + p[1];
-            })
-            .on('mouseover', function() {
-                this.style.fill = 'red';
-                var t = popup_text;
-                var p = projection(this.getAttribute('data-position').split(','));
-                t.text(this.getAttribute('data-address'));
-                t.attr('x', p[0]);
-                t.attr('y', p[1]);
-            })
-            .on('mouseout', function() {
-                this.style.fill = 'silver';
-                popup_text.text('');
-                t.attr('x', 0);
-                t.attr('y', 0);
-            });
-
-        popup_text = g.append('text');
-        popup_text.attr('class', 'popup');
-    });
-});
-	  </script>
-<svg id="map2"></svg><br>	  
+<svg id="map"></svg><br>	  
 <a href="http://kzmw.github.io/index.html">
   <img src="https://ga-beacon.appspot.com/UA-163404333-1/kzmw.github.io/index.html?flat-gif"/>
 </a>
