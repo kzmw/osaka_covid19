@@ -393,15 +393,13 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('class', 'area');
+            .attr('class', 'area')
 	g.append("text")
     .attr({
-      // 真ん中若干下に配置されるように、文字色は白に。
       'text-anchor': "middle",
       'dy': ".35em",
       'fill': "black",
     })
-    // iは0から始まるので、+1しておく
     .text("大阪府だよー");
     });
 });</script>
