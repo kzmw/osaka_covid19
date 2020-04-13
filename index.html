@@ -121,11 +121,11 @@
 	    .attr('text-anchor', "middle")
 	    .attr('x', function(d) {
                 var p = d3.geoCentroid(d);
-                return p[0];
+                return (p[0])*2.5;
             })
 	    .attr('y', function(d) {
                 var p = d3.geoCentroid(d);
-                return p[1];
+                return (p[1])*2.5;
             })
             .text(function(d) {
                 var p = d.properties;
