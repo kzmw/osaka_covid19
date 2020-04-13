@@ -194,6 +194,7 @@ margin:0px;
 font-size:30pt;
 font-weight:700;
 color:#ff2f2f;
+width:40pt;
 }
 
 .number_title{
@@ -201,4 +202,5 @@ margin:0px;
 font-size:20pt;
 font-weight:700;
 color:#000;
+vertical-align: bottom;	
 }
