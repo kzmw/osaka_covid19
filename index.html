@@ -121,13 +121,13 @@
             .attr('data-position', function(d) {
                 var p = d3.geoCentroid(d);
                 return p[0] + "," + p[1];
-            })
+            });
 	g.append("text")
-	    var p = projection(d3.getAttribute('data-position').split(','))
+	    var p = projection(g.getAttribute('data-position').split(','))
 	    .attr('x', p[0])
 	    .attr('y', p[1])
 	    .attr('text-anchor', "middle")
-            .text(d3.getAttribute('data-address'));
+            .text(g.getAttribute('data-address'));
 	    
     });
 });</script>
