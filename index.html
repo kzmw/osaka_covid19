@@ -114,12 +114,20 @@
             .append('path')
             .attr('d', path)
             .attr('fill', "gray")
-	    .text(function(d){return "this data is " + d;});
+	    .attr('data-address', function(d) {
+                var p = d.properties;
+                return p.N03_004;
+            })
+            .attr('data-position', function(d) {
+                var p = d3.geoCentroid(d);
+                return p[0] + "," + p[1];
+            })
 	g.append("text")
-	    .attr('x', 175)
-	    .attr('y', 250)
+	    var p = projection(g.getAttribute('data-position').split(','))
+	    .attr('x', p[0])
+	    .attr('y', p[1])
 	    .attr('text-anchor', "middle")
-            .text(function(d){return "this data is " + d;});
+            .text(g.getAttribute('data-address'));
 	    
     });
 });</script>
