@@ -193,6 +193,28 @@ white-space: nowrap;
 span#number_text{
 display:inline-block;
 margin:0px;
+font-weight:700;
+color:#ff2f2f;
+width:100pt;
+text-align:right;
+line-height: 53px;
+vertical-align: bottom;	
+white-space: nowrap;
+}
+
+.number_title{
+margin:0px;
+font-weight:700;
+color:#000;
+line-height: 26px;
+vertical-align: bottom;	
+	white-space: nowrap;
+}
+
+@media screen and (max-width:530px) {
+	span#number_text{
+display:inline-block;
+margin:0px;
 font-size:10vw;
 font-weight:700;
 color:#ff2f2f;
@@ -211,4 +233,5 @@ color:#000;
 line-height: 26px;
 vertical-align: bottom;	
 	white-space: nowrap;
+}
 }
