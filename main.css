@@ -269,7 +269,7 @@ vertical-align: bottom;
 /* タイトル付　枠　1　*/
 .kakomi-box11 {
  position: relative;
- margin: 2em auto;
+ margin: 2em;
  padding: 1.2em;
  color: #000; /* 文章色 */
  background-color: #fff; /* 背景色 */
@@ -280,7 +280,7 @@ vertical-align: bottom;
  position: absolute;
  padding: 0.5em;
  left: 20px;
- top: -15px;
+ top: -25px;
  font-weight: bold;
  background-color: #fff; /* タイトル背景色 */
  color: #000; /* タイトル文字色 */
