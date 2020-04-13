@@ -113,7 +113,8 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', "gray");
+            .attr('fill', "gray")
+	    .text(function(d){return "this data is " + d;});
 	g.append("text")
 	    .attr('x', 175)
 	    .attr('y', 250)
