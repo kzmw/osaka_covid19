@@ -110,7 +110,7 @@
             .append('path')
             .attr('d', path)
             .attr('fill', function(d,i) {
-                return color[i]
+                return color(i)
             })
 	g.append("text")
 	    .attr('x', 200)
