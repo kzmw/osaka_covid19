@@ -109,7 +109,7 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr("fill", function(d,i) { return color(i); });
+            .attr("fill", color[0]);
 	g.append("text")
 	    .attr({'x' : 200,'y': 300})
 	    .attr('text-anchor', "middle")
