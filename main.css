@@ -173,12 +173,14 @@ table th{
 background: #595959;
 color: #FFF;
 border: 2px solid #fff;
+white-space: nowrap;
 }
 
 table td{
 background: #d9d9d9;
 color: #000;
 border: 2px solid #fff;
+white-space: nowrap;
 }
 
 .hptitle{
@@ -187,6 +189,7 @@ width:100%;
 height:55px;
 font-weight:700;
 vertical-align: middle;
+white-space: nowrap;
 }
 
 span#number_text{
@@ -199,6 +202,7 @@ width:100pt;
 text-align:right;
 line-height: 40pt;
 vertical-align: bottom;	
+white-space: nowrap;
 }
 
 .number_title{
@@ -208,4 +212,5 @@ font-weight:700;
 color:#000;
 line-height: 20pt;
 vertical-align: bottom;	
+	white-space: nowrap;
 }
