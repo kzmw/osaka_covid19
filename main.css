@@ -192,10 +192,11 @@ white-space: nowrap;
 
 span#number_text{
 display:inline-block;
+font-size:53px;
 margin:0px;
 font-weight:700;
 color:#ff2f2f;
-width:100pt;
+width:133px;
 text-align:right;
 line-height: 53px;
 vertical-align: bottom;	
@@ -204,6 +205,7 @@ white-space: nowrap;
 
 .number_title{
 margin:0px;
+font-size:26px;
 font-weight:700;
 color:#000;
 line-height: 26px;
@@ -218,7 +220,7 @@ margin:0px;
 font-size:10vw;
 font-weight:700;
 color:#ff2f2f;
-width:100pt;
+width:25vw;
 text-align:right;
 line-height: 53px;
 vertical-align: bottom;	
