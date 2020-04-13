@@ -118,6 +118,7 @@
                 return p[0]
             })
 	    .attr('y', function(d) {
+		var p = d3.geoCentroid(d);
                 return p[1]
             })
 	    .append("text")
