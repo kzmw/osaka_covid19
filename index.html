@@ -11,6 +11,38 @@
 			     height:auto;}
 		} 
 	</style>
+	<script>
+	const outputElement = document.getElementById('output_csv');
+
+function getCsvData(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArray(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArray(data) {
+ const dataArray = [];
+ const dataString = data.split('\n');
+ for (let i = 0; i < dataString.length; i++) {
+  dataArray[i] = dataString[i].split(',');
+ }
+ let insertElement = '';
+ dataArray.forEach((element) => {
+  insertElement += '<tr>';
+  element.forEach((childElement) => {
+   insertElement += `<td>${childElement}</td>`
+  });
+  insertElement += '</tr>';
+ });
+ outputElement.innerHTML = insertElement;
+}
+
+getCsvData('/corona.csv');
+	</script>
 </head>
 <body>
 <header>
@@ -38,6 +70,9 @@
 <div class="kakomi-box11"><span class="title-box11">年齢比</span>10代：50%<br>120代：50%</div>
 <div class="kakomi-box11"><span class="title-box11">症状例</span>胸がドキドキ：340人<br>記憶喪失：50000人</div>
 <table>
+ <tbody id="output_csv"></tbody>
+</table>
+	  <table>
  <tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>
  <tr><td>大阪府外</td><td></td><td>14</td><td>0</td><td></td></tr>
  <tr><td>大阪市</td><td>2,743,599</td><td>385</td><td>9</td><td>7,126人に1人</td></tr>
