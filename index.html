@@ -97,14 +97,14 @@
     var svg = d3.selectAll("#map")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
-
+    
     var g = svg.append("g");
     var color = [ "red", "green", "blue" ];
     d3.json('/osaka.geojson').then(function(json) {
         var projection = d3.geoMercator()
+	var c = d3.geoCentroid(json)
             .scale(25000)
-            .center(function(){var c = d3.geoCentroid(json)
-	    return (c[0]+1) + "," + c[1]})
+            .center((c[0]+1) + "," + c[1]})
             .translate([WIDTH / 2, HEIGHT / 2]);
         var path = d3.geoPath()
             .projection(projection);
