@@ -101,8 +101,8 @@
     var g = svg.append("g");
     var color = [ "red", "green", "blue" ];
     d3.json('/osaka.geojson').then(function(json) {
-        var projection = d3.geoMercator()
 	var c = d3.geoCentroid(json)
+        var projection = d3.geoMercator()
             .scale(25000)
             .center((c[0]+1) + "," + c[1])
             .translate([WIDTH / 2, HEIGHT / 2]);
