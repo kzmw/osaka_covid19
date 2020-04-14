@@ -135,7 +135,7 @@ getCsvData('https://drive.google.com/uc?id=1e1_-hhNP8Li34I6E0zRutRRcn7xbKL5j');
     var color = [ "red", "green", "blue" ];
     d3.json('/osaka.geojson').then(function(json) {
         var projection = d3.geoMercator()
-            .scale(25000)
+            .scale(30000)
             .center(d3.geoCentroid(json))
             .translate([WIDTH / 2, HEIGHT / 2]);
         var path = d3.geoPath()
@@ -168,7 +168,7 @@ var q = projection((p[0] + "," + p[1]).split(","));
                 return p.N03_004;
             })
 	    .style("fill", "black")
-	    .attr("font-size","9pt");
+	    .attr("font-size","7pt");
     });
 });</script>
 <svg id="map"></svg><br>	  
