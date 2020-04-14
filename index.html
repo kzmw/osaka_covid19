@@ -93,7 +93,7 @@
         document.addEventListener('DOMContentLoaded', fn);
     }
 })(function() {
-    var WIDTH = 350, HEIGHT = 500;
+    var WIDTH = 400, HEIGHT = 500;
     var svg = d3.selectAll("#map")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
@@ -112,7 +112,7 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', "gray");
+            .attr('fill', function(d){return color[d]});
 	    
         g.selectAll('text')
             .data(json.features)
