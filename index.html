@@ -7,12 +7,14 @@
   <title>大阪府新型コロナウイルス感染者情報</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
+$(function() {
 $.getJSON("/data/2020_04_15.json", (data) => {
  var sum = ${data.sum}
  var change = ${data.change}
  var citizen = ${data.citizen}
 });
 document.getElementById("number_text") = sum
+	});
 	</script>
 </head>
 <body>
