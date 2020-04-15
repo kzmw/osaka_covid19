@@ -8,7 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
 $.getJSON("/data/2020_04_15.json", (data) => {
- document.getElementById("number_text") = data.sum
+ $("#number_text").text(data.sum);
 });
 </script>
 </head>
