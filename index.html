@@ -23,6 +23,26 @@ $.getJSON("/data/2020_04_15.json", (data) => {
  $("#eightties").text("80代：" + data.age[9] + "%");
  $("#nineties").text("90代：" + data.age[10] + "%");
  $("#over").text("100代以上：" + data.age[11] + "%");
+ $("#").text("100代以上：" + data.age[11] + "%");
+ $("#fever").text("発熱：" + data.symptom[0] + "人");
+ $("#cough ").text("咳：" + data.symptom[1] + "人");
+ $("#sputum ").text("痰：" + data.symptom[2] + "人");
+ $("#nose").text("鼻汁：" + data.symptom[3] + "人");
+ $("#close_nose").text("鼻閉：" + data.symptom[4] + "人");
+ $("#sneeze").text("くしゃみ：" + data.symptom[5] + "人");
+ $("#head").text("頭痛：" + data.symptom[6] + "人");
+ $("#chest").text("胸痛：" + data.symptom[7] + "人");
+ $("#pharynx").text("咽頭痛：" + data.symptom[8] + "人");
+ $("#joint").text("関節痛：" + data.symptom[9] + "人");
+ $("#diarrhea").text("下痢：" + data.symptom[10] + "人");
+ $("#breath").text("呼吸困難：" + data.symptom[11] + "人");
+ $("#malaise").text("倦怠感：" + data.symptom[12] + "人");
+ $("#eye").text("目のかゆみ：" + data.symptom[13] + "人");
+ $("#taste").text("味覚障害：" + data.symptom[14] + "人");
+ $("#smell").text("嗅覚障害：" + data.symptom[15] + "人");
+ $("#pneumonia").text("肺炎：" + data.symptom[16] + "人");
+ $("#asymptomatic").text("無症状：" + data.symptom[17] + "人");
+
 });
 </script>
 </head>
@@ -50,7 +70,8 @@ $.getJSON("/data/2020_04_15.json", (data) => {
 <span class="number_title">大阪府で確認された感染者数</span><span id="number_text">894</span><span class="number_title">人</span>
 	  <div class="kakomi-box11"><span class="title-box11">男女比</span><p id="men"></p><p id="women"></p></div>
 <div class="kakomi-box11"><span class="title-box11">年齢比</span><p id="preschool"></p><p id="school"></p><p id="teens"></p><p id="twenties"></p><p id="thirties"></p><p id="fourties"></p><p id="fifties"></p><p id="sixties"></p><p id="seventies"></p><p id="eighties"></p><p id="nineties"></p><p id="over"></p></div>
-<div class="kakomi-box11"><span class="title-box11">症状例</span>胸がドキドキ：340人<br>記憶喪失：50000人</div>
+<div class="kakomi-box11"><span class="title-box11">症状例</span><p id="fever"></p><p id="cough "></p><p id="sputum "></p><p id="nose"></p><p id="close_nose"></p><p id="sneeze"></p><p id="head"></p><p id="chest"></p><p id="pharynx"></p><p id="joint"></p><p id="diarrhea"></p><p id="breath"></p><p id="malaise"></p><p id="eye"></p><p id="taste"></p><p id="smell"></p><p id="pneumonia"></p><p id="asymptomatic"></p>
+</div>
 <table>
  <tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>
 	<tr><td>大阪府外</td><td></td><td>16</td><td>1</td><td></td></tr>
