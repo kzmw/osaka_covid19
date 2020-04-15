@@ -171,24 +171,26 @@ table {
 table th{
 background: #595959;
 color: #FFF;
+font-size:11px;
 border: 2px solid #fff;
 }
 
 table td{
 background: #d9d9d9;
 color: #000;
+font-size:11px;
 border: 2px solid #fff;
 }
 @media screen and (max-width:420px) {
 table th{
-font-size:3.8vw;
+font-size:3.6vw;
 background: #595959;
 color: #FFF;
 border: 2px solid #fff;
 }
 
 table td{
-font-size:3.8vw;
+font-size:3.6vw;
 background: #d9d9d9;
 color: #000;
 }
