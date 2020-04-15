@@ -9,14 +9,14 @@
 	<script>
 $.getJSON("/data/2020_04_15.json", (data) => {
  $("#number_text").text(data.sum);
- $("#men").text(data.sex[0]);
- $("#women").text(data.sex[1]);
- $("#preschool").text(data.age[0]);
- $("#school").text(data.age[1]);
- $("#teens").text(data.age[2]);
- $("#twenties").text(data.age[3]);
- $("#thirties").text(data.age[4]);
- $("#fourties").text(data.age[5]);
+ $("#men").text("男性：" + data.sex[0] + "%");
+ $("#women").text("女性：" + data.sex[1] + "%");
+ $("#preschool").text("未就学児：" + data.age[0] + "%");
+ $("#school").text("未就学児：" + data.age[1] + "%");
+ $("#teens").text("就学児：" + data.age[2] + "%");
+ $("#twenties").text("10代：" + data.age[3] + "%");
+ $("#thirties").text("20代：" + data.age[4] + "%");
+ $("#fourties").text("30代：" + data.age[5] + "%");
 });
 </script>
 </head>
