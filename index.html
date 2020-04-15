@@ -12,11 +12,17 @@ $.getJSON("/data/2020_04_15.json", (data) => {
  $("#men").text("男性：" + data.sex[0] + "%");
  $("#women").text("女性：" + data.sex[1] + "%");
  $("#preschool").text("未就学児：" + data.age[0] + "%");
- $("#school").text("未就学児：" + data.age[1] + "%");
- $("#teens").text("就学児：" + data.age[2] + "%");
- $("#twenties").text("10代：" + data.age[3] + "%");
- $("#thirties").text("20代：" + data.age[4] + "%");
- $("#fourties").text("30代：" + data.age[5] + "%");
+ $("#school").text("就学児：" + data.age[1] + "%");
+ $("#teens").text("10代：" + data.age[2] + "%");
+ $("#twenties").text("20代：" + data.age[3] + "%");
+ $("#thirties").text("30代：" + data.age[4] + "%");
+ $("#fourties").text("40代：" + data.age[5] + "%");
+ $("#fifties").text("50代：" + data.age[6] + "%");
+ $("#sixties").text("60代：" + data.age[7] + "%");
+ $("#seventies").text("70代：" + data.age[8] + "%");
+ $("#eightties").text("80代：" + data.age[9] + "%");
+ $("#nineties").text("90代：" + data.age[10] + "%");
+ $("#over").text("100代以上：" + data.age[11] + "%");
 });
 </script>
 </head>
