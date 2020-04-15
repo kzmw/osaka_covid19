@@ -285,3 +285,7 @@ vertical-align: bottom;
  background-color: #fff; /* タイトル背景色 */
  color: #000; /* タイトル文字色 */
 }
+
+p{
+margin:0px;
+}
