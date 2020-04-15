@@ -9,6 +9,14 @@
 	<script>
 $.getJSON("/data/2020_04_15.json", (data) => {
  $("#number_text").text(data.sum);
+ $("#men").text(data.sex[0]);
+ $("#women").text(data.sex[1]);
+ $("#preschool").text(data.age[0]);
+ $("#school").text(data.age[1]);
+ $("#teens").text(data.age[2]);
+ $("#twenties").text(data.age[3]);
+ $("#thirties").text(data.age[4]);
+ $("#fourties").text(data.age[5]);
 });
 </script>
 </head>
@@ -34,8 +42,8 @@ $.getJSON("/data/2020_04_15.json", (data) => {
 <ul class="important_ul">
       <li class="important_li"><span class="news_title">緊急事態宣言</span><span class="important_content">不要不急の外出は控えましょう。</span></li></ul>
 <span class="number_title">大阪府で確認された感染者数</span><span id="number_text">894</span><span class="number_title">人</span>
-<div class="kakomi-box11"><span class="title-box11">男女比</span>男性：57.4%<br>女性：42.6%</div>
-<div class="kakomi-box11"><span class="title-box11">年齢比</span>10代：50%<br>120代：50%</div>
+	  <div class="kakomi-box11"><span class="title-box11">男女比</span><p id="men"></p><p id="women"></p></div>
+<div class="kakomi-box11"><span class="title-box11">年齢比</span><p id="preschool"></p><p id="school"></p><p id="teens"></p><p id="twenties"></p><p id="thirties"></p><p id="fourties"></p><p id="fifties"></p><p id="sixties"></p><p id="seventies"></p><p id="eighties"></p><p id="nineties"></p><p id="over"></p></div>
 <div class="kakomi-box11"><span class="title-box11">症状例</span>胸がドキドキ：340人<br>記憶喪失：50000人</div>
 <table>
  <tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>
