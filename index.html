@@ -5,41 +5,14 @@
   <meta name="viewport" content="width=device-width" >
   <link rel="stylesheet" href="/main.css">
   <title>大阪府新型コロナウイルス感染者情報</title>
-	<style>
-		@media screen and (max-width:420px) {
-			.map{width:100%;
-			     height:auto;}
-		} 
-	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
-function getCsvData(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArray(response);
- });
- request.open('GET', dataPath, true);
- request.send();
+$.getJSON("/data/2020_04_15.json", (data) => {
+ var sum = ${data.sum}
+ var change = ${data.change}
+ var citizen = ${data.citizen}
 }
-
-function convertArray(data) {
- const dataArray = [];
- const dataString = data.split('\n');
- for (let i = 0; i < dataString.length; i++) {
-  dataArray[i] = dataString[i].split(',');
- }
- let insertElement = '';
- dataArray.forEach((element) => {
-  insertElement += '<tr>';
-  element.forEach((childElement) => {
-   insertElement += `<td>${childElement}</td>`
-  });
-  insertElement += '</tr>';
- });
-document.getElementById('output_csv').innerHTML = insertElement;	
-}
-
-getCsvData('https://drive.google.com/uc?id=1e1_-hhNP8Li34I6E0zRutRRcn7xbKL5j');
+document.getElementById("number_text") = sum
 	</script>
 </head>
 <body>
