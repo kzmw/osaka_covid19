@@ -13,7 +13,10 @@
     d3.json('/osaka.geojson').then(function(json) {
     d3.json('/data.json').then(function(data){
 for(var i = 0;i <= json.features.length -1; i++){
-    json.features[i].properties.color = "red"
+for(var j = 0;j<=data.city.length -1;j++){
+if(data.city[j].patient <= 30){
+    json.features[i].properties.color = "red"}
+}
 }
 	    var projection = d3.geoMercator()
             .scale(30000)
