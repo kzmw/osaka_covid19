@@ -15,7 +15,7 @@
 for(var i = 0;i <= json.features.length -1; i++){
     json.features[i].properties.color = "red"
 }
-    }
+    });
 	    var projection = d3.geoMercator()
             .scale(30000)
             .center(d3.geoCentroid(json))
