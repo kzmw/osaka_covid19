@@ -11,7 +11,6 @@
         .attr("height", HEIGHT);
     
     var g = svg.append("g");
-    var color = [ "red", "green", "blue" ];
     d3.json('/osaka.geojson').then(function(json) {
         var projection = d3.geoMercator()
             .scale(30000)
@@ -24,7 +23,7 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', "gray")
+            .attr('fill', "silver")
 	    .attr('stroke', "white");
 	    
         g.selectAll('text')
