@@ -15,7 +15,8 @@
 for(var i = 0;i <= json.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
 if(data.city[j].code == json.features[i].properties.N03_007){
-    json.features[i].properties.color = "red"}
+    if(data.city[j].color == 3){
+    json.features[i].properties.color = "red"}}
 }
 }
 	    var projection = d3.geoMercator()
