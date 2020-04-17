@@ -24,10 +24,8 @@
             .attr('d', path)
             .attr('fill', function(d){
 	d3.json('/data.json').then(function(data) {
-    for (var i=0;i <= d.properties.length;i++){
-    d.properties.color = "silver";
-    }
-    });
+        d.properties.color = "silver"
+        });
 	return d.properties.color
 	})
 	    .attr('stroke', "white");
