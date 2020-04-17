@@ -34,7 +34,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
             .attr('fill', function(d){
 	return d.properties.patient_color
 	})
-	    .attr('stroke', "white");
+	    .attr('stroke', "rgb(127,127,127)");
         g.selectAll('text')
             .data(json.features)
             .enter()
