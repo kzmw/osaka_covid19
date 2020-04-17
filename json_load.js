@@ -34,12 +34,11 @@ $.getJSON("/data.json", (data) => {
  $("#asymptomatic").text("無症状：" + data.symptom[17] + "人");
 $(
 function(){
-var table_data;
-	for (var i=0;i<=data.city.length;i++){
+var table_data = "";
+	for (var i=0;i<=(data.city.length -1);i++){
 	table_data += "<tr><td>" + data.city[i].name + "</td><td>" + data.city[i].population + "</td><td>" + data.city[i].patient + "</td><td>" + data.city[i].change + "</td><td>" + data.city[i].proportion + "</td></tr>";
 	}
-table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>" + table_data
+table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>" + table_data;
 $("#covid_table").html(table_data)
-}
-)
+});
 });
