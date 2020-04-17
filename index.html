@@ -44,7 +44,7 @@ $.getJSON("/data.json", (data) => {
  $("#pneumonia").text("肺炎：" + data.symptom[16] + "人");
  $("#asymptomatic").text("無症状：" + data.symptom[17] + "人");
 $(
-function(){
+function(data){
 var table_data = "";
 	for (var i=0;i<=data.city.length;i++){
 	table_data += "<tr><td>" + data.city[i].name + "</td><td>" + data.city[i].population + "</td><td>" + data.city[i].patient + "</td><td>" + data.city[i].change + "</td><td>" + data.city[i].proportion + "</td></tr>";
