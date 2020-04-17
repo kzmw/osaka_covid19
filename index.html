@@ -11,18 +11,18 @@ $.getJSON("/data/2020_04_15.json", (data) => {
  $("#number_text").text(data.sum);
  $("#men").text("男性：" + data.sex[0] + "%");
  $("#women").text("女性：" + data.sex[1] + "%");
- $("#preschool").text("未就学児：" + data.age[0] + "%");
- $("#school").text("就学児：" + data.age[1] + "%");
- $("#teens").text("10代：" + data.age[2] + "%");
- $("#twenties").text("20代：" + data.age[3] + "%");
- $("#thirties").text("30代：" + data.age[4] + "%");
- $("#fourties").text("40代：" + data.age[5] + "%");
- $("#fifties").text("50代：" + data.age[6] + "%");
- $("#sixties").text("60代：" + data.age[7] + "%");
- $("#seventies").text("70代：" + data.age[8] + "%");
- $("#eightties").text("80代：" + data.age[9] + "%");
- $("#nineties").text("90代：" + data.age[10] + "%");
- $("#over").text("100代以上：" + data.age[11] + "%");
+ $("#preschool").text("未就学児：" + data.age[0] + "人");
+ $("#school").text("就学児：" + data.age[1] + "人");
+ $("#teens").text("10代：" + data.age[2] + "人");
+ $("#twenties").text("20代：" + data.age[3] + "人");
+ $("#thirties").text("30代：" + data.age[4] + "人");
+ $("#fourties").text("40代：" + data.age[5] + "人");
+ $("#fifties").text("50代：" + data.age[6] + "人");
+ $("#sixties").text("60代：" + data.age[7] + "人");
+ $("#seventies").text("70代：" + data.age[8] + "人");
+ $("#eighties").text("80代：" + data.age[9] + "人");
+ $("#nineties").text("90代：" + data.age[10] + "人");
+ $("#over").text("100代以上：" + data.age[11] + "人");
  $("#fever").text("発熱：" + data.symptom[0] + "人");
  $("#cough").text("咳：" + data.symptom[1] + "人");
  $("#sputum").text("痰：" + data.symptom[2] + "人");
@@ -41,7 +41,16 @@ $.getJSON("/data/2020_04_15.json", (data) => {
  $("#smell").text("嗅覚障害：" + data.symptom[15] + "人");
  $("#pneumonia").text("肺炎：" + data.symptom[16] + "人");
  $("#asymptomatic").text("無症状：" + data.symptom[17] + "人");
-
+$(
+function(){
+var table_data;
+	for (var i=0;i<=data.city.length;i++){
+	table_data += "<tr><td>" + data.city[i].name + "</td><td>" + data.city[i].population + "</td><td>" + data.city[i].patient + "</td><td>" + data.city[i].change + "</td><td>" + data.city[i].proportion + "</td></tr>";
+	}
+table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>" + table_data
+$("#covid_table").html(table_data)
+}
+)
 });
 </script>
 </head>
@@ -66,57 +75,12 @@ $.getJSON("/data/2020_04_15.json", (data) => {
   <div class="content_div" style="padding-top:55px">
 <ul class="important_ul">
       <li class="important_li"><span class="news_title">緊急事態宣言</span><span class="important_content">不要不急の外出は控えましょう。</span></li></ul>
-<span class="number_title">大阪府で確認された感染者数</span><span id="number_text">894</span><span class="number_title">人</span>
+<span class="number_title">大阪府で確認された感染者数</span><span id="number_text"></span><span class="number_title">人</span>
 	  <div class="kakomi-box11"><span class="title-box11">男女比</span><p id="men"></p><p id="women"></p></div>
 <div class="kakomi-box11"><span class="title-box11">年齢比</span><p id="preschool"></p><p id="school"></p><p id="teens"></p><p id="twenties"></p><p id="thirties"></p><p id="fourties"></p><p id="fifties"></p><p id="sixties"></p><p id="seventies"></p><p id="eighties"></p><p id="nineties"></p><p id="over"></p></div>
 <div class="kakomi-box11"><span class="title-box11">症状例(346例目まで)</span><p id="fever"></p><p id="cough"></p><p id="sputum"></p><p id="nose"></p><p id="close_nose"></p><p id="sneeze"></p><p id="head"></p><p id="chest"></p><p id="pharynx"></p><p id="joint"></p><p id="diarrhea"></p><p id="breath"></p><p id="malaise"></p><p id="eye"></p><p id="taste"></p><p id="smell"></p><p id="pneumonia"></p><p id="asymptomatic"></p>
 </div>
-<table>
- <tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>
-	<tr><td>大阪府外</td><td></td><td>16</td><td>1</td><td></td></tr>
-	<tr><td>大阪市</td><td>2,744,379</td><td>421</td><td>36</td><td>6,519人に1人</td></tr>
-	<tr><td>堺市</td><td>827,055</td><td>61</td><td>1</td><td>13,558人に1人</td></tr>
-	<tr><td>能勢町</td><td>9,155</td><td>2</td><td>0</td><td>4,578人に1人</td></tr>
-	<tr><td>豊能町</td><td>18,290</td><td>0</td><td>0</td><td></td></tr>
-	<tr><td>池田市</td><td>103,980</td><td>13</td><td>0</td><td>7,998人に1人</td></tr>
-	<tr><td>箕面市</td><td>136,364</td><td>17</td><td>0</td><td>8,021人に1人</td></tr>
-	<tr><td>豊中市</td><td>400,655</td><td>35</td><td>1</td><td>11,447人に1人</td></tr>
-	<tr><td>茨木市</td><td>283,081</td><td>13</td><td>0</td><td>21,775人に1人</td></tr>
-	<tr><td>高槻市</td><td>347,833</td><td>18</td><td>0</td><td>19,324人に1人</td></tr>
-	<tr><td>島本町</td><td>31,030</td><td>0</td><td>0</td><td></td></tr>
-	<tr><td>吹田市</td><td>382,442</td><td>42</td><td>0</td><td>9,106人に1人</td></tr>
-	<tr><td>摂津市</td><td>85,998</td><td>6</td><td>1</td><td>14,333人に1人</td></tr>
-	<tr><td>枚方市</td><td>398,397</td><td>21</td><td>0</td><td>18,971人に1人</td></tr>
-	<tr><td>交野市</td><td>76,152</td><td>8</td><td>0</td><td>9,519人に1人</td></tr>
-	<tr><td>寝屋川市</td><td>229,401</td><td>6</td><td>2</td><td>38,234人に1人</td></tr>
-	<tr><td>守口市</td><td>142,214</td><td>10</td><td>0</td><td>14,221人に1人</td></tr>
-	<tr><td>門真市</td><td>119,393</td><td>17</td><td>0</td><td>7,023人に1人</td></tr>
-	<tr><td>四條畷市</td><td>55,443</td><td>3</td><td>0</td><td>18,481人に1人</td></tr>
-	<tr><td>大東市</td><td>119,860</td><td>31</td><td>3</td><td>3,866人に1人</td></tr>
-	<tr><td>東大阪市</td><td>493,656</td><td>29</td><td>2</td><td>17,023人に1人</td></tr>
-	<tr><td>八尾市</td><td>265,959</td><td>25</td><td>4</td><td>10,638人に1人</td></tr>
-	<tr><td>柏原市</td><td>68,354</td><td>4</td><td>0</td><td>17,089人に1人</td></tr>
-	<tr><td>松原市</td><td>117,971</td><td>11</td><td>2</td><td>10,725人に1人</td></tr>
-	<tr><td>羽曳野市</td><td>109,250</td><td>5</td><td>0</td><td>21,850人に1人</td></tr>
-	<tr><td>藤井寺市</td><td>63,678</td><td>2</td><td>0</td><td>31,839人に1人</td></tr>
-	<tr><td>太子町</td><td>13,169</td><td>0</td><td>0</td><td></td></tr>
-	<tr><td>河南町</td><td>15,688</td><td>0</td><td>0</td><td></td></tr>
-	<tr><td>千早赤阪村</td><td>4,888</td><td>0</td><td>0</td><td></td></tr>
-	<tr><td>富田林市</td><td>109,687</td><td>1</td><td>0</td><td>109,687人に1人</td></tr>
-	<tr><td>大阪狭山市</td><td>58,762</td><td>4</td><td>0</td><td>14,691人に1人</td></tr>
-	<tr><td>河内長野市</td><td>101,520</td><td>4</td><td>0</td><td>25,380人に1人</td></tr>
-	<tr><td>和泉市</td><td>185,311</td><td>33</td><td>2</td><td>5,615人に1人</td></tr>
-	<tr><td>高石市</td><td>56,119</td><td>1</td><td>0</td><td>56,119人に1人</td></tr>
-	<tr><td>泉大津市</td><td>74,417</td><td>5</td><td>1</td><td>14,883人に1人</td></tr>
-	<tr><td>忠岡町</td><td>16,821</td><td>0</td><td>0</td><td></td></tr>
-	<tr><td>岸和田市</td><td>189,418</td><td>15</td><td>0</td><td>12,628人に1人</td></tr>
-	<tr><td>貝塚市</td><td>85,589</td><td>3</td><td>2</td><td>28,530人に1人</td></tr>
-	<tr><td>熊取町</td><td>43,877</td><td>1</td><td>0</td><td>43,877人に1人</td></tr>
-	<tr><td>泉佐野市</td><td>100,123</td><td>5</td><td>0</td><td>20,025人に1人</td></tr>
-	<tr><td>田尻町</td><td>8,412</td><td>1</td><td>0</td><td>8,412人に1人</td></tr>
-	<tr><td>泉南市</td><td>60,219</td><td>1</td><td>0</td><td>60,219人に1人</td></tr>
-	<tr><td>阪南市</td><td>51,542</td><td>1</td><td>1</td><td>51,542人に1人</td></tr>
-	<tr><td>岬町</td><td>15,025</td><td>0</td><td>0</td><td></td></tr>
+<table id="covid_table">
 </table>
 <table>
  <tbody id="output_csv"></tbody>
