@@ -6,53 +6,9 @@
   <link rel="stylesheet" href="/main.css">
   <title>大阪府新型コロナウイルス感染者情報</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-$.getJSON("/data/2020_04_15.json", (data) => {
- $("#number_text").text(data.sum);
- $("#men").text("男性：" + data.sex[0] + "%");
- $("#women").text("女性：" + data.sex[1] + "%");
- $("#preschool").text("未就学児：" + data.age[0] + "人");
- $("#school").text("就学児：" + data.age[1] + "人");
- $("#teens").text("10代：" + data.age[2] + "人");
- $("#twenties").text("20代：" + data.age[3] + "人");
- $("#thirties").text("30代：" + data.age[4] + "人");
- $("#fourties").text("40代：" + data.age[5] + "人");
- $("#fifties").text("50代：" + data.age[6] + "人");
- $("#sixties").text("60代：" + data.age[7] + "人");
- $("#seventies").text("70代：" + data.age[8] + "人");
- $("#eighties").text("80代：" + data.age[9] + "人");
- $("#nineties").text("90代：" + data.age[10] + "人");
- $("#over").text("100代以上：" + data.age[11] + "人");
- $("#fever").text("発熱：" + data.symptom[0] + "人");
- $("#cough").text("咳：" + data.symptom[1] + "人");
- $("#sputum").text("痰：" + data.symptom[2] + "人");
- $("#nose").text("鼻汁：" + data.symptom[3] + "人");
- $("#close_nose").text("鼻閉：" + data.symptom[4] + "人");
- $("#sneeze").text("くしゃみ：" + data.symptom[5] + "人");
- $("#head").text("頭痛：" + data.symptom[6] + "人");
- $("#chest").text("胸痛：" + data.symptom[7] + "人");
- $("#pharynx").text("咽頭痛：" + data.symptom[8] + "人");
- $("#joint").text("関節痛：" + data.symptom[9] + "人");
- $("#diarrhea").text("下痢：" + data.symptom[10] + "人");
- $("#breath").text("呼吸困難：" + data.symptom[11] + "人");
- $("#malaise").text("倦怠感：" + data.symptom[12] + "人");
- $("#eye").text("目のかゆみ：" + data.symptom[13] + "人");
- $("#taste").text("味覚障害：" + data.symptom[14] + "人");
- $("#smell").text("嗅覚障害：" + data.symptom[15] + "人");
- $("#pneumonia").text("肺炎：" + data.symptom[16] + "人");
- $("#asymptomatic").text("無症状：" + data.symptom[17] + "人");
-$(
-function(){
-var table_data;
-	for (var i=0;i<=data.city.length;i++){
-	table_data += "<tr><td>" + data.city[i].name + "</td><td>" + data.city[i].population + "</td><td>" + data.city[i].patient + "</td><td>" + data.city[i].change + "</td><td>" + data.city[i].proportion + "</td></tr>";
-	}
-table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>" + table_data
-$("#covid_table").html(table_data)
-}
-)
-});
-</script>
+<script src="/json_load.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="/mapping.js"></script>
 </head>
 <body>
 <header>
@@ -85,60 +41,7 @@ $("#covid_table").html(table_data)
 <table>
  <tbody id="output_csv"></tbody>
 </table>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script>
-(function(fn) {
-    if (document.readyState !== 'loading'){
-        fn();
-    } else {
-        document.addEventListener('DOMContentLoaded', fn);
-    }
-})(function() {
-    var WIDTH = 400, HEIGHT = 500;
-    var svg = d3.selectAll("#map")
-        .attr("width", WIDTH)
-        .attr("height", HEIGHT);
-    
-    var g = svg.append("g");
-    var color = [ "red", "green", "blue" ];
-    d3.json('/osaka.geojson').then(function(json) {
-        var projection = d3.geoMercator()
-            .scale(30000)
-            .center(d3.geoCentroid(json))
-            .translate([WIDTH / 2, HEIGHT / 2]);
-        var path = d3.geoPath()
-            .projection(projection);
-        g.selectAll('path')
-            .data(json.features)
-            .enter()
-            .append('path')
-            .attr('d', path)
-            .attr('fill', "gray")
-	    .attr('stroke', "white");
-	    
-        g.selectAll('text')
-            .data(json.features)
-            .enter()
-	    .append('text')
-	    .attr('text-anchor', "middle")
-	    .attr('x', function(d) {
-                var p = d3.geoCentroid(d);
-var q = projection((p[0] + "," + p[1]).split(","));
-                return q[0];
-            })
-	    .attr('y', function(d) {
-                var p = d3.geoCentroid(d);
-var q = projection((p[0] + "," + p[1]).split(","));
-                return q[1];
-            })
-            .text(function(d) {
-                var p = d.properties;
-                return p.N03_004;
-            })
-	    .style("fill", "black")
-	    .attr("font-size","7pt");
-    });
-});</script>
+
 <svg id="map"></svg><br>	  
 <a href="http://kzmw.github.io/index.html">
   <img src="https://ga-beacon.appspot.com/UA-163404333-1/kzmw.github.io/index.html?flat-gif"/>
