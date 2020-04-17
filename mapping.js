@@ -13,8 +13,8 @@
     d3.json('/osaka.geojson').then(function(json) {
     d3.json('/data.json').then(function(data){
 for(var i = 0;i <= json.features.length -1; i++){
-for(var j = 0;j<=data.city.length -1;j++){
-if(data.city[j].patient <= 30){
+for(var j = 1;j<=data.city.length -1;j++){
+if(data.city[j].code == json.features[i].properties.N03_007){
     json.features[i].properties.color = "red"}
 }
 }
