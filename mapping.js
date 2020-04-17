@@ -11,6 +11,11 @@
         .attr("height", HEIGHT);
     var g = svg.append("g");
     d3.json('/osaka.geojson').then(function(json) {
+	function(d){
+	d3.json('/data.json').then(function(data) {
+        d.properties.color = "silver"
+        });
+	};
         var projection = d3.geoMercator()
             .scale(30000)
             .center(d3.geoCentroid(json))
@@ -22,12 +27,7 @@
             .enter()
             .append('path')
             .attr('d', path)
-            .attr('fill', function(d){
-	d3.json('/data.json').then(function(data) {
-        d.properties.color = "silver"
-        });
-	return d.properties.color
-	})
+            .attr('fill', "red")
 	    .attr('stroke', "white");
 	    
         g.selectAll('text')
