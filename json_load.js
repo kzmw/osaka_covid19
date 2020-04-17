@@ -1,4 +1,4 @@
-$.getJSON("/data/2020_04_15.json", (data) => {
+$.getJSON("/data.json", (data) => {
  $("#number_text").text(data.sum);
  $("#men").text("男性：" + data.sex[0] + "%");
  $("#women").text("女性：" + data.sex[1] + "%");
