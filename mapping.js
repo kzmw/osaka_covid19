@@ -12,6 +12,9 @@
     
     var g = svg.append("g");
     d3.json('/osaka.geojson').then(function(json) {
+    d3.json('/data.json').then(function(data) {
+    
+    };
         var projection = d3.geoMercator()
             .scale(30000)
             .center(d3.geoCentroid(json))
@@ -24,9 +27,6 @@
             .append('path')
             .attr('d', path)
             .attr('fill', "silver")
-	    .attr("fill", function(d,i){ 
-    console.log(d.properties.N03_007)
-})
 	    .attr('stroke', "white");
 	    
         g.selectAll('text')
@@ -51,4 +51,5 @@ var q = projection((p[0] + "," + p[1]).split(","));
 	    .style("fill", "black")
 	    .attr("font-size","7pt");
     });
+
 });
