@@ -15,7 +15,9 @@
 for(var i = 0;i <= json.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
 if(data.city[j].code == json.features[i].properties.N03_007){
-    json.features[i].properties.color = "#" + (data.city[j].color[0]).toString(16)
+    json.features[i].properties.patient_color = "rgb(" + data.city[j].color[0][0] + "," + data.city[j].color[0][1] + "," + data.city[j].color[0][2] +")"
+    json.features[i].properties.proportion_color = "rgb(" + data.city[j].color[1][0] + "," + data.city[j].color[1][1] + "," + data.city[j].color[1][2] +")"
+
 }}
 }
 	    var projection = d3.geoMercator()
@@ -30,7 +32,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
             .append('path')
             .attr('d', path)
             .attr('fill', function(d){
-	return d.properties.color
+	return d.properties.patient_color
 	})
 	    .attr('stroke', "white");
         g.selectAll('text')
