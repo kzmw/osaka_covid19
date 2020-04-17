@@ -14,7 +14,7 @@
     d3.json('/osaka.geojson').then(function(json) {
     d3.json('/data.json').then(function(data) {
     
-    };
+    });
         var projection = d3.geoMercator()
             .scale(30000)
             .center(d3.geoCentroid(json))
