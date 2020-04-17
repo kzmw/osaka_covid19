@@ -24,6 +24,9 @@
             .append('path')
             .attr('d', path)
             .attr('fill', "silver")
+	    .attr("fill", function(d,i){ 
+    console.log(d.properties.code)
+}
 	    .attr('stroke', "white");
 	    
         g.selectAll('text')
