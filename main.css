@@ -291,3 +291,16 @@ vertical-align: bottom;
 p{
 margin:0px;
 }
+
+#tooltip{
+	position: absolute;
+	z-index: 10;
+	visibility: hidden;
+	padding: 10px;
+	border: 1px solid #000;
+	border-radius: 2px;
+	background-color: #FFF;
+	color: #333;
+	font-size: 13px;
+	opacity: 0.85;
+}
