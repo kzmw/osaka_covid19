@@ -1,5 +1,7 @@
 $.getJSON("/data.json", (data) => {
  $("#number_text").text(data.sum);
+ $("#citizen").text(data.citizen);
+ $("#change").text(data.change);
  $("#men").text("男性：" + data.sex[0] + "%");
  $("#women").text("女性：" + data.sex[1] + "%");
  $("#preschool").text("未就学児：" + data.age[0] + "人");
