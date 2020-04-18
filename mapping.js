@@ -37,18 +37,15 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	    .attr("stroke-width",2)
 	    .attr('stroke', "rgb(127,127,127)")
 	     .on("mouseover", function (d) {
-            return $tooltip
-                .style("visibility", "visible")
+            return  this.style("visibility", "visible")
                 .text(d.properties.N03_004 + "：" + d.properties.patient + "人");
         })
         .on("mousemove", function (d) {
-            return $tooltip
-                .style("top", (event.pageY - 20) + "px")
+            return this.style("top", (event.pageY - 20) + "px")
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function (d) {
-            return $tooltip
-                .style("visibility", "hidden");
+            return this.style("visibility", "hidden");
         });
     });
     });
