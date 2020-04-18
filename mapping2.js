@@ -16,7 +16,7 @@ for(var i = 0;i <= json.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
 if(data.city[j].code == json.features[i].properties.N03_007){
     json.features[i].properties.proportion_color = "rgb(" + data.city[j].color[1][0] + "," + data.city[j].color[1][1] + "," + data.city[j].color[1][2] +")"
-    json.features[i].properties.patient = data.city[j].patient
+    json.features[i].properties.proportion = data.city[j].proportion
 }}
 }
 	    var projection = d3.geoMercator()
@@ -37,7 +37,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	    .attr('stroke', "rgb(127,127,127)")
 	     .on("mouseover", function (d) {
                 var selection = d3.select( "#tooltip" )
-		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient )
+		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.proportion )
                 .style("visibility", "visible")
         })
         .on("mousemove", function (d) {
