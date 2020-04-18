@@ -35,28 +35,21 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	return d.properties.patient_color
 	})
 	    .attr("stroke-width",2)
-	    .attr('stroke', "rgb(127,127,127)");
-        g.selectAll('text')
-            .data(json.features)
-            .enter()
-	    .append('text')
-	    .attr('text-anchor', "middle")
-	    .attr('x', function(d) {
-                var p = d3.geoCentroid(d);
-var q = projection((p[0] + "," + p[1]).split(","));
-                return q[0];
-            })
-	    .attr('y', function(d) {
-                var p = d3.geoCentroid(d);
-var q = projection((p[0] + "," + p[1]).split(","));
-                return q[1];
-            })
-            .text(function(d) {
-                var p = d.properties;
-                return p.N03_004;
-            })
-	    .style("fill", "black")
-	    .attr("font-size","7pt");
+	    .attr('stroke', "rgb(127,127,127)")
+	     .on("mouseover", function (d) {
+            return $tooltip
+                .style("visibility", "visible")
+                .text(d.properties.N03_004 + "：" + d.properties.patient + "人");
+        })
+        .on("mousemove", function (d) {
+            return $tooltip
+                .style("top", (event.pageY - 20) + "px")
+                .style("left", (event.pageX + 10) + "px");
+        })
+        .on("mouseout", function (d) {
+            return $tooltip
+                .style("visibility", "hidden");
+        });
     });
     });
 });
