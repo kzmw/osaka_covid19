@@ -36,19 +36,20 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	})
 	    .attr("stroke-width",2)
 	    .attr('stroke', "rgb(127,127,127)")
-	     .on("mouseover", function (d) {
-            return $tooltip
+	     .on("mouseover", function () {
+                var selection = d3.select( "#tooltip" )
+		 selection.html( "value", d.properties.N03_004 )
                 .style("visibility", "visible")
-                .text(d.properties.name_local + "の出荷量：約" + d.properties.value + "トン");
         })
         .on("mousemove", function (d) {
-            return $tooltip
+                var selection = d3.select( "#tooltip" )
                 .style("top", (event.pageY - 20) + "px")
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function (d) {
-            return $tooltip
-                .style("visibility", "hidden");
+                var selection = d3.select( "#tooltip" )
+		 selection.html( "value", "" )
+                .style("visibility", "hidden")
         });
     });
     });
