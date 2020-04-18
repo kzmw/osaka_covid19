@@ -1,7 +1,7 @@
 $.getJSON("/data.json", (data) => {
  $("#number_text").text(data.sum);
- $("#citizen").text("うち大阪府民" + data.citizen + "人");
- $("#change").text("前日比" + data.change + "人");
+ $("#citizen").text("うち大阪府民：" + data.citizen + "人");
+ $("#change").text("前日比：" + data.change + "人");
  $("#men").text("男性：" + data.sex[0] + "%");
  $("#women").text("女性：" + data.sex[1] + "%");
  $("#preschool").text("未就学児：" + data.age[0] + "人");
@@ -38,7 +38,7 @@ $(
 function(){
 var table_data = "";
 	for (var i=0;i<=(data.city.length -1);i++){
-	table_data += "<tr><td>" + data.city[i].name + "</td><td>" + data.city[i].population + "</td><td>" + data.city[i].patient + "</td><td>" + data.city[i].change + "</td><td>" + data.city[i].proportion + "</td></tr>";
+	table_data += "<tr><td>" + data.city[i].name + "</td><td>" + Number(data.city[i].population).toLocaleString() + "</td><td>" + Number(data.city[i].partient).toLocaleString() + "</td><td>" + Number(data.city[i].change).toLocaleString() + "</td><td>" + data.city[i].proportion + "</td></tr>";
 	}
 table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>" + table_data;
 $("#covid_table").html(table_data)
