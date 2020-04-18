@@ -38,7 +38,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	    .attr('stroke', "rgb(127,127,127)")
 	     .on("mouseover", function (d) {
                 var selection = d3.select( "#tooltip" )
-		 selection.html( "value", d.properties.N03_004 )
+		 selection.html( "value", d.properties.N03_004 + "：感染者なんとか人" )
                 .style("visibility", "visible")
         })
         .on("mousemove", function (d) {
