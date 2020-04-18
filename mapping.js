@@ -5,10 +5,11 @@
         document.addEventListener('DOMContentLoaded', fn);
     }
 })(function() {
-    var WIDTH = 400, HEIGHT = 550;
     var svg = d3.selectAll("#map")
-        .attr("width", WIDTH)
-        .attr("height", HEIGHT);
+        .attr("width", "100%")
+        .attr("height", "auto")
+        .attr("max-width", "500px")
+        .attr("min-width", "250px");
     var g = svg.append("g");
     d3.json('/osaka.geojson').then(function(json) {
     d3.json('/data.json').then(function(data){
@@ -37,7 +38,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	    .attr('stroke', "rgb(127,127,127)")
 	     .on("mouseover", function (d) {
                 var selection = d3.select( "#tooltip" )
-		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient )
+		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient + d3.geoCentroid(json) )
                 .style("visibility", "visible")
         })
         .on("mousemove", function (d) {
