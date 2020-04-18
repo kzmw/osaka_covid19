@@ -2,8 +2,8 @@ $.getJSON("/data.json", (data) => {
  $("#number_text").text(data.sum);
  $("#citizen").text("うち大阪府民：" + data.citizen + "人");
 if(data.change > 0){$("#change").text("前日比：＋" + data.change + "人")}
-else if(data.change == 0)){$("#change").text("前日比：±" + data.change + "人")}
-else if(data.change  0)){$("#change").text("前日比：－" + data.change + "人")}
+else if(data.change == 0){$("#change").text("前日比：±" + data.change + "人")}
+else if(data.change < 0){$("#change").text("前日比：－" + data.change + "人")}
  $("#men").text("男性：" + data.sex[0] + "%");
  $("#women").text("女性：" + data.sex[1] + "%");
  $("#preschool").text("未就学児：" + data.age[0] + "人");
