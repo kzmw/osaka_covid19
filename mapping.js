@@ -5,7 +5,7 @@
         document.addEventListener('DOMContentLoaded', fn);
     }
 })(function() {
-    var WIDTH = 400, HEIGHT = 500;
+    var WIDTH = 350, HEIGHT = 400;
     var svg = d3.selectAll("#map")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
@@ -21,7 +21,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 }}
 }
 	    var projection = d3.geoMercator()
-            .scale(30000)
+            .scale(27000)
             .center(d3.geoCentroid(json))
             .translate([WIDTH / 2, HEIGHT / 2]);
         var path = d3.geoPath()
