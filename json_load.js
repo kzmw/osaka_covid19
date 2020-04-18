@@ -44,8 +44,8 @@ var table_data = "";
 	}
 table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合</th></tr>" + table_data;
 $("#covid_table").html(table_data)
-});
-$(function change_plus(change){
+}
+function change_plus(change){
 if(change > 0){
 return "＋" + Number(change).toLocaleString()
 }
@@ -55,5 +55,6 @@ return "±" + Number(change).toLocaleString()
 else if(change < 0){
 return "－" + Number(change).toLocaleString()
 }
-});
+}
+);
 });
