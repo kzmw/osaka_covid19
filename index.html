@@ -42,21 +42,24 @@
 <table id="covid_table">
 </table>
 <div class="tabs">
-  <input id="patient" type="radio" name="tab_item" checked>
-  <label class="tab_item" for="patient">感染者数マップ</label>
-  <input id="proportion" type="radio" name="tab_item">
-  <label class="tab_item" for="proportion">感染者の割合マップ</label>
-  <div class="tab_content" id="patient_content">
-    <div class="tab_content_description">
-      <svg id="map"></svg><br>
+    <input id="all" type="radio" name="tab_item" checked>
+    <label class="tab_item" for="all">総合</label>
+    <input id="programming" type="radio" name="tab_item">
+    <label class="tab_item" for="programming">プログラミング</label>
+    <input id="design" type="radio" name="tab_item">
+    <label class="tab_item" for="design">デザイン</label>
+    <div class="tab_content" id="all_content">
+        総合の内容がここに入ります
     </div>
-  </div>
-  <div class="tab_content" id="proportion_content">
-    <div class="tab_content_description">
-      <svg id="map2"></svg><br>
-    </div>
-  </div>
+    <div class="tab_content" id="programming_content">
+        プログラミングの内容がここに入ります
 </div>
+    <div class="tab_content" id="design_content">
+        デザインの内容がここに入ります
+</div>
+      <svg id="map"></svg><br>
+      <svg id="map2"></svg><br>
+
 <span id="tooltip" style="visibility: hidden; top: 238px; left: 426px;"></span>
 <a href="http://kzmw.github.io/index.html">
   <img src="https://ga-beacon.appspot.com/UA-163404333-1/kzmw.github.io/index.html?flat-gif"/>
