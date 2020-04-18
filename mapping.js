@@ -5,11 +5,12 @@
         document.addEventListener('DOMContentLoaded', fn);
     }
 })(function() {
+	var WIDTH = 500;
+	var HEIGHT = 700;
     var svg = d3.selectAll("#map")
-        .attr("width", "100%")
-        .attr("height", "auto")
-        .attr("max-width", "500px")
-        .attr("min-width", "250px");
+        .attr("width", WIDTH)
+        .attr("height", HEIGHT);
+
     var g = svg.append("g");
     d3.json('/osaka.geojson').then(function(json) {
     d3.json('/data.json').then(function(data){
@@ -22,8 +23,8 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 }
 	    var projection = d3.geoMercator()
             .scale(30000)
-            .center(d3.geoCentroid(json))
-            .translate([250, 350]);
+            .center([135,35])
+            .translate([WIDTH, HEIGHT]);
         var path = d3.geoPath()
             .projection(projection);
         g.selectAll('path')
@@ -38,7 +39,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	    .attr('stroke', "rgb(127,127,127)")
 	     .on("mouseover", function (d) {
                 var selection = d3.select( "#tooltip" )
-		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient + d3.geoCentroid(json) )
+		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient )
                 .style("visibility", "visible")
         })
         .on("mousemove", function (d) {
