@@ -350,9 +350,9 @@ input[name="tab_item"] {
 
 
 /*選択されているタブのコンテンツのみを表示*/
-#patient:checked ~ #patient_content,
-#proportion:checked ~ #proportion_content,
- {
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
   display: block;
 }
 
