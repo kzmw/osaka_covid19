@@ -37,15 +37,18 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	    .attr("stroke-width",2)
 	    .attr('stroke', "rgb(127,127,127)")
 	     .on("mouseover", function (d) {
-            return  this.style("visibility", "visible")
-                .text(d.properties.N03_004 + "：" + d.properties.patient + "人");
+            return $tooltip
+                .style("visibility", "visible")
+                .text(d.properties.name_local + "の出荷量：約" + d.properties.value + "トン");
         })
         .on("mousemove", function (d) {
-            return this.style("top", (event.pageY - 20) + "px")
+            return $tooltip
+                .style("top", (event.pageY - 20) + "px")
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function (d) {
-            return this.style("visibility", "hidden");
+            return $tooltip
+                .style("visibility", "hidden");
         });
     });
     });
