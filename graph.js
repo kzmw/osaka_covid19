@@ -1,5 +1,5 @@
 var ctx = document.getElementById("sex");
-  var myPieChart = new Chart(ctx, {
+  var sex = new Chart(ctx, {
     type: 'pie',
     data: {
       labels: ["A型", "O型", "B型", "AB型"],
