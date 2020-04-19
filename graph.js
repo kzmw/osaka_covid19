@@ -1,22 +1,13 @@
-var ctx = document.getElementById("sex");
-  var sex = new Chart(ctx, {
-    type: 'pie',
-    data: {
-      labels: ["A型", "O型", "B型", "AB型"],
-      datasets: [{
-          backgroundColor: [
-              "#BB5179",
-              "#FAFF67",
-              "#58A27C",
-              "#3C00FF"
-          ],
-          data: [38, 31, 21, 10]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: '血液型 割合'
-      }
-    }
-  });
+  // データ --- (*1)
+  const data = {
+    labels: ['A', 'B', 'C', 'D', 'E'],
+    datasets: [{
+      label: '国語のテスト',
+      data: [78, 64, 35, 90, 83]
+    }]}
+  // グラフを描画 --- (*2)
+  const ctx = document.getElementById('sex')
+  const chart_cv = new Chart(ctx, {
+    type: 'bar', // グラフの種類
+    data: data, // データ
+    options: {}}) // オプション
