@@ -4,20 +4,7 @@ $.getJSON("/data.json", (data) => {
 if(data.change > 0){$("#change").text("前日比：＋" + data.change + "人")}
 else if(data.change == 0){$("#change").text("前日比：±" + data.change + "人")}
 else if(data.change < 0){$("#change").text("前日比：－" + data.change + "人")}
- $("#men").text("男性：" + data.sex[0] + "%");
- $("#women").text("女性：" + data.sex[1] + "%");
- $("#preschool").text("未就学児：" + data.age[0] + "人");
- $("#school").text("就学児：" + data.age[1] + "人");
- $("#teens").text("10代：" + data.age[2] + "人");
- $("#twenties").text("20代：" + data.age[3] + "人");
- $("#thirties").text("30代：" + data.age[4] + "人");
- $("#fourties").text("40代：" + data.age[5] + "人");
- $("#fifties").text("50代：" + data.age[6] + "人");
- $("#sixties").text("60代：" + data.age[7] + "人");
- $("#seventies").text("70代：" + data.age[8] + "人");
- $("#eighties").text("80代：" + data.age[9] + "人");
- $("#nineties").text("90代：" + data.age[10] + "人");
- $("#over").text("100代以上：" + data.age[11] + "人");
+
  $("#fever").text("発熱：" + data.symptom[0] + "人");
  $("#cough").text("咳：" + data.symptom[1] + "人");
  $("#sputum").text("痰：" + data.symptom[2] + "人");
