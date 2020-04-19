@@ -361,3 +361,16 @@ input[name="tab_item"] {
   background-color: #5ab4bd;
   color: #fff;
 }
+
+.two_column {
+  width: 100%;
+  overflow: hidden;
+}
+.two_left {
+  width: 50%;
+  float: left;
+}
+.two_right {
+  width: 50%;
+  float: right;
+}
