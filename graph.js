@@ -27,19 +27,9 @@ var age = document.getElementById("age");
     data: {
       labels: ["未就学児", "就学児", "10代", "20代", "30代", "40代", "50代", "60代", "70代", "80代", "90代", "100代以上"],
       datasets: [{
+          label: '人数',
           backgroundColor: [
-              "#BB5179",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67",
-              "#FAFF67"
+              "#BB5179"
           ],
           data: [data.age[0], data.age[1],data.age[2],data.age[3],data.age[4],data.age[5],data.age[6],data.age[7],data.age[8],data.age[9],data.age[10],data.age[11]]
       }]
@@ -53,7 +43,7 @@ var age = document.getElementById("age");
     },
       title: {
         display: true,
-        text: '性別'
+        text: '年齢'
       }
     }
   });
