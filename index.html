@@ -8,9 +8,11 @@
   <title>大阪府新型コロナウイルス感染者情報</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
 <script src="/mapping.js"></script>
 <script src="/mapping2.js"></script>
 <script src="/json_load.js"></script>
+<script src="/graph.js"></script>
 </head>
 <body>
 <header>
@@ -36,8 +38,10 @@
 <span class="number_title">大阪府で確認された感染者数</span><span id="number_text"></span><span class="number_title">人</span>
 <p id="citizen"><p>
 <p id="change"><p>
-	  <div class="kakomi-box11"><span class="title-box11">男女比</span><p id="men"></p><p id="women"></p></div>
-<div class="kakomi-box11"><span class="title-box11">年齢比</span><p id="preschool"></p><p id="school"></p><p id="teens"></p><p id="twenties"></p><p id="thirties"></p><p id="fourties"></p><p id="fifties"></p><p id="sixties"></p><p id="seventies"></p><p id="eighties"></p><p id="nineties"></p><p id="over"></p></div>
+<div class="two_column">
+<div class="two_left"><canvas id="sex"></canvas></div>
+<div class="two_right"><canvas id="age"></canvas></div>
+</div>
 <div class="kakomi-box11"><span class="title-box11">症状例(346例目まで)</span><p id="fever"></p><p id="cough"></p><p id="sputum"></p><p id="nose"></p><p id="close_nose"></p><p id="sneeze"></p><p id="head"></p><p id="chest"></p><p id="pharynx"></p><p id="joint"></p><p id="diarrhea"></p><p id="breath"></p><p id="malaise"></p><p id="eye"></p><p id="taste"></p><p id="smell"></p><p id="pneumonia"></p><p id="asymptomatic"></p>
 </div>
 <table id="covid_table">
