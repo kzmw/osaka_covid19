@@ -41,7 +41,7 @@ var age = document.getElementById("age");
               "#FAFF67",
               "#FAFF67"
           ],
-          data: [8, 6,33,255,202,209,172,102,108,59,8,1]
+          data: [data.age[0], data.age[1],data.age[2],data.age[3],data.age[4],data.age[5],data.age[6],data.age[7],data.age[8],data.age[9],data.age[10],data.age[11]]
       }]
     },
     options: {
