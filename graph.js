@@ -1,3 +1,4 @@
+$.getJSON("/data.json", (data) => {
 window.onload = function() {
 var sex = document.getElementById("sex");
   var sex_graph = new Chart(sex, {
@@ -6,10 +7,10 @@ var sex = document.getElementById("sex");
       labels: ["男性", "女性"],
       datasets: [{
           backgroundColor: [
-              "#BB5179",
-              "#FAFF67"
+              "#1e90ff",
+              "#ff69b4"
           ],
-          data: [52, 48]
+          data: [data.sex[0], data.sex[1]]
       }]
     },
     options: {
@@ -50,4 +51,4 @@ var age = document.getElementById("age");
       }
     }
   });
-  }
+  }}
