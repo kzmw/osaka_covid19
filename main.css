@@ -362,6 +362,7 @@ input[name="tab_item"] {
   color: #fff;
 }
 
+@media screen and (min-width:530px) {
 .two_column {
   width: 100%;
   overflow: hidden;
@@ -373,4 +374,5 @@ input[name="tab_item"] {
 .two_right {
   width: 50%;
   float: right;
+}
 }
