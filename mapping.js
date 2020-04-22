@@ -8,6 +8,8 @@
 	var WIDTH = 500;
 	var HEIGHT = 700;
     var svg = d3.selectAll("#map")
+    	.attr("width", WIDTH)
+        .attr("height", HEIGHT);
     var g = svg.append("g");
     d3.json('/osaka.geojson').then(function(json) {
     d3.json('/data.json').then(function(data){
