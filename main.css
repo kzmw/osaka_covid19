@@ -308,6 +308,7 @@ display:block;
 
 /*タブ切り替え全体のスタイル*/
 .tabs {
+  box-sizing: content-box;
   margin-top: 50px;
   padding-bottom: 40px;
   background-color: #fff;
@@ -317,6 +318,7 @@ display:block;
 @media screen and (max-width:530px) {
 /*タブ切り替え全体のスタイル*/
 .tabs {
+  box-sizing: content-box;
   margin-top: 50px;
   padding-bottom: 40px;
   background-color: #fff;
