@@ -5,7 +5,13 @@
         document.addEventListener('DOMContentLoaded', fn);
     }
 })(function() {
-    var WIDTH = 500, HEIGHT = 700;
+    if (window.innerWidth >= 530){
+	var WIDTH = 500;
+	var HEIGHT = 700;}
+	else{
+	var WIDTH = window.innerWidth;
+	var HEIGHT = (window.innerWidth * 1.4);
+	}
     var svg = d3.selectAll("#map2")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
