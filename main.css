@@ -306,7 +306,14 @@ margin:0px;
 display:block;
 }
 
-
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 530px;
+	margin: 0 auto;}
 @media screen and (max-width:530px) {
 /*タブ切り替え全体のスタイル*/
 .tabs {
@@ -316,15 +323,6 @@ display:block;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
 	margin: 0 auto;}}
-/*タブ切り替え全体のスタイル*/
-.tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 530px;
-	margin: 0 auto;}
-
 /*タブのスタイル*/
 .tab_item {
   width: calc(100%/2);
