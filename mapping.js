@@ -46,7 +46,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
         })
         .on("mouseout", function (d) {
                 var selection = d3.select( "#tooltip" )
-		 selection.html("" )
+		 selection.html("")
                 .style("visibility", "hidden")
         });
     });
