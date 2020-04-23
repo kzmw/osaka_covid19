@@ -313,8 +313,20 @@ display:block;
   padding-bottom: 40px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;}
+
+@media screen and (max-width:1000px){
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  box-sizing: content-box;
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 530px;
-	margin: 0 auto;}
+	margin: 0 auto;}}
 @media screen and (max-width:530px) {
 /*タブ切り替え全体のスタイル*/
 .tabs {
@@ -325,6 +337,7 @@ display:block;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
 	margin: 0 auto;}}
+
 /*タブのスタイル*/
 .tab_item {
   width: calc(100%/2);
@@ -354,12 +367,41 @@ input[name="tab_item"] {
   clear: both;
   overflow: hidden;
 }
+@media screen and (max-width:1000px){
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/2);
+  height: 50px;
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #5ab4bd;
+  color: #fff;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 10px;
+  clear: both;
+  overflow: hidden;
+}
 
 
 /*選択されているタブのコンテンツのみを表示*/
 #all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+#programming:checked ~ #programming_content {
   display: block;
 }
 
@@ -368,6 +410,8 @@ input[name="tab_item"] {
   background-color: #5ab4bd;
   color: #fff;
 }
+}
+
 
 @media screen and (min-width:530px) {
 .two_column {
