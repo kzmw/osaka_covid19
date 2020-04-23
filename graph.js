@@ -28,7 +28,7 @@ var age = document.getElementById("age");
   var age_chart = new Chart(age, {
     type: 'horizontalBar',
     data: {
-      labels: ["未就学児", "就学児", "10代", "20代", "30代", "40代", "50代", "60代", "70代", "80代", "90代", "100代以上"],
+      labels: ["未就学児", "就学児", "10代", "20代", "30代", "40代", "50代", "60代", "70代", "80代", "90代", "100歳以上"],
       datasets: [{
           label: '人数',
 backgroundColor: "#40e0d0",
