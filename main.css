@@ -380,10 +380,12 @@ input[name="tab_item"] {
 
 @media screen and (min-width:1000px){
 #all_content {
+  display: block;
   width: 50%;
   float: left;
 }
 #programming_content {
+  display: block;
   width: 50%;
   float: right;
 	}}
