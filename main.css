@@ -341,9 +341,6 @@ display:block;
   font-weight: bold;
   transition: all 0.2s ease;
 }
-.tab_item:hover {
-  opacity: 0.75;
-}
 
 /*ラジオボタンを全て消す*/
 input[name="tab_item"] {
