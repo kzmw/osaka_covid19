@@ -381,11 +381,13 @@ input[name="tab_item"] {
   display: block;
   width: 50%;
   float: left;
+  margin:  0 auto;
 }
 #programming_content {
   display: block;
   width: 50%;
   float: right;
+  margin:  0 auto;
 	}}
 
 @media screen and (max-width:1000px){
