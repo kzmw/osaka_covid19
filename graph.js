@@ -1,7 +1,7 @@
 $.getJSON("/data.json", (data) => {
 Chart.defaults.global. defaultFontFamily = "'Noto Sans JP', sans-serif";
 Chart.defaults.global.defaultFontColor = 'Black';
-Chart.defaults.global.defaultColor = rgb(64,224,208)
+Chart.defaults.global.defaultColor = "#40e0d0";
 
 var sex = document.getElementById("sex");
   var sex_graph = new Chart(sex, {
