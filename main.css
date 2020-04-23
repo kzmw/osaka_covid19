@@ -268,26 +268,6 @@ vertical-align: bottom;
 }
 }
 
-/* タイトル付　枠　1　*/
-.kakomi-box11 {
- position: relative;
- margin: 2em;
- padding: 1.2em;
- color: #000; /* 文章色 */
- background-color: #fff; /* 背景色 */
- border: 3px solid #000; /* 枠線の太さ・色 */
- width: 200px;
-}
-.title-box11 {
- position: absolute;
- padding: 0.5em;
- left: 20px;
- top: -25px;
- font-weight: bold;
- background-color: #fff; /* タイトル背景色 */
- color: #000; /* タイトル文字色 */
-}
-
 p{
 margin:0px;
 }
@@ -343,14 +323,13 @@ display:block;
   width: calc(100%/2);
   height: 50px;
   border-bottom: 3px solid #5ab4bd;
-  background-color: #d9d9d9;
+  background-color: #5ab4bd;
   line-height: 50px;
   font-size: 16px;
   text-align: center;
-  color: #565656;
+  color: #fff;
   display: block;
   float: left;
-  text-align: center;
   font-weight: bold;
   transition: all 0.2s ease;
 }
@@ -367,14 +346,15 @@ input[name="tab_item"] {
   clear: both;
   overflow: hidden;
 }
+
 @media screen and (max-width:1000px){
 /*タブのスタイル*/
 .tab_item {
   width: calc(100%/2);
   height: 50px;
   border-bottom: 3px solid #5ab4bd;
-  background-color: #5ab4bd;
-  color: #fff;
+  background-color: #d9d9d9;
+  color: #565656;
   line-height: 50px;
   font-size: 16px;
   text-align: center;
