@@ -376,9 +376,19 @@ input[name="tab_item"] {
   padding: 10px;
   clear: both;
   overflow: hidden;
+	}}
+
+@media screen and (min-width:1000px){
+#all_content {
+  width: 50%;
+  float: left;
 }
+#programming_content {
+  width: 50%;
+  float: right;
+	}}
 
-
+@media screen and (max-width:1000px){
 /*選択されているタブのコンテンツのみを表示*/
 #all:checked ~ #all_content,
 #programming:checked ~ #programming_content {
