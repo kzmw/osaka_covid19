@@ -1,6 +1,9 @@
 $.getJSON("/data.json", (data) => {
 window.onload = function() {
 Chart.defaults.global. defaultFontFamily = "'Noto Sans JP', sans-serif";
+
+Chart.defaults.global.defaultFontColor = 'Black';
+
 var sex = document.getElementById("sex");
   var sex_graph = new Chart(sex, {
     type: 'pie',
