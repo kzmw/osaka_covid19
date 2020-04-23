@@ -7,10 +7,10 @@
 })(function() {
 	if (window.innerWidth >= 530){
 	var WIDTH = 500;
-	var HEIGHT = 700;}
+	var HEIGHT = 600;}
 	else{
 	var WIDTH = window.innerWidth;
-	var HEIGHT = (window.innerWidth * 1.4);
+	var HEIGHT = (window.innerWidth * 1.2);
 	}
     var svg = d3.selectAll("#map")
     	.attr("width", WIDTH)
