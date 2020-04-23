@@ -1,5 +1,4 @@
 $.getJSON("/data.json", (data) => {
-window.onload = function() {
 Chart.defaults.global. defaultFontFamily = "'Noto Sans JP', sans-serif";
 
 Chart.defaults.global.defaultFontColor = 'Black';
@@ -51,4 +50,4 @@ var age = document.getElementById("age");
       }
     }
   });
-  }})
+  })
