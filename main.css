@@ -421,12 +421,23 @@ input[name="tab_item"] {
 }
 
 .legend{
+font-size:16pt;
+display: inline-block;
+}
+
+.legend_square{
+width:40px;
+height:20px;
+border: 2px solid #7F7F7F;
+	}
+@media screen and (max-width:530px) {
+.legend{
 font-size:3.8vw;
 display: inline-block;
 }
 
 .legend_square{
-width:3.8vw;
+width:7.2vw;
 height:3.8vw;
 border: 2px solid #7F7F7F;
-}
+	}}
