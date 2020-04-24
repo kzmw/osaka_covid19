@@ -419,3 +419,14 @@ input[name="tab_item"] {
   float: right;
 }
 }
+
+.legend{
+font-size:3.8vw;
+display: inline-block;
+}
+
+.legend_square{
+width:3.8vw;
+height:3.8vw;
+border: 2px solid #7F7F7F;
+}
