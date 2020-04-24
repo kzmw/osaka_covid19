@@ -15,9 +15,6 @@
     var svg = d3.selectAll("#map")
     	.attr("width", WIDTH)
         .attr("height", HEIGHT);
-    var colorScale = d3.scale.ordinal()
-	.domain([0, 1, 11, 21, 31])
-	.range([ 'rgb(217,217,217)', 'rgb(0,204,153)', 'rgb(255,255,79)', 'rgb(246,136,46)', 'rgb(255,47,47)']);
     var g = svg.append("g");
     d3.json('/osaka.geojson').then(function(json) {
     d3.json('/data.json').then(function(data){
@@ -40,7 +37,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
             .append('path')
             .attr('d', path)
             .attr('fill', function(d){
-	return colorScale(+d.properties.patient)
+	return d.properties.patient_color
 	})
 	    .attr("stroke-width",2)
 	    .attr('stroke', "rgb(127,127,127)")
