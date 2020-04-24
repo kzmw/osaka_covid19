@@ -423,6 +423,7 @@ input[name="tab_item"] {
 .legend{
 width:100%;
 font-size:16px;
+display: inline-block;
 }
 
 .legend_square{
@@ -435,6 +436,7 @@ border: 2px solid #7F7F7F;
 .legend{
 width:100%;
 font-size:3.8vw;
+display: inline-block;
 }
 
 .legend_square{
