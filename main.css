@@ -421,19 +421,20 @@ input[name="tab_item"] {
 }
 
 .legend{
-width:Calc(100%/4.9);
+width:100%;
 font-size:16px;
 display: inline-block;
 }
 
 .legend_square{
+display: inline-block;
 width:40px;
 height:20px;
 border: 2px solid #7F7F7F;
 	}
 @media screen and (max-width:530px) {
 .legend{
-width:Calc(100%/3);
+width:100%;
 font-size:3.8vw;
 display: inline-block;
 }
@@ -442,4 +443,5 @@ display: inline-block;
 width:7.2vw;
 height:3.8vw;
 border: 2px solid #7F7F7F;
-	}}
+display: inline-block;
+}}
