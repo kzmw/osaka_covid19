@@ -70,17 +70,7 @@ backgroundColor: "#40e0d0",
       title: {
         display: true,
         text: '年齢別感染者数'
-      },
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data){
-                        return data.labels[tooltipItem.index]
-                        + ":"
-                        + (data.datasets[0].data[tooltipItem.index]
-                        + "%"
-                    }
-                }
-            }
+      }
     }
   });
 });
