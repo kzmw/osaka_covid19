@@ -44,11 +44,11 @@
 <table id="covid_table">
 </table>
 <div class="tabs">
-    <input id="all" type="radio" name="tab_item" checked>
-    <label class="tab_item" for="all">感染者数マップ</label>
-    <input id="programming" type="radio" name="tab_item">
-    <label class="tab_item" for="programming">感染者の割合マップ</label>
-    <div class="tab_content" id="all_content">
+    <input id="patient" type="radio" name="tab_item" checked>
+    <label class="tab_item" for="patient">感染者数マップ</label>
+    <input id="proportion" type="radio" name="tab_item">
+    <label class="tab_item" for="proportion">感染者の割合マップ</label>
+    <div class="tab_content" id="patient_content">
 	    <div class="legend"><div style="background-color:#FF2F2F" class="legend_square"></div>31人～</div>
 	    <div class="legend"><div style="background-color:#F6882E" class="legend_square"></div>21人～30人</div>
 	    <div class="legend"><div style="background-color:#FFFF4F" class="legend_square"></div>11人～20人</div>
@@ -56,7 +56,7 @@
 	    <div class="legend"><div style="background-color:#D9D9D9" class="legend_square"></div>未確認</div><br>
         <svg id="map"></svg>
     </div>
-    <div class="tab_content" id="programming_content">
+    <div class="tab_content" id="proportion_content">
 	    <div class="legend"><div style="background-color:#FF2F2F" class="legend_square"></div>0.015%～</div>
 	    <div class="legend"><div style="background-color:#F6882E" class="legend_square"></div>0.010%～0.015%</div>
 	    <div class="legend"><div style="background-color:#FFFF4F" class="legend_square"></div>0.006%～0.010%</div>
