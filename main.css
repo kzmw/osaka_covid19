@@ -243,7 +243,7 @@ vertical-align: bottom;
 	white-space: nowrap;
 }
 p#update{
-color:#d9d9d9;
+color:#000;
 }
 @media screen and (max-width:530px) {
 	span#number_text{
