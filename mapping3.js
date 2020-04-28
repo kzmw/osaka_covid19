@@ -26,7 +26,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 }}
 }
 	    var projection = d3.geoMercator()
-            .scale(25000)
+            .scale(27000)
             .center([135.505502953116,34.52418244723416])
             .translate([(WIDTH/2), (HEIGHT/2)]);
         var path = d3.geoPath()
