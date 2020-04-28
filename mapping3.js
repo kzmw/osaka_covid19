@@ -43,7 +43,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 	    .attr('stroke', "rgb(127,127,127)")
 	     .on("mouseover", function (d) {
                 var selection = d3.select( "#tooltip" )
-		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient + d3.geoCentroid(json))
+		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient)
                 .style("visibility", "visible")
         })
         .on("mousemove", function (d) {
