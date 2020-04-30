@@ -292,7 +292,6 @@ display:block;
 .tabs {
   box-sizing: content-box;
   margin-top: 50px;
-  padding-bottom: 40px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -305,7 +304,6 @@ display:block;
 .tabs {
   box-sizing: content-box;
   margin-top: 50px;
-  padding-bottom: 40px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 530px;
@@ -315,7 +313,6 @@ display:block;
 .tabs {
   box-sizing: content-box;
   margin-top: 50px;
-  padding-bottom: 10px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -345,6 +342,8 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
   overflow: hidden;
 }
 
