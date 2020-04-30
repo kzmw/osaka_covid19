@@ -448,11 +448,11 @@ border: 2px solid #7F7F7F;
 display: inline-block;
 }}
 
-.select input{
+.proportion_select input{
 display:none;
 }
 
-.select label{
+.proportion_select label{
 display:block;
 float:left;
 cursor:pointer;
@@ -461,17 +461,17 @@ background: #bdc3c7;
 color: #FFF;
 text-align:center;
 }
-.select label:first-of-type{
+.proportion_select label:first-of-type{
 border-radius:3px 0 0 3px;
 }
-.select label:last-of-type{
+.proportion_select label:last-of-type{
 border-radius:0 3px 3px 0;
 }
-.select input[type="radio"]:checked + .proportion_on{
+.proportion_select input[type="radio"]:checked + .proportion_on{
 background-color: #aib9id;
 color: #fff;
 }
-.select input[type="radio"]:checked + .proportion_off{
+.proportion_select input[type="radio"]:checked + .proportion_off{
 background-color: #e67168;
 color: #fff;
 }
