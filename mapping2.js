@@ -12,6 +12,11 @@
 	var WIDTH = window.innerWidth;
 	var HEIGHT = (window.innerWidth * 1.2);
 	}
+	if (window.innerWidth >= 500){
+	var scale = 36000;}
+	else{
+	var scale = window.innerWidth * 72;
+	}
     var svg = d3.selectAll("#map2")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
@@ -26,7 +31,7 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 }}
 }
 	    var projection = d3.geoMercator()
-            .scale(27000)
+            .scale(scale)
             .center([135.45,34.662])
             .translate([WIDTH / 2, HEIGHT / 2]);
         var path = d3.geoPath()
