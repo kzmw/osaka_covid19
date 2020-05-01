@@ -22,7 +22,7 @@ change = "－" + Number(change).toLocaleString()
 }
 if(patient > 0){
 proportion_per = Number(Math.round(data.city[i].population / data.city[i].patient)).toLocaleString() + "人に1人";
-proportion_percent = Math.floor(Math.round(data.city[i].patient / data.city[i].population * 100) * Math.pow(10,3)) / Math.pow(10,3) + "%";
+proportion_percent = Math.floor(data.city[i].patient / data.city[i].population * 100 * Math.pow(10,3)) / Math.pow(10,3) + "%";
 }
 else{
 proportion_per = "";
