@@ -450,6 +450,7 @@ display: inline-block;
 
 .proportion_select{
 width:22.8vw;
+max-width:96px;
 margin:0 auto;
 }
 .proportion_select input{
@@ -464,6 +465,7 @@ background: #d3d3d3;
 color: #FFF;
 text-align:center;
 width:11.0vw;
+max-width:48px;
 }
 .proportion_select label:first-of-type{
 border-radius:3px 0 0 3px;
