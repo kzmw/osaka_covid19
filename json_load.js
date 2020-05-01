@@ -23,7 +23,7 @@ change = "－" + Number(change).toLocaleString()
 	else{
 	table_data += "<tr><td>" + data.city[i].name + "</td><td style=\"text-align: right\">" + Number(data.city[i].population).toLocaleString() + "</td><td style=\"text-align: right\">" + Number(data.city[i].patient).toLocaleString() + "</td><td style=\"text-align: right\">" + change + "</td><td>" + data.city[i].proportion + "</td></tr>";
 	}}
-table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合<br><div class=\"proportion_select\"><input type=\"radio\" name=\"proportion\" id=\"on\" value=\"人\" checked=\"\"><label for=\"on\" class=\"proportion_on\">人</label><input type=\"radio\" id=\"off\" name=\"proportion\" value=\"％\"><label for=\"off\" class=\"proportion_off\">％</label></div></th></tr>" + table_data;
+table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合<br><div class=\"proportion_select\"><input type=\"radio\" name=\"proportion\" id=\"person\" value=\"人\" checked=\"\"><label for=\"person\" class=\"proportion_person\">人</label><input type=\"radio\" id=\"percent\" name=\"proportion\" value=\"％\"><label for=\"percent\" class=\"proportion_percent\">％</label></div></th></tr>" + table_data;
 $("#covid_table").html(table_data)
 });
 Chart.defaults.global. defaultFontFamily = "'Noto Sans JP', sans-serif";
