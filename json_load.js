@@ -10,6 +10,7 @@ var proportion_per = "";
 var proportion_percent = "";
 for (var i=0;i<=(data.city.length -1);i++){
 var change = data.city[i].change;
+var patient = data.city[i].patient;
 if(change > 0){
 change =  "＋" + Number(change).toLocaleString()
 }
