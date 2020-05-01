@@ -14,16 +14,16 @@
 <script>
 function person() {
 var covid_table = document.getElementById("covid_table")
-for (var i=2;i<=(covid_table.rows.length -1);i++){
-covid_table.rows[i].cells[4].style.visibility = "visible";
-covid_table.rows[i].cells[5].style.visibility = "collapse";
+for (var i=1;i<=(covid_table.rows.length -1);i++){
+covid_table.rows[i].cells[4].style.display = "table-cell";
+covid_table.rows[i].cells[5].style.display = "none";
 }
 };
 function percent(){
 var covid_table = document.getElementById("covid_table")
-for (var i=2;i<=(covid_table.rows.length -1);i++){
-covid_table.rows[i].cells[4].style.visibility = "collapse";
-covid_table.rows[i].cells[5].style.visibility = "visible";
+for (var i=1;i<=(covid_table.rows.length -1);i++){
+covid_table.rows[i].cells[4].style.display = "none";
+covid_table.rows[i].cells[5].style.display = "table-cell";
 }
 };
 </script>
