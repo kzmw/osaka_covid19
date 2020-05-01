@@ -307,7 +307,8 @@ display:block;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 530px;
-	margin: 0 auto;}}
+	margin: 0 auto;
+	margin-top: 10px;}}
 @media screen and (max-width:530px) {
 /*タブ切り替え全体のスタイル*/
 .tabs {
@@ -316,21 +317,22 @@ display:block;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-	margin: 0 auto;}}
+  margin: 0 auto;
+  margin-top: 10px;
+  }}
 
 /*タブのスタイル*/
 .tab_item {
   width: calc(100%/2);
   height: 50px;
   border-bottom: 3px solid #595959;
-  background-color: #595959;
+  background-color: #d9d9d9;
   line-height: 50px;
+  color: #595959;
   font-size: 16px;
   text-align: center;
-  color: #fff;
   display: block;
   float: left;
-  margin-top: 10px;
   font-weight: bold;
   transition: all 0.2s ease;
 }
@@ -353,13 +355,12 @@ input[name="tab_item"] {
 .tab_item {
   width: calc(100%/2);
   height: 50px;
-  border-bottom: 3px solid #5ab4bd;
+  border-bottom: 3px solid #595959;
   background-color: #d9d9d9;
-  color: #565656;
+  color: #595959;
   line-height: 50px;
   font-size: 16px;
   text-align: center;
-  color: #565656;
   display: block;
   float: left;
   font-weight: bold;
@@ -402,7 +403,7 @@ input[name="tab_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .tabs input:checked + .tab_item {
-  background-color: #5ab4bd;
+  background-color: #595959;
   color: #fff;
 }
 }
