@@ -12,14 +12,14 @@
 <script src="/mapping.js"></script>
 <script src="/mapping2.js"></script>
 <script>
-document.getElementById("person").onclick = function() {
+function person() {
 var covid_table = document.getElementById("covid_table")
 for (var i=1;i<=(covid_table.rows.length -1);i++){
 covid_table.rows[i].cells[4].style.visibility = "visible"
 covid_table.rows[i].cells[5].style.visibility = "collapse"
 }
 };
-document.getElementById("percent").onclick = function() {
+function percent(){
 var covid_table = document.getElementById("covid_table")
 for (var i=1;i<=(covid_table.rows.length -1);i++){
 covid_table.rows[i].cells[4].style.visibility = "collapse"
