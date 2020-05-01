@@ -74,9 +74,4 @@ backgroundColor: "#40e0d0",
       }
     }
   });
-$(function person(){
-for (var i=1;i<=(data.city.length -1);i++){
-$("#covid_table").rows[i].cells[4].innerText = data.city[i].proportion
-}
-});
 });
