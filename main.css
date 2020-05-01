@@ -322,14 +322,15 @@ display:block;
 .tab_item {
   width: calc(100%/2);
   height: 50px;
-  border-bottom: 3px solid #5ab4bd;
-  background-color: #5ab4bd;
+  border-bottom: 3px solid #595959;
+  background-color: #595959;
   line-height: 50px;
   font-size: 16px;
   text-align: center;
   color: #fff;
   display: block;
   float: left;
+  margin-top: 10px;
   font-weight: bold;
   transition: all 0.2s ease;
 }
