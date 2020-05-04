@@ -299,7 +299,6 @@ display:block;
 .tabs {
   box-sizing: content-box;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 1040px;
   overflow: hidden;
@@ -313,7 +312,6 @@ display:block;
   box-sizing: content-box;
   margin-top: 50px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 530px;
 	margin: 0 auto;
 	margin-top: 10px;}}
@@ -323,7 +321,6 @@ display:block;
   box-sizing: content-box;
   margin-top: 50px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
   margin: 0 auto;
   margin-top: 10px;
