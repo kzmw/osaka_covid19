@@ -83,7 +83,12 @@ backgroundColor: "#40e0d0",
       title: {
         display: true,
         text: '年齢別感染者数'
-      }
+      },
+
+legend: {
+            display: false
+         }
+
     }
   });
 });
