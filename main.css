@@ -528,7 +528,7 @@ padding:10px;
 .signal_green_off{
 width:15vw;
 height:15vw;
-background:#2f4f4f;
+background:#808080;
 border-radius:100px;
 border:1.5vw solid #808080;
 margin:auto;
@@ -544,7 +544,7 @@ margin:auto;
 .signal_red_off{
 width:15vw;
 height:15vw;
-background:#8b0000;
+background:#808080;
 border-radius:100px;
 border:1.5vw solid #808080;
 margin:auto;
