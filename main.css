@@ -515,44 +515,44 @@ max-width:500px;
 }
 
 .signal_frame{
-width:Calc(53.3vw-20px);
+width:58.7vw;
 max-width:450px;
-height:Calc(21.3vw-20px);
-max-height:180px;
+height:18vw;
+max-height:120px;
 background:#d3d3d3;
-border-radius:10.65vw;
+border-radius:100vw;
 margin:0 auto;
 display:flex;
 padding:10px;
 }
 
 .signal_green_off{
-width:10vw;
+width:15vw;
 max-width:100px;
-height:10vw;
+height:15vw;
 max-height:100px;
 background:#2f4f4f;
 border-radius:100px;
-border:0.5vw solid #808080;
+border:1.5vw solid #808080;
 margin:auto;
 }
 .signal_yerrow_on{
-width:10vw;
+width:15vw;
 max-width:100px;
-height:10vw;
+height:15vw;
 max-height:100px;
 background:#ffd700;
 border-radius:100px;
-border:0.5vw solid #FFF;
+border:1.5vw solid #FFF;
 margin:auto;
 }
 .signal_red_off{
-width:10vw;
+width:15vw;
 max-width:100px;
-height:10vw;
+height:15vw;
 max-height:100px;
 background:#8b0000;
 border-radius:100px;
-border:0.5vw solid #808080;
+border:1.5vw solid #808080;
 margin:auto;
 }
