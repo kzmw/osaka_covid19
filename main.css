@@ -501,8 +501,7 @@ padding:5px;
 font-weight:700;
 color:#FFF;
 margin:0 auto;
-width:Calc(100%-20px);
-max-width:500px;
+width:max-content;
 text-align:center;
 }
 
@@ -510,8 +509,7 @@ text-align:center;
 border:3px solid #DE3E29;
 padding:5px;
 margin:0 auto;
-width:Calc(100%-20px);
-max-width:500px;
+width:max-content;
 }
 
 .signal_frame{
