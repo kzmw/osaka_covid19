@@ -493,3 +493,23 @@ color: #fff;
 transition: all 0.2s ease;
 
 }
+
+.sign_title{
+background:#DE3E29;
+border:2px solid #DE3E29;
+padding:5px;
+font-weight:700;
+color:#FFF;
+margin:0 auto;
+width:Calc(100%-20px);
+max-width:500px;
+text-align:center;
+}
+
+.sign_content{
+border:2px solid #DE3E29;
+padding:5px;
+margin:0 auto;
+width:Calc(100%-20px);
+max-width:500px;
+}
