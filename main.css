@@ -526,23 +526,22 @@ padding:10px;
 
 
 .signal_green_off{
-width:15vw;
-height:15vw;
+width:18vw;
+height:18vw;
 background:#808080;
 border-radius:100px;
 margin:auto;
 }
 .signal_yerrow_on{
-width:15vw;
-height:15vw;
+width:18vw;
+height:18vw;
 background:#ffd700;
 border-radius:100px;
-border:1.5vw solid #FFF;
 margin:auto;
 }
 .signal_red_off{
-width:15vw;
-height:15vw;
+width:18vw;
+height:18vw;
 background:#808080;
 border-radius:100px;
 margin:auto;
@@ -550,23 +549,22 @@ margin:auto;
 
 @media screen and (min-width:767px) {
 .signal_green_off{
-width:100px;
-height:100px;
+width:123px;
+height:123px;
 background:#808080;
 border-radius:100px;
 margin:auto;
 }
 .signal_yerrow_on{
-width:100px;
-height:100px;
+width:123px;
+height:123px;
 background:#ffd700;
 border-radius:100px;
-border:11.5px solid #FFF;
 margin:auto;
 }
 .signal_red_off{
-width:100px;
-height:100px;
+width:123px;
+height:123px;
 background:#808080;
 border-radius:100px;
 margin:auto;
