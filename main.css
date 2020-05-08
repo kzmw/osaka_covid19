@@ -544,7 +544,7 @@ max-height:100px;
 background:#ffd700;
 border-radius:100px;
 border:0.5vw solid #FFF;
-margin:1vw;
+margin:auto;
 }
 .signal_red_off{
 width:10vw;
@@ -554,5 +554,5 @@ max-height:100px;
 background:#8b0000;
 border-radius:100px;
 border:0.5vw solid #808080;
-margin:1vw;
+margin:auto;
 }
