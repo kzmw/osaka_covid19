@@ -530,7 +530,6 @@ width:15vw;
 height:15vw;
 background:#808080;
 border-radius:100px;
-border:1.5vw solid #808080;
 margin:auto;
 }
 .signal_yerrow_on{
@@ -546,7 +545,6 @@ width:15vw;
 height:15vw;
 background:#808080;
 border-radius:100px;
-border:1.5vw solid #808080;
 margin:auto;
 }
 
@@ -556,7 +554,6 @@ width:100px;
 height:100px;
 background:#808080;
 border-radius:100px;
-border:11.5px solid #808080;
 margin:auto;
 }
 .signal_yerrow_on{
@@ -572,7 +569,6 @@ width:100px;
 height:100px;
 background:#808080;
 border-radius:100px;
-border:11.5px solid #808080;
 margin:auto;
 }
 }
