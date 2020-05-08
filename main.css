@@ -554,7 +554,7 @@ margin:auto;
 .signal_green_off{
 width:100px;
 height:100px;
-background:#2f4f4f;
+background:#808080;
 border-radius:100px;
 border:11.5px solid #808080;
 margin:auto;
@@ -570,7 +570,7 @@ margin:auto;
 .signal_red_off{
 width:100px;
 height:100px;
-background:#8b0000;
+background:#808080;
 border-radius:100px;
 border:11.5px solid #808080;
 margin:auto;
