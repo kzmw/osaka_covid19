@@ -26,8 +26,22 @@
 for(var i = 0;i <= json.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
 if(data.city[j].code == json.features[i].properties.N03_007){
-    json.features[i].properties.proportion_color = "rgb(" + data.city[j].color[1][0] + "," + data.city[j].color[1][1] + "," + data.city[j].color[1][2] +")"
-    json.features[i].properties.proportion = data.city[j].proportion
+json.features[i].properties.proportion = Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3)
+if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) == 0){
+    json.features[i].properties.patient_color = "rgb(" + data.color[4][0] + "," + data.color[4][1] + "," + data.color[4][2] +")"
+}
+else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.015){
+    json.features[i].properties.patient_color = "rgb(" + data.color[0][0] + "," + data.color[0][1] + "," + data.color[0][2] +")"
+}
+else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.01){
+    json.features[i].properties.patient_color = "rgb(" + data.color[1][0] + "," + data.color[1][1] + "," + data.color[1][2] +")"
+}
+else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.006){
+    json.features[i].properties.patient_color = "rgb(" + data.color[2][0] + "," + data.color[2][1] + "," + data.color[2][2] +")"
+}
+else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) > 0){
+    json.features[i].properties.patient_color = "rgb(" + data.color[3][0] + "," + data.color[3][1] + "," + data.color[3][2] +")"
+}
 }}
 }
 	    var projection = d3.geoMercator()
