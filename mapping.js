@@ -30,18 +30,23 @@ if(data.city[j].code == json.features[i].properties.N03_007){
 json.features[i].properties.patient = data.city[j].patient
 if(data.city[j].patient == 0){
     json.features[i].properties.patient_color = "rgb(" + data.color[4][0] + "," + data.color[4][1] + "," + data.color[4][2] +")"
+break
 }
 else if(data.city[j].patient >= 31){
     json.features[i].properties.patient_color = "rgb(" + data.color[0][0] + "," + data.color[0][1] + "," + data.color[0][2] +")"
+break
 }
 else if(data.city[j].patient >= 21){
     json.features[i].properties.patient_color = "rgb(" + data.color[1][0] + "," + data.color[1][1] + "," + data.color[1][2] +")"
+break
 }
 else if(data.city[j].patient >= 11){
     json.features[i].properties.patient_color = "rgb(" + data.color[2][0] + "," + data.color[2][1] + "," + data.color[2][2] +")"
+break
 }
 else if(data.city[j].patient >= 1){
     json.features[i].properties.patient_color = "rgb(" + data.color[3][0] + "," + data.color[3][1] + "," + data.color[3][2] +")"
+break
 }
 }}
 }
