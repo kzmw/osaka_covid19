@@ -23,7 +23,7 @@
         .attr("height", HEIGHT);
     var g = svg.append("g");
     d3.json('/osaka.geojson').then(function(json) {
-    d3.json('/data.json').then(function(data){
+    d3.json('/data2.json').then(function(data){
 for(var i = 0;i <= json.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
 if(data.city[j].code == json.features[i].properties.N03_007){
