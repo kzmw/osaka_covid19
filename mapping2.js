@@ -31,15 +31,15 @@ if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10
     json.features[i].properties.proportion_color = "rgb(" + data.color[4][0] + "," + data.color[4][1] + "," + data.color[4][2] +")"
 break
 }
-else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.015){
+else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.02){
     json.features[i].properties.proportion_color = "rgb(" + data.color[0][0] + "," + data.color[0][1] + "," + data.color[0][2] +")"
 break
 }
-else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.01){
+else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.015){
     json.features[i].properties.proportion_color = "rgb(" + data.color[1][0] + "," + data.color[1][1] + "," + data.color[1][2] +")"
 break
 }
-else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.006){
+else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.01){
     json.features[i].properties.proportion_color = "rgb(" + data.color[2][0] + "," + data.color[2][1] + "," + data.color[2][2] +")"
 break
 }
