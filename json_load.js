@@ -1,3 +1,8 @@
+window.onload = function(){
+	// 【main-script】 を実行
+	getJsonp_GAS();
+}
+
 function getJsonp_GAS() {
 	$.ajax({
 		type: 'GET',
