@@ -1,8 +1,3 @@
-window.onload = function(){
-	// 【main-script】 を実行
-	getJsonp_GAS();
-}
-
 function getJsonp_GAS() {
 	$.ajax({
 		type: 'GET',
@@ -13,7 +8,16 @@ function getJsonp_GAS() {
         var len = data.length;
         $("#number_text").text(len);
         $("#update").text("最終更新：更新停止中");
+var male;
+var female;
+var preschool;
+var school;
+var teenager;
+var twentier;
 
+for(var i = 1; i <= len; i++){
+
+}
               
                 
 		}
