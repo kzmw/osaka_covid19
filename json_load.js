@@ -11,7 +11,7 @@ jsonpCallback: 'jsondata',
 success: function(data){
 var len = data.length;
 
-$("#number_text").text(len-1);
+$("#number_text").text(len);
 $("#update").text("最終更新：更新停止中");
 
 <!--
@@ -117,7 +117,6 @@ legend: {
 
     }
   });
-	});
-}
-	});
+	}
+	}});
 }
