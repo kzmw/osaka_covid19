@@ -5,12 +5,29 @@
   <link rel="icon" type="image/png" href="/virus_corona.png">
   <meta name="viewport" content="width=device-width" >
   <link rel="stylesheet" href="/main.css">
-  <title>大阪府新型コロナウイルス感染者情報テストページ</title>
+<meta http-equiv="Expires" content="1800">
+  <title>大阪府新型コロナウイルス感染者情報</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-<script src="/mapping3.js"></script>
+<script src="/mapping.js"></script>
 <script src="/mapping2.js"></script>
+<script>
+function person() {
+var covid_table = document.getElementById("covid_table")
+for (var i=1;i<=(covid_table.rows.length -1);i++){
+covid_table.rows[i].cells[4].style.display = "table-cell";
+covid_table.rows[i].cells[5].style.display = "none";
+}
+};
+function percent(){
+var covid_table = document.getElementById("covid_table")
+for (var i=1;i<=(covid_table.rows.length -1);i++){
+covid_table.rows[i].cells[4].style.display = "none";
+covid_table.rows[i].cells[5].style.display = "table-cell";
+}
+};
+</script>
 </head>
 <body>
 <header>
@@ -31,13 +48,17 @@
     </div>
   </div>
 	</header>
-<script src="/json_load2.js"></script>
+<script src="/json_load.js"></script>
   <div class="content_div" style="padding-top:55px">
 <ul class="important_ul">
-      <li class="important_li"><span class="news_title">緊急事態宣言</span><span class="important_content">不要不急の外出は控えましょう。大阪府は特定警戒地区に指定されています。</span></li></ul>
+      <li class="important_li"><span class="news_title">お知らせ</span><span class="important_content">緊急事態宣言が解除されたので，毎日更新はしていません。</span></li></ul>
 <span class="number_title">大阪府で確認された感染者数</span><span id="number_text"></span><span class="number_title">人</span>
 <p id="change"><p>
 <p id="update"><p>
+<div class="sign_title">新型コロナウイルス警戒信号</div>
+<div class="sign_content">
+<div id="signal_frame">
+</div></div>
 <div class="two_column">
 <div class="two_left"><canvas id="sex" style="width:50%;height:auto"></canvas></div>
 <div class="two_right"><canvas id="age" style="width:50%;height:auto"></canvas></div>
@@ -51,22 +72,20 @@
     <label class="tab_item" for="proportion">感染者の割合マップ</label>
     <div class="tab_content" id="patient_content">
 	    <div class="legend"><div style="background-color:#FF2F2F" class="legend_square"></div>31人～</div>
-	    <div class="legend"><div style="background-color:#F6882E" class="legend_square"></div>21人～30人</div>
+	    <div class="legend"><div style="background-color:#ffb13f" class="legend_square"></div>21人～30人</div>
 	    <div class="legend"><div style="background-color:#FFFF4F" class="legend_square"></div>11人～20人</div>
 	    <div class="legend"><div style="background-color:#00CC99" class="legend_square"></div>1人～10人</div>
 	    <div class="legend"><div style="background-color:#D9D9D9" class="legend_square"></div>未確認</div><br>
         <svg id="map"></svg>
     </div>
     <div class="tab_content" id="proportion_content">
-	    <div class="legend"><div style="background-color:#FF2F2F" class="legend_square"></div>0.015%～</div>
-	    <div class="legend"><div style="background-color:#F6882E" class="legend_square"></div>0.010%～0.015%</div>
-	    <div class="legend"><div style="background-color:#FFFF4F" class="legend_square"></div>0.006%～0.010%</div>
-	    <div class="legend"><div style="background-color:#00CC99" class="legend_square"></div>～0.006%</div>
+	    <div class="legend"><div style="background-color:#FF2F2F" class="legend_square"></div>0.020%～</div>
+	    <div class="legend"><div style="background-color:#ffb13f" class="legend_square"></div>0.015%～0.020%</div>
+	    <div class="legend"><div style="background-color:#FFFF4F" class="legend_square"></div>0.010%～0.015%</div>
+	    <div class="legend"><div style="background-color:#00CC99" class="legend_square"></div>～0.010%</div>
 	    <div class="legend"><div style="background-color:#D9D9D9" class="legend_square"></div>未確認</div><br>
         <svg id="map2"></svg>
-</div></div>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuGAm_jYUFlgkX3kgDY9yy2iHKi-jLwR5T0wKJ2ZNJQOVdnw/viewform?embedded=true" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-<span id="tooltip" style="visibility: hidden; top: 0px; left: 0px;"></span>
+</div></div><span id="tooltip" style="visibility: hidden; top: 0px; left: 0px;"></span>
 	</div>
 	</body>
 </html>
