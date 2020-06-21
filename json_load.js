@@ -1,3 +1,8 @@
+window.onload = function(){
+	// 【main-script】 を実行
+	getJsonp_GAS();
+}
+
 function getJsonp_GAS() {
 	$.ajax({
 		type: 'GET',
@@ -12,9 +17,61 @@ var male;
 var female;
 var preschool;
 var school;
-var teenager;
-var twentier;
-
+var teens;
+var twenties;
+var thirties;
+var fourties;
+var fifties;
+var sixties;
+var seventies;
+var eighties;
+var nineties;
+var over;
+var out_of_prefecture;
+var osaka;
+var sakai;
+var nose;
+var toyono;
+var ikeda;
+var minoh;
+var toyonaka;
+var ibaraki;
+var takatsuki;
+var shimamoto;
+var suita;
+var settsu;
+var hirakata;
+var katano;
+var neyagawa;
+var moriguchi;
+var kadoma;
+var shijonawate;
+var daitoh;
+var higashiosaka;
+var yao;
+var kashiwara;
+var matsubara;
+var habikino;
+var fujidera;
+var taishi;
+var kanan;
+var chihayaakasaka;
+var tondabayashi;
+var osakasayama;
+var kawachinagano;
+var izumi;
+var takaishi;
+var izumiohtsu;
+var tadaoka;
+var kishiwada;
+var kaizuka;
+var kumatori;
+var izumisano;
+var tajiri;
+var sennan;
+var hannan;
+var misaki;
+var unknown;
 for(var i = 1; i <= len; i++){
 
 }
