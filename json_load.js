@@ -1,34 +1,15 @@
-window.onload = function () {
-  getJsonp_GAS();
-}
-
 function getJsonp_GAS() {
-  $.ajax({
-      type: 'GET',
-      url: 'https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec',
-      dataType: 'jsonp',
-      jsonpCallback: 'jsondata',
-      success: function (data) {
+	$.ajax({
+		type: 'GET',
+		url: 'https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxx/exec',
+		dataType: 'jsonp',
+		jsonpCallback: 'jsondata',
+		success: function(json){
         var len = data.length;
         $("#number_text").text(len);
         $("#update").text("最終更新：更新停止中");
-        <!--
-        if (data.signal == "yellow") {
-          $("#signal_frame").html("<div class=\"signal_off\"></div><div class=\"signal_yerrow\"></div><div class=\"signal_off\"></div>")
-        } else if (data.signal == "green") {
-          $("#signal_frame").html("<div class=\"signal_green\"></div><div class=\"signal_off\"></div><div class=\"signal_off\"></div>")
-        } else if (data.signal == "red") {
-          $("#signal_frame").html("<div class=\"signal_off\"></div><div class=\"signal_off\"></div><div class=\"signal_red\"></div>")
-        }
-        -->
-        if (data.change > 0) {
-          $("#change").text("前日比：＋" + data.change + "人")
-        } else if (data.change == 0) {
-          $("#change").text("前日比：±" + data.change + "人")
-        } else if (data.change < 0) {
-          $("#change").text("前日比：－" + data.change + "人")
-        }
-        $(function table_generate() {
+
+                $(function table_generate() {
             var table_data = "";
             var proportion_per = "";
             var proportion_percent = "";
@@ -57,7 +38,7 @@ function getJsonp_GAS() {
               table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合<div class=\"proportion_select\"><input type=\"radio\" name=\"proportion1\" id=\"person\" value=\"人\" checked=\"\" onclick=\"person()\"><label for=\"person\" class=\"proportion_person\">人</label><input type=\"radio\" id=\"percent\" name=\"proportion1\" value=\"%\" onclick=\"percent()\"><label for=\"percent\" class=\"proportion_percent\">%</label></div></th><th style=\"display:none\">感染者の割合<div class=\"proportion_select\"><input type=\"radio\" name=\"proportion2\" id=\"person\" value=\"人\" onclick=\"person()\"><label for=\"person\" class=\"proportion_person\">人</label><input type=\"radio\" id=\"percent\" name=\"proportion2\" value=\"%\" checked=\"\" onclick=\"percent()\"><label for=\"percent\" class=\"proportion_percent\">%</label></div></th></tr>" + table_data;
               $("#covid_table").html(table_data)
             }});
-          Chart.defaults.global.defaultFontFamily = "'Noto Sans JP', sans-serif"; Chart.defaults.global.defaultFontColor = 'Black'; Chart.defaults.global.title.fontSize = 18;
+                 Chart.defaults.global.defaultFontFamily = "'Noto Sans JP', sans-serif"; Chart.defaults.global.defaultFontColor = 'Black'; Chart.defaults.global.title.fontSize = 18;
           var sex = document.getElementById("sex");
           var sex_graph = new Chart(sex, {
             type: 'pie',
@@ -103,6 +84,6 @@ function getJsonp_GAS() {
               }
             }
           });
-        }
-      });
-  }
+		}
+	});
+}
