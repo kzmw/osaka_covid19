@@ -1,12 +1,11 @@
 window.onload = function(){
-	// 【main-script】 を実行
 	getJsonp_GAS();
 }
 
 function getJsonp_GAS() {
 	$.ajax({
-		type: 'GET',
-cache : false,
+      type: 'GET',
+      cache : false,
 		url: '//script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec',
 		dataType: 'jsonp',
 		jsonpCallback: 'jsondata',
@@ -79,5 +78,10 @@ for(var i = 1; i <= len; i++){
               
                 
 		}
+error:{
+
+alert('Error')
+
+}
 	});
 }
