@@ -503,6 +503,7 @@ color:#FFF;
 margin:0 auto;
 width:65vw;
 text-align:center;
+max-width:499px;
 }
 
 .sign_content{
@@ -510,6 +511,7 @@ border:3px solid #DE3E29;
 padding:5px;
 margin:0 auto;
 width:65vw;
+max-width:499px;
 }
 
 #signal_frame{
