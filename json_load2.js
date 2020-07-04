@@ -36,7 +36,7 @@ proportion_per = "";
 proportion_percent = "";
 }
 
-	if( data.city[i].name == "大阪府外"){
+if (data.city[i].name == "大阪府外" || data.city[i].name == "不明") {
         table_data += "<tr><td>" + data.city[i].name + "</td><td style=\"text-align: right\"></td><td style=\"text-align: right\">" + Number(data.city[i].patient).toLocaleString() + "</td><td style=\"text-align: right\">" + change + "</td><td></td><td style=\"display:none\"></td></tr>";
 	}
 	else{
