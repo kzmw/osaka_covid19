@@ -4,6 +4,7 @@ window.onload = function(){
 
 function getJsonp_GAS() {
 	$.ajax({
+      async:false,
       type: 'GET',
       cache : false,
 		url: '//script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec',
