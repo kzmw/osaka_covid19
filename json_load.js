@@ -10,6 +10,10 @@ function getJsonp_GAS() {
 		url: '//script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec',
 		dataType: 'jsonp',
 		jsonpCallback: 'jsondata',
+beforeSend:function(xhr){
+	  if (window.navigator.userAgent.toLowerCase().indexOf('safari') != -1)
+	    xhr.setRequestHeader("If-Modified-Since", new Date().toUTCString());
+	},
 		success: function(data){
         var len = data.length;
         $("#number_text").text(len);
