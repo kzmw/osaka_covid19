@@ -83,7 +83,8 @@ for(var i = 1; i <= len; i++){
               
                 
 		},
-error:{
+error:function(){
+alert('Error');
 }
 	});
 }
