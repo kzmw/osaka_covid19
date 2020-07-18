@@ -3,7 +3,7 @@ window.onload = function(){
 }
 
 function getJsonp_GAS() {
-fetch('https:////script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec', {
+fetch('https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec', {
 mode: 'cors'
 })
 .then( response => response.json())
