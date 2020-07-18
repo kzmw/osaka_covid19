@@ -84,9 +84,6 @@ for(var i = 1; i <= len; i++){
                 
 		},
 error:{
-
-alert('Error')
-
 }
 	});
 }
