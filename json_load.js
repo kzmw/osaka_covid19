@@ -3,10 +3,7 @@ window.onload = function(){
 }
 
 function getJsonp_GAS() {
-fetch('https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec')
-.then( response => response.json())
-.then( jsonData => {
-var len = jsonData.length;
+$.getJSON("https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec", (data) => var len = data.length;
 $("#number_text").text(len);
 $("#update").text("最終更新：更新停止中");
 var male;
