@@ -1,3 +1,8 @@
+window.onload{
+getJsonp_GAS()
+}
+
+
 function getJsonp_GAS() {
 var table_data = "";
 var male = 0
