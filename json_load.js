@@ -3,7 +3,7 @@ window.onload = function(){
 }
 
 function getJsonp_GAS() {
-var table_data;
+var table_data = ""
 fetch( 'https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec',)
    .then(function(response) {
     return response.json();})
