@@ -9,8 +9,8 @@ fetch( 'https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_
     return response.json();})
    .then(data => {
     for (var i=0;i<=(data.length -1);i++){
- table_data += "<tr><td>" + data[i]["no"] + "</td><td>" + data[i]["sex"] + "</td><td>" + data[i]["place"] + "</td></tr>" 
-document.getElementById('covid_data').innerHTML = table_data }
+ table_data += "<tr><td>" + data[i]["no"] + "</td><td>" + data[i]["sex"] + "</td><td>" + data[i]["place"] + "</td></tr>" }
+document.getElementById('covid_data').innerHTML = table_data 
 var len = data.length;
 $("#number_text").text(len);
 $("#update").text("最終更新：更新停止中");
