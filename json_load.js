@@ -84,6 +84,52 @@ else if (data[i]["age"] == "80"){eighties += 1}
 else if (data[i]["age"] == "90"){nineties += 1}
 else if (data[i]["age"] == "100"){over += 1}
 
+if (data[i]["place"] == "大阪府外"){out_of_prefecture += 1}
+else if (data[i]["place"] == "大阪市"){osaka += 1}
+else if (data[i]["place"] == "堺市"){sakai += 1}
+else if (data[i]["place"] == "能勢町"){nose += 1}
+else if (data[i]["place"] == "豊能町"){toyono += 1}
+else if (data[i]["place"] == "池田市"){ikeda += 1}
+else if (data[i]["place"] == "箕面市"){minoh += 1}
+else if (data[i]["place"] == "豊中市"){toyonaka += 1}
+else if (data[i]["place"] == "茨木市"){ibaraki += 1}
+else if (data[i]["place"] == "高槻市"){takatsuki += 1}
+else if (data[i]["place"] == "島本町"){shimamoto += 1}
+else if (data[i]["place"] == "吹田市"){suita += 1}
+else if (data[i]["place"] == "摂津市"){settsu += 1}
+else if (data[i]["place"] == "枚方市"){hirakata += 1}
+else if (data[i]["place"] == "交野市"){katano += 1}
+else if (data[i]["place"] == "寝屋川市"){neyagawa += 1}
+else if (data[i]["place"] == "守口市"){moriguchi += 1}
+else if (data[i]["place"] == "門真市"){kadoma += 1}
+else if (data[i]["place"] == "四條畷市"){shijonawate += 1}
+else if (data[i]["place"] == "大東市"){daitoh += 1}
+else if (data[i]["place"] == "東大阪市"){higashiosaka += 1}
+else if (data[i]["place"] == "八尾市"){yao += 1}
+else if (data[i]["place"] == "柏原市"){kashiwara += 1}
+else if (data[i]["place"] == "松原市"){matsubara += 1}
+else if (data[i]["place"] == "羽曳野市"){habikino += 1}
+else if (data[i]["place"] == "藤井寺市"){fujidera += 1}
+else if (data[i]["place"] == "太子町"){taishi += 1}
+else if (data[i]["place"] == "河南町"){kanan += 1}
+else if (data[i]["place"] == "千早赤阪村"){chihayaakasaka += 1}
+else if (data[i]["place"] == "富田林市"){tondabayashi += 1}
+else if (data[i]["place"] == "大阪狭山市"){osakasayama += 1}
+else if (data[i]["place"] == "河内長野市"){kawachinagano += 1}
+else if (data[i]["place"] == "和泉市"){izumi += 1}
+else if (data[i]["place"] == "高石市"){takaishi += 1}
+else if (data[i]["place"] == "泉大津市"){izumiohtsu += 1}
+else if (data[i]["place"] == "忠岡町"){tadaoka += 1}
+else if (data[i]["place"] == "岸和田市"){kishiwada += 1}
+else if (data[i]["place"] == "貝塚市"){kaizuka += 1}
+else if (data[i]["place"] == "熊取町"){kumatori += 1}
+else if (data[i]["place"] == "泉佐野市"){izumisano += 1}
+else if (data[i]["place"] == "田尻町"){tajiri += 1}
+else if (data[i]["place"] == "泉南市"){sennan += 1}
+else if (data[i]["place"] == "阪南市"){hannan += 1}
+else if (data[i]["place"] == "岬町"){misaki += 1}
+else if (data[i]["place"] == "不明"){unknown += 1}
+
 table_data += "<tr><td>" + data[i]["no"] + "</td><td>" + data[i]["sex"] + "</td><td>" + data[i]["place"] + "</td></tr>" }
 document.getElementById('covid_table').innerHTML = table_data 
 var len = data.length;
