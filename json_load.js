@@ -130,12 +130,13 @@ else if (data[i]["place"] == "泉南市"){sennan += 1}
 else if (data[i]["place"] == "阪南市"){hannan += 1}
 else if (data[i]["place"] == "岬町"){misaki += 1}
 else if (data[i]["place"] == "不明"){unknown += 1}
-
-table_data += "<tr><td>" + data[i]["no"] + "</td><td>" + data[i]["sex"] + "</td><td>" + data[i]["place"] + "</td></tr>" }
-document.getElementById('covid_table').innerHTML = table_data 
+}
 var len = data.length;
 $("#number_text").text(len);
 $("#update").text("最終更新：更新停止中");
+
+table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合<div class="proportion_select"><input type="radio" name="proportion1" id="person" value="人" checked="" onclick="person()"><label for="person" class="proportion_person">人</label><input type="radio" id="percent" name="proportion1" value="%" onclick="percent()"><label for="percent" class="proportion_percent">%</label></div></th><th style="display:none">感染者の割合<div class="proportion_select"><input type="radio" name="proportion2" id="person" value="人" onclick="person()"><label for="person" class="proportion_person">人</label><input type="radio" id="percent" name="proportion2" value="%" checked="" onclick="percent()"><label for="percent" class="proportion_percent">%</label></div></th></tr>";
+document.getElementById('covid_table').innerHTML = table_data 
 
 Chart.defaults.global.defaultFontFamily = "'Noto Sans JP', sans-serif";
 Chart.defaults.global.defaultFontColor = 'Black';
