@@ -909,7 +909,7 @@ background:#000;
 color:#FFF;
 margin-top: 12px;
 padding:0px;
-box-shadow: 0 0 5px 0 rgba(255,255,255,.5);
+box-shadow: 0 0 5px 0 rgba(255,255,255,.8);
 }
 
 .important_li{
@@ -929,8 +929,8 @@ font-weight:700;
 }
 
 .important_content{
-background:#FFF;
-color:#000;
+background:#000;
+color:#FFF;
 padding-left:5px;
 display: table-cell;
 vertical-align: middle;
