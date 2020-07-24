@@ -1,9 +1,10 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+@media (prefers-color-scheme: light) {
 body {
   font-family: 'Noto Sans JP', sans-serif;
+  background:#FFF;
+  color:#000;
 }
-@media (prefers-color-scheme: light) {
-
 header{
   background: #afeeee;
   box-shadow:0 2px 5px rgba(0,0,0,.7);
@@ -680,6 +681,11 @@ margin:auto;
 
 
 @media (prefers-color-scheme: dark) {
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background:#696969;
+  color:#FFF;
+}
 header{
   background: #afeeee;
   box-shadow:0 2px 5px rgba(0,0,0,.7);
