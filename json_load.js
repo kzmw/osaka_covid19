@@ -199,7 +199,8 @@ var sex = document.getElementById("sex");
       title: {
         display: true,
         text: '男女別感染者の割合'
-      }
+      },
+      responsive: false
     }
   });
 
@@ -235,7 +236,7 @@ backgroundColor: "#40e0d0",
         display: true,
         text: '年齢別感染者数'
       },
-
+responsive: false,
 legend: {
             display: false
          }
