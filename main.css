@@ -15,10 +15,17 @@ header{
   border: none;
 }
 .loader {
-  margin: 100px auto;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+ 
+/* 以下のコードを追加 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   font-size: 25px;
-  width: 1em;
-  height: 1em;
   border-radius: 50%;
   position: relative;
   text-indent: -9999em;
