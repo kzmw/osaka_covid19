@@ -2,16 +2,16 @@ window.addEventListener('DOMContentLoaded', function () {
 getJsonp_GAS()
 })
 
-window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
-alert('ダークモード');
+alert('ライトモード');
 getJsonp_GAS()
 }
 })
 
-window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
+window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 if (e.matches == true){
-alert('ライトモード');
+alert('ダークモード');
 getJsonp_GAS()
 }
 })
