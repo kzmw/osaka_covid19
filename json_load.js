@@ -4,25 +4,18 @@ getJsonp_GAS()
 
 window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
-if (sex_graph){
-sex_graph.destroy();
-}
-if (age_chart){
-age_chart.destroy();
-}
-getJsonp_GAS();
+sex_graph.data.datasets.borderColor = 'White';
+sex_graph.data.datasets.hoverBorderColor = 'White';
+sex_graph.update();
 }
 })
 
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 if (e.matches == true){
-if (sex_graph){
-sex_graph.destroy();
-}
-if (age_chart){
-age_chart.destroy();
-}
-getJsonp_GAS();
+sex_graph.data.datasets.borderColor = 'White';
+sex_graph.data.datasets.hoverBorderColor = 'White';
+sex_graph.update();
+
 }
 })
 
@@ -199,8 +192,7 @@ var sex = document.getElementById("sex");
       title: {
         display: true,
         text: '男女別感染者の割合'
-      },
-       maintainAspectRatio: true
+      }
     }
   });
 
@@ -216,7 +208,6 @@ backgroundColor: "#40e0d0",
       }]
     },
     options: {
-       maintainAspectRatio: true,
        scales: {
         xAxes: [{
            gridLines:{
