@@ -200,7 +200,6 @@ var sex = document.getElementById("sex");
         display: true,
         text: '男女別感染者の割合'
       },
-       responsive: true,
        maintainAspectRatio: true
     }
   });
@@ -217,7 +216,6 @@ backgroundColor: "#40e0d0",
       }]
     },
     options: {
-       responsive: true,
        maintainAspectRatio: true,
        scales: {
         xAxes: [{
