@@ -7,6 +7,9 @@ if (e.matches == true){
 sex_graph.data.datasets[0].borderColor= 'White';
 sex_graph.data.datasets[0].hoverBorderColor= 'White';
 sex_graph.update();
+
+age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(0,0,0,0.1)';
+age_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.25)'
 }
 })
 
@@ -16,6 +19,9 @@ if (e.matches == true){
 sex_graph.data.datasets[0].borderColor= 'Black';
 sex_graph.data.datasets[0].hoverBorderColor= 'Black';
 sex_graph.update();
+
+age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(255,255,255,0.1)';
+age_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.25)'
 
 }
 })
