@@ -1,4 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
 @media (prefers-color-scheme: light) {
 body {
   font-family: 'Noto Sans JP', sans-serif;
@@ -683,8 +686,8 @@ margin:auto;
 @media (prefers-color-scheme: dark) {
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  background:#696969;
-  color:#FFF;
+  background:#FFF;
+  color:#000;
 }
 header{
   background: #afeeee;
@@ -851,7 +854,7 @@ header{
   width: 70%;/*右側に隙間を作る（閉じるカバーを表示）*/
   max-width: 400px;/*最大幅（調整してください）*/
   height: Calc(100% - 50px);
-  background: #696969;/*背景色*/
+  background: #000;/*背景色*/
   color:#FFF;
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(-105%);
@@ -901,7 +904,7 @@ color:#000;
 }
 
 .important_ul{
-background:#696969;
+background:#000;
 margin-top: 12px;
 padding:0px;
 box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
@@ -927,7 +930,7 @@ font-weight:700;
 padding-left:5px;
 display: table-cell;
 vertical-align: middle;
-background: #696969;
+background: #000;
 }
 
 h1 {
@@ -947,7 +950,7 @@ table th{
 background: #595959;
 color: #FFF;
 font-size:16px;
-border: 2px solid #696969;
+border: 2px solid #000;
 position: -webkit-sticky;
   position: sticky;
   top: 48px;
@@ -957,14 +960,14 @@ table td{
 background: #d9d9d9;
 color: #000;
 font-size:16px;
-border: 2px solid #696969;
+border: 2px solid #000;
 }
 @media screen and (max-width:420px) {
 table th{
 font-size:3.8vw;
 background: #595959;
 color: #FFF;
-border: 2px solid #696969;
+border: 2px solid #000;
 position: -webkit-sticky;
   position: sticky;
   top: 48px;
