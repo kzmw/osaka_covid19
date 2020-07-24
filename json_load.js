@@ -10,7 +10,8 @@ sex_graph.update();
 
 age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(0,0,0,0.1)';
 age_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.25)';
-
+age_chart.options.scales.yAxes[0].gridLines.color = 'rgba(0,0,0,0.1)';
+age_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.25)';
 age_chart.update();
 
 }
@@ -25,7 +26,8 @@ sex_graph.update();
 
 age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(255,255,255,0.9)';
 age_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.75)';
-
+age_chart.options.scales.yAxes[0].gridLines.color = 'rgba(255,255,255,0.9)';
+age_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.75)';
 age_chart.update();
 
 }
