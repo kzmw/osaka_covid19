@@ -2,6 +2,18 @@ window.addEventListener('DOMContentLoaded', function () {
 getJsonp_GAS()
 })
 
+window.matchMedia('(prefers-color-scheme:dark)').addListener(({matches}) => {
+if (matches){
+getJsonp_GAS()
+}
+})
+
+window.matchMedia('(prefers-color-scheme:light)').addListener(({matches}) => {
+if (matches){
+getJsonp_GAS()
+}
+})
+
 function getJsonp_GAS() {
 const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
