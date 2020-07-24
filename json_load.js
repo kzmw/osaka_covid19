@@ -144,8 +144,8 @@ var zeroLineColor = 'rgba(0,0,0,0.25)';
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true){
 defaultFontColor = 'White';
-gridColor = 'White';
-zeroLineColor = 'White';
+gridColor = 'rgba(255,255,255,0.1)';
+zeroLineColor = 'rgba(255,255,255,0.25)';
 }
 
 Chart.defaults.global.defaultFontFamily = "'Noto Sans JP', sans-serif";
