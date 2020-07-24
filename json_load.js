@@ -141,11 +141,13 @@ document.getElementById('covid_table').innerHTML = table_data
 var defaultFontColor = 'Black';
 var gridColor = 'rgba(0,0,0,0.1)';
 var zeroLineColor = 'rgba(0,0,0,0.25)';
+var borderColor = 'White';
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true){
 defaultFontColor = 'White';
 gridColor = 'rgba(255,255,255,0.1)';
 zeroLineColor = 'rgba(255,255,255,0.25)';
+borderColor = 'Black';
 }
 
 Chart.defaults.global.defaultFontFamily = "'Noto Sans JP', sans-serif";
@@ -162,6 +164,7 @@ var sex = document.getElementById("sex");
               "#1e90ff",
               "#ff69b4"
           ],
+          borderColor:borderColor,
           data: [male, female]
       }]
     },
