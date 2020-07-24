@@ -5,14 +5,20 @@ getJsonp_GAS()
 window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
 alert('ライトモード');
-getJsonp_GAS()
+  if (age_chart) {
+    age_chart.destroy();
+  };
+getJsonp_GAS();
 }
 })
 
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 if (e.matches == true){
 alert('ダークモード');
-getJsonp_GAS()
+  if (age_chart) {
+    age_chart.destroy();
+  };
+getJsonp_GAS();
 }
 })
 
