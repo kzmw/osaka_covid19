@@ -674,3 +674,6 @@ border-radius:100px;
 margin:auto;
 }
 }
+
+@media (prefers-color-scheme: dark) {
+}
