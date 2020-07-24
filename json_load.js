@@ -31,10 +31,10 @@ sex_graph.options.title.fontColor = 'White';
 sex_graph.options.legend.labels.fontColor = 'White'
 sex_graph.update();
 
-age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(255,255,255,0.1)';
-age_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.25)';
-age_chart.options.scales.yAxes[0].gridLines.color = 'rgba(255,255,255,0.1)';
-age_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.25)';
+age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(255,255,255,0.3)';
+age_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.55)';
+age_chart.options.scales.yAxes[0].gridLines.color = 'rgba(255,255,255,0.3)';
+age_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.55)';
 age_chart.options.scales.xAxes[0].ticks.fontColor = 'White';
 age_chart.options.scales.yAxes[0].ticks.fontColor = 'White';
 age_chart.options.title.fontColor = 'White';
@@ -187,8 +187,8 @@ var hoverBorderColor = 'White';
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true){
 defaultFontColor = 'White';
-gridColor = 'rgba(255,255,255,0.1)';
-zeroLineColor = 'rgba(255,255,255,0.25)';
+gridColor = 'rgba(255,255,255,0.3)';
+zeroLineColor = 'rgba(255,255,255,0.55)';
 borderColor = 'Black';
 hoverBorderColor = 'Black';
 }
