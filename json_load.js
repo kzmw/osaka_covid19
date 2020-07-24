@@ -6,6 +6,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
 sex_graph.data.datasets[0].borderColor= 'White';
 sex_graph.data.datasets[0].hoverBorderColor= 'White';
+sex_graph.options.title.fontColor = 'Black';
 sex_graph.update();
 
 age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(0,0,0,0.1)';
@@ -14,7 +15,7 @@ age_chart.options.scales.yAxes[0].gridLines.color = 'rgba(0,0,0,0.1)';
 age_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.25)';
 age_chart.options.scales.xAxes[0].ticks.fontColor = 'Black';
 age_chart.options.scales.yAxes[0].ticks.fontColor = 'Black';
-
+age_chart.options.title.fontColor = 'Black';
 age_chart.update();
 
 }
@@ -25,6 +26,7 @@ if (e.matches == true){
 
 sex_graph.data.datasets[0].borderColor= 'Black';
 sex_graph.data.datasets[0].hoverBorderColor= 'Black';
+sex_graph.options.title.fontColor = 'White';
 sex_graph.update();
 
 age_chart.options.scales.xAxes[0].gridLines.color = 'rgba(255,255,255,0.9)';
@@ -33,6 +35,7 @@ age_chart.options.scales.yAxes[0].gridLines.color = 'rgba(255,255,255,0.9)';
 age_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.75)';
 age_chart.options.scales.xAxes[0].ticks.fontColor = 'White';
 age_chart.options.scales.yAxes[0].ticks.fontColor = 'White';
+age_chart.options.title.fontColor = 'White';
 age_chart.update();
 
 }
