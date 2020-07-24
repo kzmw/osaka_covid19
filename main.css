@@ -29,7 +29,7 @@ header{
   z-index: 9999;
 }
 .loader {
-  margin: 100px auto;
+  margin: auto;
   font-size: 25px;
   width: 1em;
   height: 1em;
