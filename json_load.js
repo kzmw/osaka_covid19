@@ -200,6 +200,8 @@ var sex = document.getElementById("sex");
         display: true,
         text: '男女別感染者の割合'
       },
+       responsive: true,
+       maintainAspectRatio: true
     }
   });
 
@@ -214,7 +216,10 @@ backgroundColor: "#40e0d0",
           data: [preschool, school,teens,twenties,thirties,fourties,fifties,sixties,seventies,eighties,nineties,over]
       }]
     },
-    options: {scales: {
+    options: {
+       responsive: true,
+       maintainAspectRatio: true,
+       scales: {
         xAxes: [{
            gridLines:{
            color: gridColor,
