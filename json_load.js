@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
 getJsonp_GAS()
-}
+})
 window.onload = function (){
 const spinner = document.getElementById('loading');
 spinner.classList.add('loaded');
