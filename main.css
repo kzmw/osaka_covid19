@@ -691,6 +691,7 @@ body {
 }
 header{
   background: #afeeee;
+  color:#000;
   box-shadow:0 2px 5px rgba(0,0,0,.7);
   left:0;
   line-height:1;
@@ -889,7 +890,7 @@ header ul li a {  display: block;
   position: relative;
   height: 50px;
   margin: 0;
-  color: #000;
+  color: #FFF;
   padding: 0px 10px 0px 0px;
   line-height: 50px;
   text-decoration: none;
@@ -928,10 +929,11 @@ font-weight:700;
 }
 
 .important_content{
+background:#FFF;
+color:#FFF;
 padding-left:5px;
 display: table-cell;
 vertical-align: middle;
-background: #000;
 }
 
 h1 {
@@ -1127,6 +1129,8 @@ input[name="tab_item"] {
 
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
+  background:#000;
+  color:#FFF;
   display: none;
   padding: 10px;
   overflow: hidden;
