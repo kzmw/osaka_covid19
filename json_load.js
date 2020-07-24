@@ -193,6 +193,12 @@ backgroundColor: "#40e0d0",
             ticks: {
                 min: 0
             }
+        }],
+       yAxes: [{
+           gridLines:{
+           color: gridColor,
+           zeroLineColor : zeroLineColor
+           }
         }]
     },
       title: {
