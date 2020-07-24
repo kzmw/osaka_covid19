@@ -5,14 +5,16 @@ getJsonp_GAS()
 window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
 sex_graph.data.datasets[0].borderColor= 'White';
+sex_graph.data.datasets[0].hoverBorderColor= 'White';
 sex_graph.update();
 }
 })
 
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 if (e.matches == true){
-sex_graph.data.datasets.borderColor = 'White';
-sex_graph.data.datasets.hoverBorderColor = 'White';
+
+sex_graph.data.datasets[0].borderColor= 'Black';
+sex_graph.data.datasets[0].hoverBorderColor= 'Black';
 sex_graph.update();
 
 }
