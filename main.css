@@ -686,8 +686,8 @@ margin:auto;
 @media (prefers-color-scheme: dark) {
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  background:#FFF;
-  color:#000;
+  background:#000;
+  color:#FFF;
 }
 header{
   background: #afeeee;
@@ -904,7 +904,8 @@ color:#000;
 }
 
 .important_ul{
-background:#000;
+background:#FFF;
+color:#000;
 margin-top: 12px;
 padding:0px;
 box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
@@ -1289,6 +1290,7 @@ padding:5px;
 margin:0 auto;
 width:65vw;
 max-width:499px;
+background:#FFF;
 }
 
 #signal_frame{
