@@ -3,11 +3,11 @@ getJsonp_GAS()
 })
 
 window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
-if (e.matches){
-if (sex_graph){
+if (e.matches == true){
+if (sex_graph == true){
 sex_graph.destroy()
 }
-if (age_chart){
+if (age_chart == true){
 age_chart.destroy()
 }
 getJsonp_GAS()
@@ -15,11 +15,11 @@ getJsonp_GAS()
 })
 
 window.matchMedia('(prefers-color-scheme: light)').addListener(e => {
-if (e.matches){
-if (sex_graph){
+if (e.matches == true){
+if (sex_graph == true){
 sex_graph.destroy()
 }
-if (age_chart){
+if (age_chart == true){
 age_chart.destroy()
 }
 getJsonp_GAS()
