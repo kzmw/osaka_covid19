@@ -72,7 +72,7 @@ var sex = document.getElementById("sex");
               "#ff69b4"
           ],
           borderColor:borderColor,
-          data: [male, female]
+          data: [data.sex[0], data.sex[1]]
       }]
     },
     options: {
@@ -91,7 +91,7 @@ var age = document.getElementById("age");
       datasets: [{
           label: '人数',
 backgroundColor: "#40e0d0",
-          data: [preschool, school,teens,twenties,thirties,fourties,fifties,sixties,seventies,eighties,nineties,over]
+          data: [data.age[0], data.age[1],data.age[2],data.age[3],data.age[4],data.age[5],data.age[6],data.age[7],data.age[8],data.age[9],data.age[10],data.age[11]]
       }]
     },
     options: {scales: {
