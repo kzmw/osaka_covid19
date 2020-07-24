@@ -15,6 +15,12 @@ getJsonp_GAS()
 })
 
 function getJsonp_GAS() {
+if(sex_graph){
+sex_graph.destroy
+}
+if(age_graph){
+age_chart.destroy
+}
 const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
 var table_data = "";
