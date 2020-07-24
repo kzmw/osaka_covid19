@@ -2,8 +2,9 @@ window.addEventListener('DOMContentLoaded', function () {
 getJsonp_GAS()
 })
 
-window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener(e => {
 if (e.matches == true){
+alert('ダークモード');
 if (sex_graph == true){
 sex_graph.destroy()
 }
@@ -14,8 +15,9 @@ getJsonp_GAS()
 }
 })
 
-window.matchMedia('(prefers-color-scheme: light)').addListener(e => {
+window.matchMedia('(prefers-color-scheme: light)').addEventListener(e => {
 if (e.matches == true){
+alert('ライトモード');
 if (sex_graph == true){
 sex_graph.destroy()
 }
