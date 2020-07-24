@@ -52,8 +52,8 @@ var borderColor = 'White';
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true){
 defaultFontColor = 'White';
-gridColor = 'rgba(0,0,0,0.9)';
-zeroLineColor = 'rgba(0,0,0,0.75)';
+gridColor = 'rgba(255,255,255,0.9)';
+zeroLineColor = 'rgba(255,255,255,0.75)';
 borderColor = 'Black';
 }
 
