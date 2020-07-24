@@ -1,8 +1,3 @@
-window.onload = function(){
-getJsonp_GAS()
-}
-
-
 function getJsonp_GAS() {
 var table_data = "";
 var male = 0
@@ -193,4 +188,6 @@ legend: {
     }
   });
 })
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
 }
