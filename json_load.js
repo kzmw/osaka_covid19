@@ -156,12 +156,14 @@ var defaultFontColor = 'Black';
 var gridColor = 'rgba(0,0,0,0.1)';
 var zeroLineColor = 'rgba(0,0,0,0.25)';
 var borderColor = 'White';
+var hoverBorderColor = 'White';
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true){
 defaultFontColor = 'White';
 gridColor = 'rgba(255,255,255,0.9)';
 zeroLineColor = 'rgba(255,255,255,0.75)';
 borderColor = 'Black';
+hoverBorderColor = 'Black';
 }
 
 Chart.defaults.global.defaultFontFamily = "'Noto Sans JP', sans-serif";
@@ -179,6 +181,7 @@ var sex = document.getElementById("sex");
               "#ff69b4"
           ],
           borderColor:borderColor,
+          hoverBorderColor:hoverBorderColor,
           data: [male, female]
       }]
     },
