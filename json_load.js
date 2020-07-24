@@ -5,8 +5,6 @@ getJsonp_GAS()
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 if (e.matches == true){
 alert('ダークモード');
-sex_graph.destroy()
-age_chart.destroy()
 getJsonp_GAS()
 }
 })
@@ -14,8 +12,6 @@ getJsonp_GAS()
 window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
 alert('ライトモード');
-sex_graph.destroy()
-age_chart.destroy()
 getJsonp_GAS()
 }
 })
