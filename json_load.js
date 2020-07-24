@@ -5,6 +5,12 @@ getJsonp_GAS()
 window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
 alert('ライトモード');
+if (sex_graph){
+sex_graph.destroy();
+}
+if (age_chart){
+age_chart.destroy();
+}
 getJsonp_GAS();
 }
 })
@@ -12,6 +18,12 @@ getJsonp_GAS();
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 if (e.matches == true){
 alert('ダークモード');
+if (sex_graph){
+sex_graph.destroy();
+}
+if (age_chart){
+age_chart.destroy();
+}
 getJsonp_GAS();
 }
 })
@@ -171,7 +183,7 @@ Chart.defaults.global.defaultFontColor = defaultFontColor;
 Chart.defaults.global.title.fontSize = 18;
 
 var sex = document.getElementById("sex");
-  var sex_graph = new Chart(sex, {
+  window.sex_graph = new Chart(sex, {
     type: 'pie',
     data: {
       labels: ["男性", "女性"],
@@ -194,7 +206,7 @@ var sex = document.getElementById("sex");
   });
 
 var age = document.getElementById("age");
-  var age_chart = new Chart(age, {
+  window.age_chart = new Chart(age, {
     type: 'horizontalBar',
     data: {
       labels: ["未就学児", "就学児", "10代", "20代", "30代", "40代", "50代", "60代", "70代", "80代", "90代", "100歳以上"],
