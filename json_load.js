@@ -322,29 +322,29 @@ break
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
     var g = svg.append("g");
-    d3.json('/osaka.geojson').then(function(json) {
-for(var i = 0;i <= json.features.length -1; i++){
+    d3.json('/osaka.geojson').then(function(json2) {
+for(var i = 0;i <= json2.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
-if(data.city[j].code == json.features[i].properties.N03_007){
-json.features[i].properties.proportion = Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3)
+if(data.city[j].code == json2.features[i].properties.N03_007){
+json2.features[i].properties.proportion = Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3)
 if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) == 0){
-    json.features[i].properties.proportion_color = "rgb(217,217,217)"
+    json2.features[i].properties.proportion_color = "rgb(217,217,217)"
 break
 }
 else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.02){
-    json.features[i].properties.proportion_color = "rgb(255,47,47)"
+    json2.features[i].properties.proportion_color = "rgb(255,47,47)"
 break
 }
 else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.015){
-    json.features[i].properties.proportion_color = "rgb(255,177,63)"
+    json2.features[i].properties.proportion_color = "rgb(255,177,63)"
 break
 }
 else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.01){
-    json.features[i].properties.proportion_color = "rgb(255,255,121)"
+    json2.features[i].properties.proportion_color = "rgb(255,255,121)"
 break
 }
 else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) > 0){
-    json.features[i].properties.proportion_color = "rgb(0,204,153)"
+    json2.features[i].properties.proportion_color = "rgb(0,204,153)"
 break
 }
 }}
@@ -356,7 +356,7 @@ break
         var path = d3.geoPath()
             .projection(projection);
         g.selectAll('path')
-            .data(json.features)
+            .data(json2.features)
             .enter()
             .append('path')
             .attr('d', path)
