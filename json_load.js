@@ -145,11 +145,10 @@ legend: {
 var length = data.announce.length;
 var day = new Array(length);
 var date = new Date(2020, 0, 29);
-var date2 = new Date();
-for (var daily = 0; daily <= data.announce.length; daily++){
-date2.setDate(date.getDate() + daily);
-var month = date2.getMonth() +1;
-var day2 = date2.getDate();
+for (var daily = 0; daily <= length; daily++){
+date.setDate(date.getDate() + 1);
+var month = date.getMonth() + 1;
+var day2 = date.getDate();
 day[daily] = month + "/" + day2;
 }
 for (var announce_count = 0; announce_count <= length; announce_count++){
