@@ -510,7 +510,6 @@ input[name="tab_item"] {
 @media screen and (min-width:530px) {
 .two_column {
   width: 100%;
-  overflow: hidden;
 }
 .two_left {
   width: 50%;
@@ -1198,7 +1197,6 @@ input[name="tab_item"] {
 @media screen and (min-width:530px) {
 .two_column {
   width: 100%;
-  overflow: hidden;
 }
 .two_left {
   width: 50%;
