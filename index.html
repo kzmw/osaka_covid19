@@ -10,8 +10,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-<script src="/mapping.js"></script>
-<script src="/mapping2.js"></script>
+<script src="/json_load.js"></script>
 <script>
 function person() {
 var covid_table = document.getElementById("covid_table")
@@ -46,12 +45,14 @@ covid_table.rows[i].cells[5].style.display = "table-cell";
    <li><a href="/about.html">このサイトについて</a></li>
   </ul>   
     </div>
-  </div>
-	</header>
-<script src="/json_load2.js"></script>
-  <div class="content_div" style="padding-top:55px">
+</div>
+</header>
+<div id="loading">
+<div class="loader">Loading...</div>
+</div>
+<div class="content_div" style="padding-top:55px">
 <ul class="important_ul">
-      <li class="important_li"><span class="news_title">お知らせ</span><span class="important_content">緊急事態宣言が解除されたので，毎日更新はしていません。</span></li></ul>
+<li class="important_li"><span class="news_title">お知らせ</span><span class="important_content">緊急事態宣言が解除されたので，毎日更新はしていません。</span></li></ul>
 <span class="number_title">大阪府で確認された感染者数</span><span id="number_text"></span><span class="number_title">人</span>
 <p id="change"><p>
 <p id="update"><p>
@@ -63,8 +64,10 @@ covid_table.rows[i].cells[5].style.display = "table-cell";
 <div class="two_left"><canvas id="sex" style="width:50%;height:auto"></canvas></div>
 <div class="two_right"><canvas id="age" style="width:50%;height:auto"></canvas></div>
 </div>
-<table id="covid_table">
-</table>
+<div class="two_column">
+<div class="two_left"><table id="covid_table"></table></div>
+<div class="two_right"><canvas id="patient_can" style="width:50%;height:auto"></canvas></div>
+</div>
 <div class="tabs">
     <input id="patient" type="radio" name="tab_item" checked>
     <label class="tab_item" for="patient">感染者数マップ</label>
