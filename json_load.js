@@ -144,7 +144,7 @@ legend: {
   });
 var length = data.announce.length;
 var day = new Array(length);
-var date = new Date(2020, 0, 29);
+var date = new Date(2020, 0, 28);
 for (var daily = 0; daily <= length; daily++){
 date.setDate(date.getDate() + 1);
 var month = date.getMonth() + 1;
