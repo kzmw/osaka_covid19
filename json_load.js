@@ -145,13 +145,13 @@ legend: {
 var length = data.announce.length;
 var day = new Array(length);
 var date = new Date(2020, 0, 28);
-for (var daily = 0; daily <= length; daily++){
+for (var daily = 0; daily <= length -1; daily++){
 date.setDate(date.getDate() + 1);
 var month = date.getMonth() + 1;
 var day2 = date.getDate();
 day[daily] = month + "/" + day2;
 }
-for (var announce_count = 0; announce_count <= length; announce_count++){
+for (var announce_count = 0; announce_count <= length -1; announce_count++){
 if(data.announce[announce_count] == null){
 data.announce[announce_count] = 0
 }
@@ -187,7 +187,7 @@ backgroundColor: "#40e0d0",
     },
       title: {
         display: true,
-        text: '年齢別感染者数'
+        text: '日次感染者数'
       },
 legend: {
             display: false
