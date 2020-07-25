@@ -318,10 +318,11 @@ break
                 .style("visibility", "hidden")
         });
     });
+	
     var svg2 = d3.selectAll("#map2")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
-    var g = svg2.append("g");
+    var g2 = svg2.append("g2");
     d3.json('/osaka.geojson').then(function(json2) {
 for(var i = 0;i <= json2.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
@@ -355,7 +356,7 @@ break
             .translate([WIDTH / 2, HEIGHT / 2]);
         var path = d3.geoPath()
             .projection(projection);
-        g.selectAll('path')
+        g2.selectAll('path')
             .data(json2.features)
             .enter()
             .append('path')
