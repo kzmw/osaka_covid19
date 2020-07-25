@@ -950,7 +950,7 @@ table {
 }
 
 table th{
-background: #a6a6a6;
+background: #d9d9d9;
 color: #000;
 font-size:16px;
 border: 2px solid #000;
@@ -960,7 +960,7 @@ position: -webkit-sticky;
 }
 
 table td{
-background: #262626;
+background: #595959;
 color: #FFF;
 font-size:16px;
 border: 2px solid #000;
@@ -968,7 +968,7 @@ border: 2px solid #000;
 @media screen and (max-width:420px) {
 table th{
 font-size:3.8vw;
-background: #a6a6a6;
+background: #d9d9d9;
 color: #000;
 border: 2px solid #000;
 position: -webkit-sticky;
@@ -978,7 +978,7 @@ position: -webkit-sticky;
 
 table td{
 font-size:3.8vw;
-background: #262626;
+background: #595959;
 color: #FFF;
 }
 }
