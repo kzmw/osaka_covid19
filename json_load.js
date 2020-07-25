@@ -19,6 +19,15 @@ age_chart.options.scales.yAxes[0].ticks.fontColor = 'Black';
 age_chart.options.title.fontColor = 'Black';
 age_chart.update();
 
+patient_chart.options.scales.xAxes[0].gridLines.color = 'rgba(0,0,0,0.3)';
+patient_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.55)';
+patient_chart.options.scales.yAxes[0].gridLines.color = 'rgba(0,0,0,0.3)';
+patient_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.55)';
+patient_chart.options.scales.xAxes[0].ticks.fontColor = 'Black';
+patient_chart.options.scales.yAxes[0].ticks.fontColor = 'Black';
+patient_chart.options.title.fontColor = 'Black';
+patient_chart.update();
+
 }
 })
 
@@ -39,6 +48,15 @@ age_chart.options.scales.xAxes[0].ticks.fontColor = 'White';
 age_chart.options.scales.yAxes[0].ticks.fontColor = 'White';
 age_chart.options.title.fontColor = 'White';
 age_chart.update();
+
+patient_chart.options.scales.xAxes[0].gridLines.color = 'rgba(255,255,255,0.3)';
+patient_chart.options.scales.xAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.55)';
+patient_chart.options.scales.yAxes[0].gridLines.color = 'rgba(255,255,255,0.3)';
+patient_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.55)';
+patient_chart.options.scales.xAxes[0].ticks.fontColor = 'White';
+patient_chart.options.scales.yAxes[0].ticks.fontColor = 'White';
+patient_chart.options.title.fontColor = 'White';
+patient_chart.update();
 
 }
 })
@@ -173,16 +191,16 @@ backgroundColor: "#40e0d0",
            gridLines:{
            color: gridColor,
            zeroLineColor : zeroLineColor
-           },
-            ticks: {
-                min: 0
-            }
+           }
         }],
        yAxes: [{
            gridLines:{
            color: gridColor,
            zeroLineColor : zeroLineColor
-           }
+           },
+            ticks: {
+                min: 0
+            }
         }]
     },
       title: {
