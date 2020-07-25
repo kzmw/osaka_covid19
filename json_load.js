@@ -53,7 +53,13 @@ fetch( 'https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_
    .then(data => {
 $("#number_text").text(data.sum);
 $("#update").text("最終更新：更新停止中");
-
+if (data.signal == "yellow") {
+          $("#signal_frame").html("<div class=\"signal_off\"></div><div class=\"signal_yerrow\"></div><div class=\"signal_off\"></div>")
+        } else if (data.signal == "green") {
+          $("#signal_frame").html("<div class=\"signal_green\"></div><div class=\"signal_off\"></div><div class=\"signal_off\"></div>")
+        } else if (data.signal == "red") {
+          $("#signal_frame").html("<div class=\"signal_off\"></div><div class=\"signal_off\"></div><div class=\"signal_red\"></div>")
+        }
 table_data = "<tr><th>居住地</th><th>人口</th><th>感染者数</th><th>前日比</th><th>感染者の割合<div class=\"proportion_select\"><input type=\"radio\" name=\"proportion1\" id=\"person\" value=\"人\" checked=\"\" onclick=\"person()\"><label for=\"person\" class=\"proportion_person\">人</label><input type=\"radio\" id=\"percent\" name=\"proportion1\" value=\"%\" onclick=\"percent()\"><label for=\"percent\" class=\"proportion_percent\">%</label></div></th><th style=\"display:none\">感染者の割合<div class=\"proportion_select\"><input type=\"radio\" name=\"proportion2\" id=\"person\" value=\"人\" onclick=\"person()\"><label for=\"person\" class=\"proportion_person\">人</label><input type=\"radio\" id=\"percent\" name=\"proportion2\" value=\"%\" checked=\"\" onclick=\"percent()\"><label for=\"percent\" class=\"proportion_percent\">%</label></div></th></tr>";
 document.getElementById('covid_table').innerHTML = table_data 
 var defaultFontColor = 'Black';
@@ -106,6 +112,59 @@ var age = document.getElementById("age");
           label: '人数',
 backgroundColor: "#40e0d0",
           data: [data.age[0], data.age[1],data.age[2],data.age[3],data.age[4],data.age[5],data.age[6],data.age[7],data.age[8],data.age[9],data.age[10],data.age[11]]
+      }]
+    },
+    options: {
+       scales: {
+        xAxes: [{
+           gridLines:{
+           color: gridColor,
+           zeroLineColor : zeroLineColor
+           },
+            ticks: {
+                min: 0
+            }
+        }],
+       yAxes: [{
+           gridLines:{
+           color: gridColor,
+           zeroLineColor : zeroLineColor
+           }
+        }]
+    },
+      title: {
+        display: true,
+        text: '年齢別感染者数'
+      },
+legend: {
+            display: false
+         }
+
+    }
+  });
+var day = new Array(data.announce.length)
+var date = new Date(2020, 0, 29)
+var date2 = '';
+for (var daily = 0; daily <= data.announce.length; daily++){
+date2.setDate(date.getDate() + daily);
+var month = date2.getMonth() +1;
+var day2 = date2.getDate();
+day[daily] = month + "/" + day2
+}
+for (var announce_count = 0; announce_count <= data.announce.length; announce_count++){
+if(data.announce[announce_count] == null){
+data.announce[announce_count] = 0
+}
+}
+var patient_can = document.getElementById("patient");
+  window.patient_chart = new Chart(patient_can, {
+    type: 'bar',
+    data: {
+      labels: day,
+      datasets: [{
+          label: '人数',
+backgroundColor: "#40e0d0",
+          data: data.announce
       }]
     },
     options: {
