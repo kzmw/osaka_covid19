@@ -142,16 +142,17 @@ legend: {
 
     }
   });
-var day = new Array(data.announce.length)
-var date = new Date(2020, 0, 29)
+var length = data.announce.length;
+var day = new Array(length);
+var date = new Date(2020, 0, 29);
 var date2 = new Date();
 for (var daily = 0; daily <= data.announce.length; daily++){
 date2.setDate(date.getDate() + daily);
 var month = date2.getMonth() +1;
 var day2 = date2.getDate();
-day[daily] = month + "/" + day2
+day[daily] = month + "/" + day2;
 }
-for (var announce_count = 0; announce_count <= data.announce.length; announce_count++){
+for (var announce_count = 0; announce_count <= length; announce_count++){
 if(data.announce[announce_count] == null){
 data.announce[announce_count] = 0
 }
