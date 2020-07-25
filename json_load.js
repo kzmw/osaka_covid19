@@ -350,17 +350,17 @@ break
 }
 }}
 }
-	    var projection = d3.geoMercator()
+	    var projection2 = d3.geoMercator()
             .scale(scale)
             .center([135.45,34.662])
             .translate([WIDTH / 2, HEIGHT / 2]);
-        var path = d3.geoPath()
-            .projection(projection);
+        var path2 = d3.geoPath()
+            .projection(projection2);
         g2.selectAll('path')
             .data(json2.features)
             .enter()
             .append('path')
-            .attr('d', path)
+            .attr('d', path2)
             .attr('fill', function(d){
 	return d.properties.proportion_color
 	})
