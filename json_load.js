@@ -318,10 +318,10 @@ break
                 .style("visibility", "hidden")
         });
     });
-    var svg = d3.selectAll("#map2")
+    var svg2 = d3.selectAll("#map2")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
-    var g = svg.append("g");
+    var g = svg2.append("g");
     d3.json('/osaka.geojson').then(function(json2) {
 for(var i = 0;i <= json2.features.length -1; i++){
 for(var j = 1;j<=data.city.length -1;j++){
