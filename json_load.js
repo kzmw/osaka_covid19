@@ -170,7 +170,7 @@ if(data.announce[announce_count] == null){
 data.announce[announce_count] = 0
 }
 }
-var patient_can = document.getElementById("patient");
+var patient_can = document.getElementById("patient_can");
   window.patient_chart = new Chart(patient_can, {
     type: 'bar',
     data: {
