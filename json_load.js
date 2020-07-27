@@ -243,17 +243,17 @@ legend: {
 
     }
   })
-	if (window.innerWidth >= 530){
+	if (window.outerWidth >= 530){
 	var WIDTH = 500;
 	var HEIGHT = 600;}
 	else{
-	var WIDTH = window.innerWidth;
-	var HEIGHT = (window.innerWidth * 1.2);
+	var WIDTH = window.outerWidth;
+	var HEIGHT = (window.outerWidth * 1.2);
 	}
-	if (window.innerWidth >= 500){
+	if (window.outerWidth >= 500){
 	var scale = 36000;}
 	else{
-	var scale = window.innerWidth * 72;
+	var scale = window.outerWidth * 72;
 	}
     var svg = d3.selectAll("#map")
     	.attr("width", WIDTH)
