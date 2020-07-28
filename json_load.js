@@ -179,7 +179,15 @@ backgroundColor: "#40e0d0",
            color: gridColor,
            zeroLineColor : zeroLineColor
            }
-        }]
+        }],
+       tooltips:{
+    callbacks: 
+    {
+        label: function(tooltipItems, data) {
+            return tooltipItems.yLabel + "人";
+        }
+    }
+}
     },
       title: {
         display: true,
