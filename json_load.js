@@ -133,15 +133,16 @@ var sex = document.getElementById("sex");
   window.sex_graph = new Chart(sex, {
     type: 'pie',
     data: {
-      labels: ["男性", "女性"],
+      labels: ["男性", "女性","不明"],
       datasets: [{
           backgroundColor: [
               "#1e90ff",
-              "#ff69b4"
+              "#ff69b4",
+	      "#d8d8d8"
           ],
           borderColor:borderColor,
           hoverBorderColor:hoverBorderColor,
-          data: [data.sex[0], data.sex[1]]
+          data: [data.sex[0], data.sex[1], data.sex[2]]
       }]
     },
     options: {
