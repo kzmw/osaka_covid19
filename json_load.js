@@ -70,7 +70,7 @@ if(data.change > 0){$("#change").text("前日比：＋" + data.change + "人")}
 else if(data.change == 0){$("#change").text("前日比：±" + data.change + "人")}
 else if(data.change < 0){$("#change").text("前日比：－" + data.change + "人")}
 var last_update = new Date(data.last_update);
-$("#update").text("最終更新：" + last_update.getFullYear() + "/" + (last_update.getMonth() + 1) + "/" + last_update.getDate());
+$("#update").text("最終更新：" + last_update.getFullYear() + "/" + (last_update.getMonth() + 1) + "/" + last_update.getDate() + " " + last_update.getHours() + ":" + last_update.getMinutes());
 if (data.signal == "yellow") {
           $("#signal_frame").html("<div class=\"signal_off\"></div><div class=\"signal_yerrow\"></div><div class=\"signal_off\"></div>")
         } else if (data.signal == "green") {
