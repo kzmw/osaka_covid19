@@ -283,11 +283,11 @@ border: 2px solid #fff;
 }
 .proportion_select label:first-of-type{
 border-radius:3px 0 0 3px;
-height:24vw;
+height:24px;
 }
 .proportion_select label:last-of-type{
 border-radius:0 3px 3px 0;
-height:24vw;
+height:24px;
 }
 .proportion_select input[type="radio"]:checked + .proportion_person{
 background-color: #ffa500;
