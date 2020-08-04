@@ -283,23 +283,21 @@ border: 2px solid #fff;
 }
 .proportion_select label:first-of-type{
 border-radius:3px 0 0 3px;
-height:24px;
 }
 .proportion_select label:last-of-type{
 border-radius:0 3px 3px 0;
-height:24px;
 }
 .proportion_select input[type="radio"]:checked + .proportion_person{
 background-color: #ffa500;
 color: #fff;
-
+height:24px;
 transition: all 0.2s ease;
 
 }
 .proportion_select input[type="radio"]:checked + .proportion_percent{
 background-color: #ffa500;
 color: #fff;
-
+height:24px;
 transition: all 0.2s ease;
 
 }
@@ -341,23 +339,21 @@ max-width:48px;
 }
 .proportion_select label:first-of-type{
 border-radius:3px 0 0 3px;
-height:3.8vw;
 }
 .proportion_select label:last-of-type{
 border-radius:0 3px 3px 0;
-height:3.8vw;
 }
 .proportion_select input[type="radio"]:checked + .proportion_person{
 background-color: #ffa500;
 color: #fff;
-
+height:3.8vw;
 transition: all 0.2s ease;
 
 }
 .proportion_select input[type="radio"]:checked + .proportion_percent{
 background-color: #ffa500;
 color: #fff;
-
+height:3.8vw;
 transition: all 0.2s ease;
 
 }
