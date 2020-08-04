@@ -125,7 +125,7 @@ borderColor = 'Black';
 hoverBorderColor = 'Black';
 }
 
-Chart.defaults.global.defaultFontFamily = "'Noto Sans JP', sans-serif";
+Chart.defaults.global.defaultFontFamily = "'Roboto', sans-serif";
 Chart.defaults.global.defaultFontColor = defaultFontColor;
 Chart.defaults.global.title.fontSize = 18;
 
