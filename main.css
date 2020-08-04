@@ -1,7 +1,7 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto:900,400);
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background:#FFF;
   color:#000;
 }
