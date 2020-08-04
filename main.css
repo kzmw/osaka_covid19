@@ -466,7 +466,45 @@ background:#ff6347;
 border-radius:100px;
 margin:auto;
 }
+.proportion_select{
+width:22.8vw;
+max-width:96px;
+margin:0 auto;
+}
+.proportion_select input{
+display:none;
+}
+.proportion_select label{
+display:block;
+float:left;
+cursor:pointer;
+margin:3px 0;
+background: #d3d3d3;
+color: #FFF;
+text-align:center;
+width:11.0vw;
+max-width:48px;
+}
+.proportion_select label:first-of-type{
+border-radius:3px 0 0 3px;
+}
+.proportion_select label:last-of-type{
+border-radius:0 3px 3px 0;
+}
+.proportion_select input[type="radio"]:checked + .proportion_person{
+background-color: #ffa500;
+color: #fff;
 
+transition: all 0.2s ease;
+
+}
+.proportion_select input[type="radio"]:checked + .proportion_percent{
+background-color: #ffa500;
+color: #fff;
+
+transition: all 0.2s ease;
+
+}
 @media screen and (min-width:767px) {
 .signal_off{
 width:123px;
@@ -1001,5 +1039,43 @@ border-radius:100px;
 margin:auto;
 }
 }
+.proportion_select{
+width:22.8vw;
+max-width:96px;
+margin:0 auto;
+}
+.proportion_select input{
+display:none;
+}
+.proportion_select label{
+display:block;
+float:left;
+cursor:pointer;
+margin:3px 0;
+background: #d3d3d3;
+color: #FFF;
+text-align:center;
+width:11.0vw;
+max-width:48px;
+}
+.proportion_select label:first-of-type{
+border-radius:3px 0 0 3px;
+}
+.proportion_select label:last-of-type{
+border-radius:0 3px 3px 0;
+}
+.proportion_select input[type="radio"]:checked + .proportion_person{
+background-color: #ffa500;
+color: #fff;
 
+transition: all 0.2s ease;
+
+}
+.proportion_select input[type="radio"]:checked + .proportion_percent{
+background-color: #ffa500;
+color: #fff;
+
+transition: all 0.2s ease;
+
+}
 }
