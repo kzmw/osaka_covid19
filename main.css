@@ -431,6 +431,11 @@ vertical-align: bottom;
 p#update{
 color:#000;
 }
+
+p#change{
+color:#000;
+}
+
 @media screen and (max-width:530px) {
   span#number_text{
 display:inline-block;
@@ -933,6 +938,11 @@ vertical-align: bottom;
 p#update{
 color:#FFF;
 }
+
+p#update{
+color:#FFF;
+}
+
 @media screen and (max-width:530px) {
   span#number_text{
 display:inline-block;
