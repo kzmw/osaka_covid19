@@ -255,102 +255,28 @@ legend: {
 	var scale = 36000;}
 	else{
 	var scale = window.outerWidth * 72;
-	}
-    var svg = d3.selectAll("#map")
-    	.attr("width", WIDTH)
-        .attr("height", HEIGHT);
-    var g = svg.append("g");
-    d3.json('/osaka.geojson').then(function(json) {
-for(var i = 0;i <= json.features.length -1; i++){
-for(var j = 1;j <= data.city.length -1;j++){
-if(data.city[j].code == json.features[i].properties.N03_007){
-json.features[i].properties.patient = data.city[j].patient
-if(data.city[j].patient == 0){
-    json.features[i].properties.patient_color = "rgb(217,217,217)"
-break
-}
-else if(data.city[j].patient >= 31){
-    json.features[i].properties.patient_color = "rgb(255,47,47)"
-break
-}
-else if(data.city[j].patient >= 21){
-    json.features[i].properties.patient_color = "rgb(255,177,63)"
-break
-}
-else if(data.city[j].patient >= 11){
-    json.features[i].properties.patient_color = "rgb(255,255,121)"
-break
-}
-else if(data.city[j].patient >= 1){
-    json.features[i].properties.patient_color = "rgb(0,204,153)"
-break
-}
-}}
-}
-	    var projection = d3.geoMercator()
-            .scale(scale)
-            .center([135.45,34.662])
-            .translate([(WIDTH/2), (HEIGHT/2)]);
-        var path = d3.geoPath()
-            .projection(projection);
-        g.selectAll('path')
-            .data(json.features)
-            .enter()
-            .append('path')
-            .attr('d', path)
-            .attr('fill', function(d){
-	return d.properties.patient_color
-	})
-	    .attr("stroke-width",2)
-	    .attr('stroke', "rgb(127,127,127)")
-	     .on("mouseover", function (d) {
-                var selection = d3.select( "#tooltip" )
-		 selection.html(d.properties.N03_004 + "<br>感染者数：" + d.properties.patient )
-                .style("visibility", "visible")
-        })
-        .on("mousemove", function (d) {
-                var selection = d3.select( "#tooltip" )
-                .style("top", (event.pageY - 20) + "px")
-                .style("left", (event.pageX + 10) + "px");
-        })
-        .on("mouseout", function (d) {
-                var selection = d3.select( "#tooltip" )
-		 selection.html("")
-                .style("visibility", "hidden")
-        });
-    });
-	
+	}	
+	var color = d3.interpolateReds();
     var svg2 = d3.selectAll("#map2")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
     var g2 = svg2.append("g");
     d3.json('/osaka.geojson').then(function(json2) {
+
 for(var i = 0;i <= json2.features.length -1; i++){
-for(var j = 1;j<=data.city.length -1;j++){
+for(var j = 1;j <= data.city.length -1;j++){
 if(data.city[j].code == json2.features[i].properties.N03_007){
 json2.features[i].properties.proportion = Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3)
-if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) == 0){
-    json2.features[i].properties.proportion_color = "rgb(217,217,217)"
-break
-}
-else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.02){
-    json2.features[i].properties.proportion_color = "rgb(255,47,47)"
-break
-}
-else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.015){
-    json2.features[i].properties.proportion_color = "rgb(255,177,63)"
-break
-}
-else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) >= 0.01){
-    json2.features[i].properties.proportion_color = "rgb(255,255,121)"
-break
-}
-else if(Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3) > 0){
-    json2.features[i].properties.proportion_color = "rgb(0,204,153)"
-break
-}
 }}
 }
+	color.domain([
+    d3.min(json2.features[i].properties.proportion, function (d) {
+        return Number(d.value);
+    }),
+    d3.max(json2.features[i].properties.proportion, function (d) {
+        return Number(d.value);
+    })
+]);
 	    var projection2 = d3.geoMercator()
             .scale(scale)
             .center([135.45,34.662])
@@ -363,7 +289,10 @@ break
             .append('path')
             .attr('d', path2)
             .attr('fill', function(d){
-	return d.properties.proportion_color
+	var value = d.properties.proportion;
+        if (value) {
+            return color(value);
+        }
 	})
 	    .attr("stroke-width",2)
 	    .attr('stroke', "rgb(127,127,127)")
