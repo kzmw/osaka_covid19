@@ -257,6 +257,8 @@ legend: {
 	var scale = window.outerWidth * 72;
 	}	
 	var color = d3.interpolateReds();
+	var min_value = 100;
+	var max_value = 0;
     var svg2 = d3.selectAll("#map2")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
@@ -267,15 +269,15 @@ for(var i = 0;i <= json2.features.length -1; i++){
 for(var j = 1;j <= data.city.length -1;j++){
 if(data.city[j].code == json2.features[i].properties.N03_007){
 json2.features[i].properties.proportion = Math.floor(data.city[j].patient / data.city[j].population * 100 * Math.pow(10,3)) / Math.pow(10,3)
+	if (min_value > json2.features[i].properties.proportion){
+	min_value = json2.features[i].properties.proportion
+	}
+	if (max_value < json2.features[i].properties.proportion){
+	max_value = json2.features[i].properties.proportion
+	}
 }}
 }
-	color.domain([
-    d3.min(json2.features[i].properties.proportion, function (d) {
-        return Number(d.value);
-    }),
-    d3.max(json2.features[i].properties.proportion, function (d) {
-        return Number(d.value);
-    })
+	color.domain([min_value, max_value})
 ]);
 	    var projection2 = d3.geoMercator()
             .scale(scale)
