@@ -254,6 +254,11 @@ h1 {
   color: #fff;
 }
 
+#proportion_content{
+margin:10px;
+width:Calc(100% - 10px);
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
