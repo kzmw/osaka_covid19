@@ -249,10 +249,10 @@ legend: {
 	var HEIGHT = 600;}
 	else{
 	var WIDTH = window.outerWidth - 30;
-	var HEIGHT = ((window.outerWidth - 30) * 1.2);
+	var HEIGHT = ((window.outerWidth) * 1.2);
 	}
 	if (window.outerWidth >= 530){
-	var scale = 35600;}
+	var scale = 36000;}
 	else{
 	var scale = window.outerWidth * 72;
 	}	
