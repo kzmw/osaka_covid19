@@ -276,7 +276,7 @@ json2.features[i].properties.proportion = Math.floor(data.city[j].patient / data
 	}
 }}
 }
-	var color = d3.scaleSequential(d3.interpolateReds()).domain([min_value, max_value]);
+	var color = d3.scaleSequential(d3.interpolateReds).domain([min_value, max_value]);
 	    var projection2 = d3.geoMercator()
             .scale(scale)
             .center([135.45,34.662])
