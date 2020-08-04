@@ -290,9 +290,12 @@ json2.features[i].properties.proportion = Math.floor(data.city[j].patient / data
             .attr('d', path2)
             .attr('fill', function(d){
 	var value = d.properties.proportion;
-        if (value) {
+        if (value > 0) {
             return color(value);
         }
+        if (value == 0){
+	return "#FFF";
+	}
 	})
 	    .attr("stroke-width",2)
 	    .attr('stroke', "rgb(127,127,127)")
