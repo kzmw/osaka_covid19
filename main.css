@@ -346,14 +346,14 @@ border-radius:0 3px 3px 0;
 .proportion_select input[type="radio"]:checked + .proportion_person{
 background-color: #ffa500;
 color: #fff;
-height:3.8vw;
+height:5.6vw;
 transition: all 0.2s ease;
 
 }
 .proportion_select input[type="radio"]:checked + .proportion_percent{
 background-color: #ffa500;
 color: #fff;
-height:3.8vw;
+height:5.6vw;
 transition: all 0.2s ease;
 
 }
