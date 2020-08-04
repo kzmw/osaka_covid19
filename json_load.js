@@ -256,7 +256,6 @@ legend: {
 	else{
 	var scale = window.outerWidth * 72;
 	}	
-	var color = d3.interpolateReds();
 	var min_value = 100;
 	var max_value = 0;
     var svg2 = d3.selectAll("#map2")
@@ -277,7 +276,7 @@ json2.features[i].properties.proportion = Math.floor(data.city[j].patient / data
 	}
 }}
 }
-	color.domain([min_value, max_value]);
+	var color = d3.scaleSequential(d3.interpolateReds()).domain([min_value, max_value]);
 	    var projection2 = d3.geoMercator()
             .scale(scale)
             .center([135.45,34.662])
