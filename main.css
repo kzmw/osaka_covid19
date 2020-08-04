@@ -256,7 +256,7 @@ h1 {
 
 #proportion_content{
 margin:10px;
-width:Calc(100% - 10px);
+width:Calc(100% - 20px);
 }
 
 table {
@@ -758,7 +758,10 @@ h1 {
   margin: 0px;
   color: #000;
 }
-
+#proportion_content{
+margin:10px;
+width:Calc(100% - 20px);
+}
 table {
   border-collapse: collapse;
   border-spacing: 0;
