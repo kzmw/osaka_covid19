@@ -242,11 +242,11 @@ backgroundColor: "#40e0d0",
           type: 'line',
           label: '陽性者率',
           borderColor: "#ba55d3",
-	  borderWidth: 0.8,
-	  hoverBorderWidth: 0.8,
+	  borderWidth: 1,
+	  hoverBorderWidth: 1,
 	  pointBackgroundColor: "#ba55d3",
-	  radius: 1,
-	  hoverRadius: 2,
+	  radius: 1.5,
+	  hoverRadius: 3,
 	  fill:false,
           yAxisID:"y-axis-proportion",
           data: data.daily_proportion
@@ -280,8 +280,8 @@ backgroundColor: "#40e0d0",
            },
             ticks: {
                 min: 0,
-		max: 20,
-		stepSize: 2
+		max: 30,
+		stepSize: 3
             }
         }]
     },
