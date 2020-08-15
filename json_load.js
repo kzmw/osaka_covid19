@@ -236,7 +236,7 @@ backgroundColor: "#40e0d0",
     },
       title: {
         display: true,
-        text: '日次感染者数'
+        text: '発表日別感染者数'
       },
 legend: {
             display: false
