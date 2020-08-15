@@ -24,6 +24,10 @@ patient_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.5
 patient_chart.options.scales.xAxes[0].ticks.fontColor = 'Black';
 patient_chart.options.scales.yAxes[0].ticks.fontColor = 'Black';
 patient_chart.options.title.fontColor = 'Black';
+patient_chart.options.scales.yAxes[1].gridLines.color = 'rgba(0,0,0,0.3)';
+patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor =  'rgba(0,0,0,0.55)';
+patient_chart.options.scales.xAxes[1].ticks.fontColor = 'Black';
+patient_chart.options.scales.yAxes[1].ticks.fontColor = 'Black';
 patient_chart.update();
 
 onset_chart.options.scales.yAxes[0].gridLines.color = 'rgba(0,0,0,0.3)';
@@ -58,6 +62,10 @@ patient_chart.options.scales.yAxes[0].gridLines.color = 'rgba(255,255,255,0.3)';
 patient_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(255,255,255,0.55)';
 patient_chart.options.scales.xAxes[0].ticks.fontColor = 'White';
 patient_chart.options.scales.yAxes[0].ticks.fontColor = 'White';
+patient_chart.options.scales.yAxes[1].gridLines.color = 'rgba(255,255,255,0.3)';
+patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor =  'rgba(255,255,255,0.55)';
+patient_chart.options.scales.xAxes[1].ticks.fontColor = 'White';
+patient_chart.options.scales.yAxes[1].ticks.fontColor = 'White';
 patient_chart.options.title.fontColor = 'White';
 patient_chart.update();
 
@@ -231,14 +239,16 @@ var patient_can = document.getElementById("patient_can");
 	  type: 'bar',
           label: '人数',
 backgroundColor: "#40e0d0",
+	  yAxisID:"y-axis-patient",
           data: data.announce
       },
 		{
           type: 'line',
-          label: '陽性率',
+          label: '陽性者率',
           borderColor: "#ba55d3",
 	  pointBackgroundColor: "#ba55d3",
 	  fill:false,
+          yAxisID:"y-axis-proportion",
           data: data.daily_proportion
       }]
     },
@@ -250,6 +260,9 @@ backgroundColor: "#40e0d0",
            }
         }],
        yAxes: [{
+	   id:"y-axis-patient",
+	   type:"linear",
+	   position:"left",
            gridLines:{
            color: gridColor,
            zeroLineColor : zeroLineColor
@@ -257,16 +270,26 @@ backgroundColor: "#40e0d0",
             ticks: {
                 min: 0
             }
+        },
+	      {
+	   id:"y-axis-proportion",
+	   type:"linear",
+	   position:"right",
+           gridLines:{
+           color: gridColor,
+           zeroLineColor : zeroLineColor
+           },
+            ticks: {
+                min: 0,
+		max: 20,
+		stepSize: 1
+            }
         }]
     },
       title: {
         display: true,
-        text: '発表日別感染者数'
-      },
-legend: {
-            display: false
-         }
-
+        text: '発表日別感染者数と陽性者率'
+      }
     }
   })
 var length2 = data.onset.length;
