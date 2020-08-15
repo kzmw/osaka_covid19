@@ -225,13 +225,19 @@ data.announce[announce_count] = 0
 }
 var patient_can = document.getElementById("patient_can");
   window.patient_chart = new Chart(patient_can, {
-    type: 'bar',
     data: {
       labels: day,
       datasets: [{
+	  type: 'bar',
           label: '人数',
 backgroundColor: "#40e0d0",
           data: data.announce
+      },
+		{
+          type: 'line',
+          label: '陽性率',
+backgroundColor: "#40e0d0",
+          data: data.daily_proportion
       }]
     },
     options: {
