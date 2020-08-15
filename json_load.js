@@ -27,6 +27,7 @@ patient_chart.options.title.fontColor = 'Black';
 patient_chart.options.scales.yAxes[1].gridLines.color = 'rgba(0,0,0,0.1)';
 patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor = 'rgba(0,0,0,0.25)';
 patient_chart.options.scales.yAxes[1].ticks.fontColor = 'Black';
+patient_chart.options.legend.labels.fontColor = 'Black';
 patient_chart.update();
 
 onset_chart.options.scales.yAxes[0].gridLines.color = 'rgba(0,0,0,0.1)';
@@ -65,6 +66,7 @@ patient_chart.options.scales.yAxes[1].ticks.fontColor = 'White';
 patient_chart.options.scales.yAxes[1].gridLines.color = 'rgba(255,255,255,0.3)';
 patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor = 'rgba(255,255,255,0.55)';
 patient_chart.options.title.fontColor = 'White';
+patient_chart.options.legend.labels.fontColor = 'White';
 patient_chart.update();
 
 onset_chart.options.scales.yAxes[0].gridLines.color = 'rgba(255,255,255,0.3)';
