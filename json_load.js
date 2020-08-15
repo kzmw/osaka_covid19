@@ -26,6 +26,13 @@ patient_chart.options.scales.yAxes[0].ticks.fontColor = 'Black';
 patient_chart.options.title.fontColor = 'Black';
 patient_chart.update();
 
+onset_chart.options.scales.yAxes[0].gridLines.color = 'rgba(0,0,0,0.3)';
+onset_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.55)';
+onset_chart.options.scales.xAxes[0].ticks.fontColor = 'Black';
+onset_chart.options.scales.yAxes[0].ticks.fontColor = 'Black';
+onset_chart.options.title.fontColor = 'Black';
+onset_chart.update();
+
 }
 })
 
