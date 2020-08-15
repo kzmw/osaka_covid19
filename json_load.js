@@ -279,7 +279,7 @@ backgroundColor: "#40e0d0",
 	   position:"right",
            gridLines:{
 color: gridColor,
-           zeroLineColor : zeroLineColor
+           zeroLineColor : zeroLineColor,
            drawOnChartArea: false
            },
             ticks: {
