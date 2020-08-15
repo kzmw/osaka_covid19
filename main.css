@@ -107,6 +107,7 @@ header{
 }
 
 #load_status{
+positon:relative;
 color:#FFF;
 top: 60%; /*親要素を起点に上から50%*/
 text-align:center;
