@@ -74,11 +74,13 @@ onset_chart.update();
 function getJsonp_GAS() {
 const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
+$("#load_status").text("感染者情報を読み込み中");
 var table_data = "";
 fetch( 'https://script.google.com/macros/s/AKfycbyrNVl5HtIe6be_n_d2ixxEG5ABXkTb_bZI3RvfOM4MpAXYySQ/exec',)
    .then(function(response) {
     return response.json();})
    .then(data => {
+$("#load_status").text("データを書き出し中");
 $("#number_text").text(data.sum);
 if(data.change > 0){$("#change").text("前日比：＋" + data.change + "人")}
 else if(data.change == 0){$("#change").text("前日比：±" + data.change + "人")}
