@@ -58,6 +58,11 @@ patient_chart.update();
 })
 
 function getJsonp_GAS() {
+
+document.addEventListener("mousewheel", scroll_control, { passive: false });
+document.addEventListener("touchmove", scroll_control, { passive: false });
+}
+
 const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
 var table_data = "";
@@ -319,5 +324,9 @@ json2.features[i].properties.proportion = Math.floor(data.city[j].patient / data
 .then(function(){
 const spinner = document.getElementById('loading');
 spinner.classList.add('loaded');
+
+document.removeEventListener("mousewheel", scroll_control, { passive: false });
+document.removeEventListener('touchmove', scroll_control, { passive: false });
+
   })
 }
