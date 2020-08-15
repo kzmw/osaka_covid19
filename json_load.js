@@ -61,7 +61,6 @@ function getJsonp_GAS() {
 
 document.addEventListener("mousewheel", scroll_control, { passive: false });
 document.addEventListener("touchmove", scroll_control, { passive: false });
-}
 
 const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
