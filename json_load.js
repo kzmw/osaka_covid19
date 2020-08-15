@@ -236,7 +236,9 @@ backgroundColor: "#40e0d0",
 		{
           type: 'line',
           label: '陽性率',
-backgroundColor: "#40e0d0",
+          borderColor: "#ba55d3",
+	  pointBackgroundColor: "#ba55d3",
+	  fill:false,
           data: data.daily_proportion
       }]
     },
