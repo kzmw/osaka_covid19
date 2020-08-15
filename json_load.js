@@ -244,6 +244,58 @@ legend: {
 
     }
   })
+var length2 = data.onset.length;
+var day3 = new Array(length2);
+var date2 = new Date(2020, 0, 19);
+for (var daily2 = 0; daily2 <= length2 -1; daily2++){
+date2.setDate(date2.getDate() + 1);
+var month2 = date2.getMonth() + 1;
+var day4 = date2.getDate();
+day3[daily2] = month2 + "/" + day4;
+}
+for (var onset_count = 0; onset_count <= length2 -1; onset_count++){
+if(data.onset[onset_count] == null){
+data.onset[onset_count] = 0
+}
+}
+var onset_can = document.getElementById("onset_can");
+  window.onset_chart = new Chart(onset_can, {
+    type: 'bar',
+    data: {
+      labels: day3,
+      datasets: [{
+          label: '人数',
+backgroundColor: "#40e0d0",
+          data: data.onset
+      }]
+    },
+    options: {
+       scales: {
+        xAxes: [{
+           gridLines:{
+           display: false
+           }
+        }],
+       yAxes: [{
+           gridLines:{
+           color: gridColor,
+           zeroLineColor : zeroLineColor
+           },
+            ticks: {
+                min: 0
+            }
+        }]
+    },
+      title: {
+        display: true,
+        text: '発症日別感染者数'
+      },
+legend: {
+            display: false
+         }
+
+    }
+  })
 	if (window.outerWidth >= 530){
 	var WIDTH = 500;
 	var HEIGHT = 600;}
