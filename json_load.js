@@ -24,10 +24,8 @@ patient_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(0,0,0,0.2
 patient_chart.options.scales.xAxes[0].ticks.fontColor = 'Black';
 patient_chart.options.scales.yAxes[0].ticks.fontColor = 'Black';
 patient_chart.options.title.fontColor = 'Black';
-
 patient_chart.options.scales.yAxes[1].gridLines.color = 'rgba(0,0,0,0.1)';
-patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor =  'rgba(0,0,0,0.25)';
-
+patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor = 'rgba(0,0,0,0.25)';
 patient_chart.options.scales.yAxes[1].ticks.fontColor = 'Black';
 patient_chart.update();
 
@@ -64,10 +62,8 @@ patient_chart.options.scales.yAxes[0].gridLines.zeroLineColor =  'rgba(255,255,2
 patient_chart.options.scales.xAxes[0].ticks.fontColor = 'White';
 patient_chart.options.scales.yAxes[0].ticks.fontColor = 'White';
 patient_chart.options.scales.yAxes[1].ticks.fontColor = 'White';
-
 patient_chart.options.scales.yAxes[1].gridLines.color = 'rgba(255,255,255,0.3)';
-patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor =  'rgba(255,255,255,0.55)';
-
+patient_chart.options.scales.yAxes[1].gridLines.zeroLineColor = 'rgba(255,255,255,0.55)';
 patient_chart.options.title.fontColor = 'White';
 patient_chart.update();
 
