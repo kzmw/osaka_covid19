@@ -105,9 +105,16 @@ header{
   opacity: 0;
   visibility: hidden;
 }
-.load_status{
+
+#load_status{
 color:#FFF;
+top: 50%; /*親要素を起点に上から50%*/
+left: 50%;  /*親要素を起点に左から50%*/
+transform: translateY(-40%) translateX(-50%) translateZ(0); /*要素の大きさの半分ずつを戻す*/
+-webkit-transform: translateY(-40%) translateX(-50%) translateZ(0);
+-ms-transform: translateY(-40%) translateX(-50%) translateZ(0);
 }
+
 #nav-drawer {
   position:fixed;
   top:10px;
