@@ -67,30 +67,20 @@ function getJsonp_GAS() {
 const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
 var table_data = "";
-
+var data_patient = '';
  const request_patient = new XMLHttpRequest();
- request_patient.addEventListener('load', (event) => {
-  const response_patient = event.target.responseText;
-  const data_patient = [];
- const datastring_patient = response_patient.split('n');
- for (let i = 0; i < datastring_patient.length; i++) {
-  data_patient[i] = datastring_patient[i].split(',');
- }
- outputElement.innerHTML = data_patient;
- });
  request_patient.open('GET', 'https://covid19-osaka.info/data/patients.csv', true);
- request_patient.send();
+ request_patient.send(null);
+ request_patient.onload = function(){
+ data_patient = convertCSVtoArray(request_patient.responseText);
+ };
+
+function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列として渡される
+    var result = []; // 最終的な二次元配列を入れるための配列
+    var tmp = str.split("\n"); // 改行を区切り文字として行を要素とした配列を生成
  
-  const request_summary = new XMLHttpRequest();
- request_patient.addEventListener('load', (event) => {
-  const response_summary = event.target.responseText;
-  const data_summary = [];
- const datastring_summary = response_summary.split('n');
- for (let i = 0; i < datastring_summary.length; i++) {
-  data_summary[i] = datastring_summary[i].split(',');
- }
- });
- request_summary.open('GET', 'https://covid19-osaka.info/data/summary.csv', true);
- request_summary.send();
-spinner.classList.add('loaded');
+    // 各行ごとにカンマで区切った文字列を要素とした二次元配列を生成
+    for(var i=0;i<tmp.length;++i){
+        result[i] = tmp[i].split(',');
+    }
 }
