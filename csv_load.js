@@ -88,5 +88,4 @@ var table_data = "";
  });
  request_summary.open('GET', 'https://covid19-osaka.info/data/summary.csv', true);
  request_summary.send();
- const spinner = document.getElementById('loading');
 spinner.classList.add('loaded');
