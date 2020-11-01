@@ -1,3 +1,6 @@
+window.addEventListener('DOMContentLoaded', function () {
+getJsonp_GAS()
+})
 window.matchMedia('(prefers-color-scheme: light)').addListener((e) => {
 if (e.matches == true){
 sex_graph.data.datasets[0].borderColor= 'White';
@@ -60,6 +63,7 @@ patient_chart.update();
 }
 })
 
+function getJsonp_GAS() {
 const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
 var table_data = "";
@@ -89,3 +93,4 @@ var table_data = "";
  request_summary.open('GET', 'https://covid19-osaka.info/data/summary.csv', true);
  request_summary.send();
 spinner.classList.add('loaded');
+}
