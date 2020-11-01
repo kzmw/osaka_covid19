@@ -74,6 +74,7 @@ var data_patient = '';
  request_patient.onload = function(){
  data_patient = convertCSVtoArray(request_patient.responseText);
  };
+}
 
 function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列として渡される
     var result = []; // 最終的な二次元配列を入れるための配列
