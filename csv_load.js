@@ -75,7 +75,7 @@ var table_data = "";
  }
  outputElement.innerHTML = data_patient;
  });
- request_patient.open('GET', https://covid19-osaka.info/data/patients.csv, true);
+ request_patient.open('GET', 'https://covid19-osaka.info/data/patients.csv', true);
  request_patient.send();
  
   const request_summary = new XMLHttpRequest();
@@ -87,6 +87,6 @@ var table_data = "";
   data_summary[i] = datastring_summary[i].split(',');
  }
  });
- request_summary.open('GET', https://covid19-osaka.info/data/summary.csv, true);
+ request_summary.open('GET', 'https://covid19-osaka.info/data/summary.csv', true);
  request_summary.send();
 }
