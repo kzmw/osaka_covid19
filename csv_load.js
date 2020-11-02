@@ -77,6 +77,6 @@ fetch( 'https://covid19-osaka.info/data/patients.csv',)
     for(var i=0;i<tmp.length;++i){
         data_patient[i] = tmp[i].split(',');
     }
-}
+})
 spinner.classList.add('loaded');
 }
