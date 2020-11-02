@@ -68,7 +68,7 @@ const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
 var table_data = "";
 var data_patient = '';
-fetch( 'https://covid19-osaka.info/data/patients.csv',)
+fetch( 'https://covid19-osaka.info/data/patients.csv',{ mode: 'cors',})
    .then(function(response) {
     return response.text();})
    .then(data => {
