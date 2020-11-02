@@ -68,12 +68,11 @@ const spinner = document.getElementById('loading');
 spinner.classList.remove('loaded');
 var table_data = "";
 var data_patient = '';
- const request_patient = new XMLHttpRequest();
- request_patient.open('GET', 'https://covid19-osaka.info/data/patients.csv', true);
- request_patient.send(null);
- request_patient.onload = function(){
- data_patient = convertCSVtoArray(request_patient.responseText);
- };
+ fetch( 'https://covid19-osaka.info/data/patients.csv',)
+   .then(function(response) {
+    return response.text();})
+   .then(data => {}
+spinner.classList.add('loaded');
 }
 
 function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列として渡される
