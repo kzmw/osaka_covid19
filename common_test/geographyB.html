@@ -21,7 +21,8 @@ function timer(){
 document.getElementById('start').disabled = true;
 document.getElementById('stop').disabled = false;
 var start = new Date();
-var goal = goal.setHours(start.getHours() + 1);
+var goal = new Date();
+goal.setHours(start.getHours() + 1);
 
 setInterval(function(){
 var now = new Date();
