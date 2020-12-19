@@ -26,7 +26,7 @@ goal.setHours(start.getHours() + 1);
 
 setInterval(function(){
 var now = new Date();
-var difference = Math.round(goal.getTime() - now.getTime());
+var difference = Math.round((goal.getTime() - now.getTime())/1000) * 1000;
 var time = "2000/01/01 0:00:00";
 var time_date = new Date(time);
 time_date.setTime(time_date.getTime() + difference);
