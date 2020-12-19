@@ -24,7 +24,10 @@ var timer = function(){
 var time = "2000/01/01 " + document.getElementById('rest_time').textContent;
 var time_date = new Date(time)
 time_date.setSeconds(time_date.getSeconds() - 1);
-document.getElementById('rest_time').textContent = time_date.getHours() + ":" + time_date.getMinutes() + ":" + time_date.getSeconds();
+var hours = time_date.getHours();
+var minutes = ("0" + time_date.getMinutes()).slice(-2);
+var seconds = ("0" + time_date.getSeconds()).slice(-2);
+document.getElementById('rest_time').textContent = hours + ":" + minutes + ":" + seconds;
 }
 
 </script>
