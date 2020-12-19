@@ -29,7 +29,7 @@ var now = new Date();
 var difference = goal.getTime() - now.getTime();
 var time = "2000/01/01 " + document.getElementById('rest_time').textContent;
 var time_date = new Date(time);
-time_date.setTime(time_date.getTime()- difference);
+time_date.setTime(time_date.getTime() + difference);
 var hours = time_date.getHours();
 var minutes = ("0" + time_date.getMinutes()).slice(-2);
 var seconds = ("0" + time_date.getSeconds()).slice(-2);
