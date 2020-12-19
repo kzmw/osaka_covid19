@@ -41,9 +41,17 @@ document.getElementById('rest_time').textContent = hours + ":" + minutes + ":" +
 }, 1000);
 }
 
+function reset(){
+clearInterval(interval);
+document.getElementById('start').disabled = false;
+document.getElementById('stop').disabled = true;
+document.getElementById('rest_time').textContent = '1:00:00'
+}
+
 function stop(){
 clearInterval(interval);
 document.getElementById('start').disabled = false;
+document.getElementById('stop').disabled = true;
 document.getElementById('stop').disabled = true;
 document.getElementById('start').value = '試験再開'
 }
@@ -102,7 +110,7 @@ white-space: nowrap;
 残り時間：<span id="rest_time" style="color:#ff6347;font-weight:700;border:1px solid #000;background: #fff462;">1:00:00</span><br>
 <input type="button" id="start" value="試験開始" onclick="timer()">
 <input type="button" id="stop" value="一時停止" onclick="stop()">
-<input type="button" id="reset" value="試験終了">
+<input type="button" id="reset" value="試験終了" onclick="reset()">
   </div>
   </body>
 
