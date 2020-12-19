@@ -6,7 +6,7 @@
 <meta http-equiv="Expires" content="1800">
   <title>大学入学共通テスト予想問題 地理Ｂ</title>
 <script>
-
+var interval;
 
 function getAnswerNumber() {
 var alphabet = ['A','B','C','D','E','F','G','H'];
@@ -25,7 +25,7 @@ var start = new Date();
 var goal = new Date();
 goal.setHours(start.getHours() + 1);
 
-var interval = setInterval(function(){
+interval = setInterval(function(){
 var now = new Date();
 var difference = Math.round((goal.getTime() - now.getTime())/1000) * 1000;
 var time = "2000/01/01 0:00:00";
