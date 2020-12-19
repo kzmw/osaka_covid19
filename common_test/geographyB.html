@@ -22,7 +22,7 @@ setInterval(timer, 1000);
 
 var timer = function(){
 var time = "2000/01/01 " + document.getElementById('rest_time').textContent;
-var time_date = new Date(time).getTime() - new Date('2000/01/01 0:00:01').getTime();
+var time_date = new Date(time).getDate() - new Date('2000/01/01 0:00:01').getDate();
 var mili_seconds = new Date(time_date);
 document.getElementById('rest_time').textContent = mili_seconds.getHours() + ":" + mili_seconds.getMinutes() + ":" + mili_seconds.getSeconds();
 }
