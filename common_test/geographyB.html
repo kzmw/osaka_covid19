@@ -16,23 +16,19 @@ alert((Math.floor(Math.random() * (9999 - 1000) + 1000)) + alphabet[alphabet_ran
 
 }
 
-function start(){
-document.getElementById('start').disabled = true;
-document.getElementById('stop').disabled = false;
-var interval = setInterval(timer, 1000);
-}
-
-function stop(){
-clearInterval(interval);
-}
 
 var timer = function(){
+document.getElementById('start').disabled = true;
+document.getElementById('stop').disabled = false;
 var time = "2000/01/01 " + document.getElementById('rest_time').textContent;
 var time_date = new Date(time)
 time_date.setSeconds(time_date.getSeconds() - 1);
 var hours = time_date.getHours();
 var minutes = ("0" + time_date.getMinutes()).slice(-2);
 var seconds = ("0" + time_date.getSeconds()).slice(-2);
+if (hours + ":" + minutes + ":" + seconds == "0:00:00"){
+clearInterval();
+};
 document.getElementById('rest_time').textContent = hours + ":" + minutes + ":" + seconds;
 }
 
@@ -88,7 +84,7 @@ white-space: nowrap;
 解答ページ<br>
 (解答番号<span style="width:3em;border:1px solid #000;display: inline-block;text-align: center;">1</span>～<span style="width:3em;border:1px solid #000;display: inline-block;text-align: center;">30</span>)
 残り時間：<span id="rest_time">1:00:00</span><br>
-<input type="button" id="start" value="スタート" onclick="start()">
+<input type="button" id="start" value="スタート" onclick="setInterval(timer, 1000);">
 <input type="button" id="stop" value="ストップ" onclick="stop()">
 <input type="button" id="reset" value="リセット">
   </div>
