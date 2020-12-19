@@ -21,8 +21,8 @@ setInterval(timer, 1000);
 }
 
 var timer = function(){
-var time = document.getElementById('rest_time').textContent;
-var time_date = new Date(time).getTime() - new Date('0:00:01').getTime();
+var time = "2000/01/01 " + document.getElementById('rest_time').textContent;
+var time_date = new Date(time).getTime() - new Date('2000/01/01 0:00:01').getTime();
 document.getElementById('rest_time').textContent = time_date;
 }
 
