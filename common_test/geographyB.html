@@ -16,7 +16,15 @@ alert((Math.floor(Math.random() * (9999 - 1000) + 1000)) + alphabet[alphabet_ran
 
 }
 
-getAnswerNumber()
+function start(){
+setInterval(timer, 1000);
+}
+
+var timer = function(){
+var time = document.getElementById('rest_time').textContent;
+var time_date = new Date(time).getTime() - new Date('0:00:01').getTime();
+document.getElementById('rest_time').textContent = time_date;
+}
 
 </script>
 <style>
@@ -69,6 +77,10 @@ white-space: nowrap;
 <div style="padding-top:55px">
 解答ページ<br>
 (解答番号<span style="width:3em;border:1px solid #000;display: inline-block;text-align: center;">1</span>～<span style="width:3em;border:1px solid #000;display: inline-block;text-align: center;">30</span>)
+残り時間：<span id="rest_time">1:00:00</span><br>
+<input type="button" id="start" value="スタート" onclick="start()">
+<input type="button" id="stop" value="ストップ">
+<input type="button" id="reset" value="リセット">
   </div>
   </body>
 
