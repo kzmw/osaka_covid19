@@ -117,11 +117,13 @@ white-space: nowrap;
 
 .mark{
   display: none;
+}
+.mark + label{
   padding-left: 20px;
   position:relative;
   margin-right: 20px;
-}
-.mark::before{
+  }
+.mark + label::before{
   content: "";
   display: block;
   position: absolute;
@@ -132,10 +134,10 @@ white-space: nowrap;
   border: 1px solid #000;
   border-radius: 50%;
 }
-.mark:checked{
+.mark:checked + label{
   color: #000;
 }
-.mark:checked::after{
+.mark:checked + label::after{
   content: "";
   display: block;
   position: absolute;
