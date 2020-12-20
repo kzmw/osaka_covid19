@@ -56,6 +56,11 @@ document.getElementById('start').disabled = false;
 document.getElementById('stop').disabled = true;
 document.getElementById('reset').disabled = true;
 document.getElementById('rest_time').textContent = '1:00:00'
+
+  for(var i=1;i<=30;i++){
+  
+  }
+      
   }else if (ret == false){timer_before()
   }
 }
@@ -108,6 +113,40 @@ font-weight:700;
 vertical-align: middle;
 white-space: nowrap;
 }
+}
+
+.radio-input{
+  display: none;
+}
+.radio-input + label{
+  padding-left: 20px;
+  position:relative;
+  margin-right: 20px;
+}
+.radio-input + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.radio-input:checked + label{
+  color: #000;
+}
+.radio-input:checked + label::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  background: #000;
+  border-radius: 50%;
 }
   </style>
 </head>
