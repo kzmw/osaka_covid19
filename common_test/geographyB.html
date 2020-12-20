@@ -56,11 +56,13 @@ document.getElementById('start').disabled = false;
 document.getElementById('stop').disabled = true;
 document.getElementById('reset').disabled = true;
 document.getElementById('rest_time').textContent = '1:00:00'
-
+var name;
   for(var i=1;i<=30;i++){
-for(var j=1;j<=9;j++){
-document.getElementById(i + "_" + j).checked = false
-}}
+name = 'no' + i
+ for(var element of document.getElementsByName(name)) {
+    element.checked = false;
+  }
+}
       
   }else if (ret == false){timer_before()
   }
@@ -144,15 +146,15 @@ white-space: nowrap;
 </tr>
 <tr align="center">
 <td>1</td>
-<td><label><input class="mark" type="radio" name="no1" value="1" id="1_1"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="2" id="1_2"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="3" id="1_3"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="4" id="1_4"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="5" id="1_5"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="6" id="1_6"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="7" id="1_7"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="8" id="1_8"></label></td>
-<td><label><input class="mark" type="radio" name="no1" value="9" id="1_9"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="1"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="2"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="3"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="4"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="5"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="6"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="7"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="8"></label></td>
+<td><label><input class="mark" type="radio" name="no1" value="9"></label></td>
 </tr>
 <tr align="center">
 <td>2</td>
