@@ -49,11 +49,14 @@ document.getElementById('rest_time').textContent = hours + ":" + minutes + ":" +
 }
 
 function reset(){
+  ret = confirm("試験を終了してよろしいですか？解答は送信され，リセットされます。");
+  if (ret == true){
 clearInterval(interval);
 document.getElementById('start').disabled = false;
 document.getElementById('stop').disabled = true;
 document.getElementById('reset').disabled = true;
 document.getElementById('rest_time').textContent = '1:00:00'
+  }
 }
 
 function stop(){
