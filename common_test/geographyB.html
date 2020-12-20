@@ -12,7 +12,7 @@ function getAnswerNumber() {
 var alphabet = ['A','B','C','D','E','F','G','H'];
 var alphabet_rand = Math.floor(Math.random()  * 7);
 
-alert((Math.floor(Math.random() * (9999 - 1000) + 1000)) + alphabet[alphabet_rand]);
+return (Math.floor(Math.random() * (9999 - 1000) + 1000)) + alphabet[alphabet_rand]);
 
 }
 
@@ -77,7 +77,7 @@ document.getElementById('start').value = '試験再開'
 
 function submit(){
 var answer_number = getAnswerNumber();
-var now = new Data();
+var now = new Date();
 var data = {
 "type" : "answer",
 "data" : [now,answer_number]
