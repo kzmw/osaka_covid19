@@ -75,6 +75,22 @@ document.getElementById('stop').disabled = true;
 document.getElementById('start').value = '試験再開'
 }
 
+function submit(){
+var answer_number = getAnswerNumber();
+var now = new Data();
+var data = {
+"type" : "answer",
+"data" : [now,answer_number]
+};
+var postparam = {
+"method" : "POST",
+"mode" : "no-cors",
+  "Content-Type" : "application/x-www-form-urlencoded",
+  "body" : JSON.stringify(data)
+}
+fetch('https://script.google.com/macros/s/AKfycbypjAniZNGJL-Gu7l659Uw2yibI006ilyx1RAa2Khshhr97xsc/exec',postparam
+}
+
 </script>
 <style>
   body {
@@ -131,6 +147,7 @@ white-space: nowrap;
 <input type="button" id="start" value="試験開始" onclick="timer_before()">
 <input type="button" id="stop" disabled value="一時停止" onclick="stop()">
 <input type="button" id="reset" disabled value="試験終了" onclick="reset()">
+<input type="button" id="submit" value="解答提出" onclick="submit()">
 <table border="1">
 <tr align="center">
 <th>解答番号</th>
