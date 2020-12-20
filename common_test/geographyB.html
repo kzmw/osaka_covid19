@@ -115,15 +115,15 @@ white-space: nowrap;
 }
 }
 
-.radio-input{
+.mark{
   display: none;
 }
-.radio-input + label{
+.mark + label{
   padding-left: 20px;
   position:relative;
   margin-right: 20px;
 }
-.radio-input + label::before{
+.mark + label::before{
   content: "";
   display: block;
   position: absolute;
@@ -134,10 +134,10 @@ white-space: nowrap;
   border: 1px solid #000;
   border-radius: 50%;
 }
-.radio-input:checked + label{
+.mark:checked + label{
   color: #000;
 }
-.radio-input:checked + label::after{
+.mark:checked + label::after{
   content: "";
   display: block;
   position: absolute;
