@@ -20,7 +20,7 @@ function timer_before(){
 var test_time = 3600000;
 var time = document.getElementById('rest_time').textContent;
 if(!(time == '1:00:00')){ var splits = time.split(':');
-test_time = (splits[0]*3600 + splits[1]*60 + splits[2])*1000 };
+test_time = (Number(splits[0])*3600 + Number(splits[1])*60 + Number(splits[2]))*1000 };
 timer(test_time) }
 
 function timer(test_time){
