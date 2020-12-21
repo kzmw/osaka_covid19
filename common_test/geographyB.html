@@ -51,13 +51,13 @@ document.getElementById('rest_time').textContent = hours + ":" + minutes + ":" +
 
 function reset(){
  clearInterval(interval); 
-  ret = confirm("試験を終了してよろしいですか？解答は送信され，リセットされます。");
+  ret = confirm("試験を終了してよろしいですか？解答は送信されず，リセットされます。");
   if (ret == true){
 document.getElementById('start').disabled = false;
 document.getElementById('stop').disabled = true;
 document.getElementById('reset').disabled = true;
 document.getElementById('submit').disabled = true;
-submit();
+document.getElementById('start').value = '試験開始'
 document.getElementById('rest_time').textContent = '1:00:00'
 var name;
   for(var i=1;i<=30;i++){
