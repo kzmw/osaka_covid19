@@ -82,6 +82,14 @@ var data = {
 "type" : "answer",
 "data" : [now,answer_number]
 };
+var name;
+  for(var i=1;i<=30;i++){
+name = 'no' + i
+ for(var element of document.getElementsByName(name)) {
+    data["data"].push(element.value);
+  }
+}
+
 var postparam = {
 "method" : "POST",
 "mode" : "no-cors",
