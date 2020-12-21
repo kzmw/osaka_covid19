@@ -86,12 +86,13 @@ var data = {
 var name;
   for(var i=1;i<=30;i++){
 name = 'no' + i
- for(var element of document.getElementsByName(name)) {
-
-for(var k=0; k<=8;k++){
-if(element[k].checked = true){
-data["data"].push(element[k].value);
+ var elements = document.getElementsByName(name);
+for(var k=1; k<=9;k++){
+if(elements[k].checked = true){
+data["data"].push(elements[k].value);
    }
+if(elements[k].checked = false && k = 9){
+data["data"].push("");
 }
   }
 }
