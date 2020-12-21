@@ -88,10 +88,10 @@ var name;
 name = 'no' + i
  var elements = document.getElementsByName(name);
 for(var k=0; k<=8;k++){
-if(elements[k].checked = true){
+if(elements[k].checked == true){
 data["data"].push(elements[k].value);
    }
-if((elements[k].checked = false) && (k = 8)){
+if((elements[k].checked == false) && (k = 8)){
 data["data"].push("");
 }
   }
