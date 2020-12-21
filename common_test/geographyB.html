@@ -27,6 +27,7 @@ function timer(test_time){
 document.getElementById('start').disabled = true;
 document.getElementById('stop').disabled = false;
 document.getElementById('reset').disabled = false;
+document.getElementById('submit').disabled = true;
 document.getElementById('start').value = '試験開始'
 var start = new Date();
 var goal = new Date();
@@ -55,7 +56,9 @@ function reset(){
 document.getElementById('start').disabled = false;
 document.getElementById('stop').disabled = true;
 document.getElementById('reset').disabled = true;
+document.getElementById('submit').disabled = true;
 document.getElementById('rest_time').textContent = '1:00:00'
+submit();
 var name;
   for(var i=1;i<=30;i++){
 name = 'no' + i
@@ -72,6 +75,7 @@ function stop(){
 clearInterval(interval);
 document.getElementById('start').disabled = false;
 document.getElementById('stop').disabled = true;
+document.getElementById('sumit').disabled = false;
 document.getElementById('start').value = '試験再開'
 }
 
@@ -163,7 +167,7 @@ white-space: nowrap;
 <input type="button" id="start" value="試験開始" onclick="timer_before()">
 <input type="button" id="stop" disabled value="一時停止" onclick="stop()">
 <input type="button" id="reset" disabled value="試験終了" onclick="reset()">
-<input type="button" id="submit" value="解答提出" onclick="submit()">
+<input type="button" id="submit" disabled value="解答提出" onclick="submit()">
 <table border="1">
 <tr align="center">
 <th>解答番号</th>
