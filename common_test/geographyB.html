@@ -87,9 +87,12 @@ var name;
   for(var i=1;i<=30;i++){
 name = 'no' + i
  for(var element of document.getElementsByName(name)) {
-   if(element.checked = true){
-    data["data"].push(element.value);
+
+for(var k=0; k<=9;k++){
+if(element[k].checked = true){
+data["data"].push(element[k].value);
    }
+}
   }
 }
 
