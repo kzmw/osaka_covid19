@@ -78,15 +78,18 @@ document.getElementById('start').value = '試験再開'
 function submit(){
 var answer_number = getAnswerNumber();
 var now = new Date();
+var rest_time = document.getElementById('rest_time').textContent;
 var data = {
 "type" : "answer",
-"data" : [now,answer_number]
+"data" : [now,answer_number,3,5,30,"西村 和真",0,0,0,0,0,0,rest_time]
 };
 var name;
   for(var i=1;i<=30;i++){
 name = 'no' + i
  for(var element of document.getElementsByName(name)) {
+   if(element.checked = true){
     data["data"].push(element.value);
+   }
   }
 }
 
