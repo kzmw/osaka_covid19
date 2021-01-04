@@ -73,10 +73,10 @@ document.getElementById('start').value = '試験再開'
 function submit(){
 var now = new Date();
 var rest_time = document.getElementById('rest_time').textContent;
-var grade = document.getElementsById("grade").value;
-var class_num = document.getElementsById("class_num").value;
-var syu_ban = document.getElementsById("syu_ban").value;
-var myname = document.getElementsById("myname").value;
+var grade = document.getElementById("grade").value;
+var class_num = document.getElementById("class_num").value;
+var syu_ban = document.getElementById("syu_ban").value;
+var myname = document.getElementById("myname").value;
 var data = {
 "type" : "answer",
 "data" : [now,0,grade,class_num,syu_ban,myname,0,0,0,0,0,0,rest_time]
