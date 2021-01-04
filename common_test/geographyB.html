@@ -73,9 +73,13 @@ document.getElementById('start').value = '試験再開'
 function submit(){
 var now = new Date();
 var rest_time = document.getElementById('rest_time').textContent;
+var grade = document.getElementsByName("grade");
+var class_num = document.getElementsByName("class_num");
+var syu_ban = document.getElementsByName("syu_ban");
+var myname = document.getElementsByName("myname");
 var data = {
 "type" : "answer",
-"data" : [now,0,0,0,0,0,0,0,0,0,0,0,rest_time]
+"data" : [now,0,grade,class_num,syu_ban,myname,0,0,0,0,0,0,rest_time]
 };
 var name;
   for(var i=1;i<=30;i++){
@@ -157,10 +161,10 @@ white-space: nowrap;
 <input type="button" id="stop" disabled value="一時停止" onclick="stop()">
 <input type="button" id="reset" disabled value="試験終了" onclick="reset()">
 <input type="button" id="submit" disabled value="解答提出" onclick="submit()"><br>
-<span>学年<input type="text" name="grade"></span>
-<span>組<input type="text" name="class"></span>
-<span>番<input type="text" name="syu_ban"></span>
-<span>氏名<input type="text" name="myname"></span>
+<span>学年<input type="text" name="grade" size="2"></span>
+<span>組<input type="text" name="class_num" size="2"></span>
+<span>番<input type="text" name="syu_ban" size="2"></span>
+<span>氏名<input type="text" name="myname" size="10"></span>
 </div>
 <table border="1">
 <tr align="center">
