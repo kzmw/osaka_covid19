@@ -7,15 +7,6 @@
   <title>大学入学共通テスト予想問題 地理Ｂ</title>
 <script>
 var interval;
-
-function getAnswerNumber() {
-var alphabet = ['A','B','C','D','E','F','G','H'];
-var alphabet_rand = Math.floor(Math.random()  * 7);
-
-return (Math.floor(Math.random() * (9999 - 1000) + 1000)) + alphabet[alphabet_rand];
-
-}
-
 function timer_before(){
 var test_time = 3600000;
 var time = document.getElementById('rest_time').textContent;
@@ -80,12 +71,11 @@ document.getElementById('start').value = '試験再開'
 }
 
 function submit(){
-var answer_number = getAnswerNumber();
 var now = new Date();
 var rest_time = document.getElementById('rest_time').textContent;
 var data = {
 "type" : "answer",
-"data" : [now,answer_number,3,5,30,"西村 和真",0,0,0,0,0,0,rest_time]
+"data" : [now,3,5,30,"西村 和真",0,0,0,0,0,0,rest_time]
 };
 var name;
   for(var i=1;i<=30;i++){
