@@ -103,10 +103,6 @@ var postparam = {
   "body" : JSON.stringify(data)
 };
 fetch('https://script.google.com/macros/s/AKfycbypjAniZNGJL-Gu7l659Uw2yibI006ilyx1RAa2Khshhr97xsc/exec',postparam)
-.then(response => response.json())
-.then(success => function(){
-alert(success)
-});
 }
 
 </script>
@@ -166,7 +162,8 @@ white-space: nowrap;
 <span>学年<input type="text" id="grade" size="2"></span>
 <span>組<input type="text" id="class_num" size="2"></span>
 <span>番<input type="text" id="syu_ban" size="2"></span>
-<span>氏名<input type="text" id="myname" size="10"></span>
+<span>氏名<input type="text" id="myname" size="10"></span><br>
+<a href="/geography_B_common_test_prediction_answer.pdf">解答PDFをダウンロードする</a>
 </div>
 <div style="padding-top:150px">
 (解答番号<span style="width:3.5em;border:1.5pt solid #000;display: inline-block;text-align: center;">1</span>～<span style="width:3.5em;border:1.5pt solid #000;display: inline-block;text-align: center;">30</span>)<br>
