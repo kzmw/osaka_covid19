@@ -197,8 +197,8 @@ function getJsonp_GAS() {
       if (data.onset[onset_count] == null) {
         data.onset[onset_count] = 0
       }
-      onset[onset_count] = data.announce[announce_count]["positive"];
-      date = new Date(data.onset[announce_count]["date"])
+      onset[onset_count] = data.onset[onset_count]["number"];
+      date = new Date(data.onset[onset_count]["date"])
       month2 = date2.getMonth() + 1;
       day4 = date2.getDate();
       day3[onset_count] = month2 + "/" + day4;
@@ -211,7 +211,7 @@ function getJsonp_GAS() {
         datasets: [{
           label: '人数',
           backgroundColor: "#40e0d0",
-          data: data.onset
+          data: onset
         }]
       },
       options: {
