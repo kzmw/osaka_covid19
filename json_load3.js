@@ -52,9 +52,7 @@ function getJsonp_GAS() {
   }).then(data => {
     $("#load_status").text("データを書き出し中");
     $("#number_text").text(data.sum);
-    //if(data.change > 0){$("#change").text("前日比：＋" + "準備中" + "人")}
-    //else if(data.change == 0){$("#change").text("前日比：±" + "準備中" + "人")}
-    //else if(data.change < 0){$("#change").text("前日比：－" + "準備中" + "人")}
+
     var last_update = new Date(data.last_update);
     var last_update_minute = ('00' + last_update.getMinutes()).slice(-2)
     $("#update").text("最終更新：" + last_update.getFullYear() + "/" + (last_update.getMonth() + 1) + "/" + last_update.getDate() + " " + last_update.getHours() + ":" + last_update_minute);
@@ -69,14 +67,7 @@ function getJsonp_GAS() {
     var proportion_per = "";
     var proportion_percent = "";
     for (var i = 0; i <= (data.city.length - 1); i++) {
-      //var change = data.city[i].change;
       var patient = data.city[i].patient;
-      /*if(change == 0){
-      change = Number(change).toLocaleString()
-      }
-      else if(change < 0){
-      change = "－" + Number(change).toLocaleString()
-      }*/
       if (patient > 0) {
         proportion_per = Number(Math.round(data.city[i].population / data.city[i].patient)).toLocaleString() + "人に1人";
         proportion_percent = Math.floor(data.city[i].patient / data.city[i].population * 100 * Math.pow(10, 3)) / Math.pow(10, 3) + "%";
