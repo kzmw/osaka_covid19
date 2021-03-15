@@ -198,7 +198,7 @@ function getJsonp_GAS() {
         data.onset[onset_count] = 0
       }
       onset[onset_count] = data.onset[onset_count]["number"];
-      date = new Date(data.onset[onset_count]["date"])
+      date2 = new Date(data.onset[onset_count]["date"])
       month2 = date2.getMonth() + 1;
       day4 = date2.getDate();
       day3[onset_count] = month2 + "/" + day4;
