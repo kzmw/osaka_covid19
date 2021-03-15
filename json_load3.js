@@ -60,9 +60,9 @@ fetch( 'https://script.google.com/macros/s/AKfycbysGozVtCq3KedCaYZo2Tk_sycdysgkd
    .then(data => {
 $("#load_status").text("データを書き出し中");
 $("#number_text").text(data.sum);
-if(data.change > 0){$("#change").text("前日比：＋" + "準備中" + "人")}
-else if(data.change == 0){$("#change").text("前日比：±" + "準備中" + "人")}
-else if(data.change < 0){$("#change").text("前日比：－" + "準備中" + "人")}
+//if(data.change > 0){$("#change").text("前日比：＋" + "準備中" + "人")}
+//else if(data.change == 0){$("#change").text("前日比：±" + "準備中" + "人")}
+//else if(data.change < 0){$("#change").text("前日比：－" + "準備中" + "人")}
 var last_update = new Date(data.last_update);
 var last_update_minute = ('00' + last_update.getMinutes()).slice(-2)
 $("#update").text("最終更新：" + last_update.getFullYear() + "/" + (last_update.getMonth() + 1) + "/" + last_update.getDate() + " " + last_update.getHours() + ":" + last_update_minute);
