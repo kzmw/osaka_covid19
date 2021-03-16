@@ -114,7 +114,7 @@ function getJsonp_GAS() {
         data.announce[announce_count]["tests-conducted"] = 0
       }
       announce[announce_count] = data.announce[announce_count]["positive"];
-      announce2[announce_count] = data.announce[announce_count]["tests-conducted"];
+      announce2[announce_count] = (data.announce[announce_count]["positive"])/(data.announce[announce_count]["tests-conducted"])*100;
       date = new Date(data.announce[announce_count]["date"])
       month = date.getMonth() + 1;
       day2 = date.getDate();
