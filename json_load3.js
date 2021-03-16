@@ -49,7 +49,7 @@ function getJsonp_GAS() {
   var table_data = "";
   fetch('https://script.google.com/macros/s/AKfycbysGozVtCq3KedCaYZo2Tk_sycdysgkdn7__fQvA8InTQGju41hiv6xaCA2BASbI3vp/exec', )
     .then(function (response) {
-    return JSON.parse(String(response));})
+    return response.json();})
     .then(data => {
     $("#load_status").text("データを書き出し中");
     $("#number_text").text(data.sum);
