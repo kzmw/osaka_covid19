@@ -102,7 +102,7 @@ function getJsonp_GAS() {
     var length = data.announce.length;
     var day = new Array(length);
     var date;
-    var announce;
+    var announce = new Array(length);
     var month;
     var day2;
     for (var announce_count = 0; announce_count <= length - 1; announce_count++) {
@@ -181,7 +181,7 @@ function getJsonp_GAS() {
     })
     var length2 = data.onset.length;
     var day3 = new Array(length2);
-    var onset;
+    var onset = new Array(length2);;
     var date2;
     var month2;
     var day4;
