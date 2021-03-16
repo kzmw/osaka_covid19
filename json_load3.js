@@ -103,13 +103,18 @@ function getJsonp_GAS() {
     var day = new Array(length);
     var date;
     var announce = new Array(length);
+    var announce2 = new Array(length);
     var month;
     var day2;
     for (var announce_count = 0; announce_count <= length - 1; announce_count++) {
       if (data.announce[announce_count]["positive"] == null) {
         data.announce[announce_count]["positive"] = 0
       }
+      if (data.announce[announce_count]["tests-conducted"] == null) {
+        data.announce[announce_count]["tests-conducted"] = 0
+      }
       announce[announce_count] = data.announce[announce_count]["positive"];
+      announce2[announce_count] = data.announce[announce_count]["tests-conducted"];
       date = new Date(data.announce[announce_count]["date"])
       month = date.getMonth() + 1;
       day2 = date.getDate();
@@ -136,7 +141,7 @@ function getJsonp_GAS() {
           hoverRadius: 3,
           fill: false,
           yAxisID: "y-axis-proportion",
-          data: data.daily_proportion
+          data: announce2
         }]
       },
       options: {
