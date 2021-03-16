@@ -47,7 +47,7 @@ function getJsonp_GAS() {
   spinner.classList.remove('loaded');
   $("#load_status").text("感染者情報を読み込み中");
   var table_data = "";
-  fetch('https://script.google.com/macros/s/AKfycbysGozVtCq3KedCaYZo2Tk_sycdysgkdn7__fQvA8InTQGju41hiv6xaCA2BASbI3vp/exec', )
+  fetch('https://script.google.com/macros/s/AKfycbye_6bGPTwcBE-xsTPNnQUpDs6xle34MHcTTBYfdIFb-YhguaA/exec', )
     .then(function (response) {
     return response.json();})
     .then(data => {
