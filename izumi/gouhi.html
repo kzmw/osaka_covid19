@@ -20,7 +20,6 @@ req.open("get", "izumi.csv", true);
 req.send(null);
 req.onload = function(){
 var result = [];
-var message = "受験番号に誤りはありませんか。半角数字4ケタでご入力ください。";
 var csv_data = req.responseText;
 var tmp = csv_data.split("\r\n");
 for (let i = 0; i < tmp.length; i++){
@@ -29,18 +28,18 @@ result[i] = tmp[i].split(',');
 }
 }
 var no = hankaku2Zenkaku(decodeURI(window.location.search.slice(4)));
-
+var message = "受験番号：" + no + "<br>受験番号に誤りはありませんか。半角数字4ケタでご入力ください。";
 
 for(var j=1;j<result.length; j++){
 if (result[j][0]==no){
 if (result[j][1]=="合格"){
 if (result[j][0]<1200){ var time = "12:40" }
 else{var time = "14:30"}
-message = "おめでとうございます。あなたは，本校　" + result[j][2] + "科　に合格されました。<br>" + time + "からの合格者説明会にご出席ください。";
+message = "受験番号：" + no + "<br>おめでとうございます。あなたは，本校　" + result[j][2] + "科　に合格されました。<br>" + time + "からの合格者説明会にご出席ください。";
 break
 }
 else if (result[j][1]=="不合格"){
-message = "残念ながら，あなたは不合格となりました。ご受験お疲れさまでした。";
+message = "受験番号：" + no + "<br>残念ながら，あなたは不合格となりました。ご受験お疲れさまでした。";
 break
 }
 }
