@@ -27,12 +27,12 @@ if (tmp[i] != ""){			// 空行を除外（特にファイル末尾）
 result[i] = tmp[i].split(',');
 }
 }
-if((window.location.search.slice(4)).match(/[0-9]/g) && (window.location.search.slice(4)).length == 4){
+if((window.location.search.slice(4)).match(/[^0-9]+/) && (window.location.search.slice(4)).length == 4){
 var no = window.location.search.slice(4);
 var change = "";
 var message = "";
 }
-else if((window.location.search.slice(4)).length == 4 && (window.location.search.slice(4)).match(/[０-９]/g)){
+else if((window.location.search.slice(4)).length == 4 && (window.location.search.slice(4)).match(/[０-９]/)){
 var no = hankaku2Zenkaku(decodeURI(window.location.search.slice(4)));
 var change = "受験番号の入力に不備があったため，修正しました。";
 var message = "";
