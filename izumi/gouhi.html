@@ -27,30 +27,20 @@ if (tmp[i] != ""){			// 空行を除外（特にファイル末尾）
 result[i] = tmp[i].split(',');
 }
 }
-if((window.location.search.slice(4)).match(/[^0-9]+/) && (window.location.search.slice(4)).length == 4){
-var no = window.location.search.slice(4);
-var change = "";
-var message = "";
-}
-else if((window.location.search.slice(4)).length == 4 && (window.location.search.slice(4)).match(/[０-９]/)){
+
 var no = hankaku2Zenkaku(decodeURI(window.location.search.slice(4)));
-var change = "受験番号の入力に不備があったため，修正しました。";
-var message = "";
-}
-else{
 var message = "受験番号：" + no + "<br>受験番号に誤りがあります。半角数字4ケタでご入力ください。";
-}	
 
 for(var j=1;j<result.length; j++){
 if (result[j][0]==no){
 if (result[j][1]=="合格"){
 if (result[j][0]<1200){ var time = "12:40" }
 else{var time = "14:30"}
-message = "受験番号：" + no + "(" + change +")<br>おめでとうございます。あなたは，本校　" + result[j][2] + "科　に合格されました。<br>" + time + "からの合格者説明会にご出席ください。";
+message = "受験番号：" + no + "<br>おめでとうございます。あなたは，本校　" + result[j][2] + "科　に合格されました。<br>" + time + "からの合格者説明会にご出席ください。";
 break
 }
 else if (result[j][1]=="不合格"){
-message = "受験番号：" + no + "(" + change +")<br>残念ながら，あなたは不合格となりました。ご受験お疲れさまでした。";
+message = "受験番号：" + no + "<br>残念ながら，あなたは不合格となりました。ご受験お疲れさまでした。";
 break
 }
 }
