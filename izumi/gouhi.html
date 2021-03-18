@@ -8,6 +8,13 @@
   <title>令和３年度　大阪府立和泉高等学校　合格発表</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+function hankaku2Zenkaku(str) {
+    return str.replace(/[０-９]/g, function(s) {
+        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    });
+}
+	
+
 var req = new XMLHttpRequest();
 req.open("get", "izumi.csv", true);
 req.send(null);
@@ -21,7 +28,9 @@ if (tmp[i] != ""){			// 空行を除外（特にファイル末尾）
 result[i] = tmp[i].split(',');
 }
 }
-var no = window.location.search.slice(4);
+var no = hankaku2Zenkaku(window.location.search.slice(4));
+
+
 for(var j=1;j<result.length; j++){
 if (result[j][0]==no){
 if (result[j][1]=="合格"){
@@ -39,6 +48,7 @@ break
 var myh1 = document.getElementById("gouhi");
 myh1.innerHTML = message;
 }
+	
 </script>
 </head>
 <body>
