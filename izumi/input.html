@@ -7,6 +7,12 @@
 <meta http-equiv="Expires" content="1800">
   <title>令和３年度　大阪府立和泉高等学校　合格発表</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+function gouhi(){
+var no = document.getElementById(no).value;
+window.open('gouhi.html?no=' + no, '_blank');
+}
+</script>
 </head>
 <body>
 <header>
@@ -19,7 +25,7 @@
 <label for="name">あなたの受験番号(半角数字4ケタ)</label>
 <input type="text" id="no" name="no" required
        minlength="4" maxlength="4" size="10">
-<input type="button" value="合否確認">
+<input type="button" onclick="gouhi()" value="合否確認">
 	</div>
 	</body>
 </html>
