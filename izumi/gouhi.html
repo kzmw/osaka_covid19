@@ -28,7 +28,7 @@ if (tmp[i] != ""){			// 空行を除外（特にファイル末尾）
 result[i] = tmp[i].split(',');
 }
 }
-var no = hankaku2Zenkaku(window.location.search.slice(4));
+var no = hankaku2Zenkaku(decodeURI(window.location.search.slice(4)));
 
 
 for(var j=1;j<result.length; j++){
