@@ -10,7 +10,7 @@
 <script>
 function hankaku2Zenkaku(str) {
     return str.replace(/[０-９]/g, function(s) {
-        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+        return String.fromCharCode(s.charCodeAt(0) - 65248);
     });
 }
 	
