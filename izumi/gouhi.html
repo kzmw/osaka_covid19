@@ -9,7 +9,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 function hankaku2Zenkaku(str) {
-    return str.replace(/[０-９]/g, function(s) {
+    return str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 65248);
     });
 }
@@ -28,7 +28,7 @@ if (tmp[i] != ""){			// 空行を除外（特にファイル末尾）
 result[i] = tmp[i].split(',');
 }
 }
-var no = decodeURI(hankaku2Zenkaku(window.location.search.slice(4)));
+var no = hankaku2Zenkaku(window.location.search.slice(4));
 
 
 for(var j=1;j<result.length; j++){
