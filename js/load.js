@@ -27836,5 +27836,5 @@ function change() {
             }
         }
     }
-    document.getElementById('data_content').innerHTML = '<table border="1">' + table + '</table>';
+    document.getElementById('data_content').innerHTML = '<table>' + table + '</table>';
 }
