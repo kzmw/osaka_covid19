@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/load.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet">
+    <title>奈良教育大学代替シラバス</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_content">
+            <form>
+                <table border="0">
+                    <tr>
+                        <td align="right"><b> 時間割番号：</b></td>
+                        <td>G<input type="tel" id="tt_num" size="5" maxlength="5" placeholder="数字のみ" oninput="change()"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b> 科目名：</b></td>
+                        <td><input type="text" id="name" size="30" maxlength="20" oninput="change()"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>開講期間：</b></td>
+                        <td>
+                            <input type="radio" name="semester" value="すべて" onchange="change()" checked>すべて
+                            <input type="radio" name="semester" value="前期" onchange="change()">前期
+                            <input type="radio" name="semester" value="後期" onchange="change()">後期
+                            <input type="radio" name="semester" value="通年" onchange="change()">通年
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>曜日：</b></td>
+                        <td>
+                            <input type="checkbox" name="period" value="月1" onchange="change()">月1
+                            <input type="checkbox" name="period" value="月2" onchange="change()">月2
+                            <input type="checkbox" name="period" value="月3" onchange="change()">月3
+                            <input type="checkbox" name="period" value="月4" onchange="change()">月4
+                            <input type="checkbox" name="period" value="月5" onchange="change()">月5
+                            <input type="checkbox" name="period" value="月6" onchange="change()">月6
+                            <input type="checkbox" name="period" value="月7" onchange="change()">月7
+                            <input type="checkbox" name="period" value="月8" onchange="change()">月8
+                            <input type="checkbox" name="period" value="月9" onchange="change()">月9
+                            <input type="checkbox" name="period" value="月10" onchange="change()">月10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="period" value="火1" onchange="change()">火1
+                            <input type="checkbox" name="period" value="火2" onchange="change()">火2
+                            <input type="checkbox" name="period" value="火3" onchange="change()">火3
+                            <input type="checkbox" name="period" value="火4" onchange="change()">火4
+                            <input type="checkbox" name="period" value="火5" onchange="change()">火5
+                            <input type="checkbox" name="period" value="火6" onchange="change()">火6
+                            <input type="checkbox" name="period" value="火7" onchange="change()">火7
+                            <input type="checkbox" name="period" value="火8" onchange="change()">火8
+                            <input type="checkbox" name="period" value="火9" onchange="change()">火9
+                            <input type="checkbox" name="period" value="火10" onchange="change()">火10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="period" value="水1" onchange="change()">水1
+                            <input type="checkbox" name="period" value="水2" onchange="change()">水2
+                            <input type="checkbox" name="period" value="水3" onchange="change()">水3
+                            <input type="checkbox" name="period" value="水4" onchange="change()">水4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="period" value="木1" onchange="change()">木1
+                            <input type="checkbox" name="period" value="木2" onchange="change()">木2
+                            <input type="checkbox" name="period" value="木3" onchange="change()">木3
+                            <input type="checkbox" name="period" value="木4" onchange="change()">木4
+                            <input type="checkbox" name="period" value="木5" onchange="change()">木5
+                            <input type="checkbox" name="period" value="木6" onchange="change()">木6
+                            <input type="checkbox" name="period" value="木7" onchange="change()">木7
+                            <input type="checkbox" name="period" value="木8" onchange="change()">木8
+                            <input type="checkbox" name="period" value="木9" onchange="change()">木9
+                            <input type="checkbox" name="period" value="木10" onchange="change()">木10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="period" value="金1" onchange="change()">金1
+                            <input type="checkbox" name="period" value="金2" onchange="change()">金2
+                            <input type="checkbox" name="period" value="金3" onchange="change()">金3
+                            <input type="checkbox" name="period" value="金4" onchange="change()">金4
+                            <input type="checkbox" name="period" value="金5" onchange="change()">金5
+                            <input type="checkbox" name="period" value="金6" onchange="change()">金6
+                            <input type="checkbox" name="period" value="金7" onchange="change()">金7
+                            <input type="checkbox" name="period" value="金8" onchange="change()">金8
+                            <input type="checkbox" name="period" value="金9" onchange="change()">金9
+                            <input type="checkbox" name="period" value="金10" onchange="change()">金10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="period" value="集中" onchange="change()">集中講義
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </header>
+    <div id="data_content">
+    </div>
+</body>
+
+</html>
