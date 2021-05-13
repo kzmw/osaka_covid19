@@ -13888,7 +13888,7 @@ window.onload = function() {
         }
         table += '<tr><td>' + data["subject"][i]["tt_num"] + "</td><td>" + data["subject"][i]["name"] + '<br><a href="' + data["subject"][i]["page"] + '"class="syllabus" target="_blank">シラバス</a></td><td>' + data["subject"][i]["semester"] + "</td><td>" + period + "</td><td>" + data["subject"][i]["credits"] + "</td><td>" + teacher + "</td></tr>"
     }
-    document.getElementById('data_content').innerHTML = '<table border="1">' + table + '</table>';
+    document.getElementById('data_content').innerHTML = '<table>' + table + '</table>';
 }
 
 function change() {
