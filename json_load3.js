@@ -56,7 +56,7 @@ function getJsonp_GAS() {
     var last_update = new Date(data.last_update);
     var last_update_minute = ('00' + last_update.getMinutes()).slice(-2)
     $("#update").text("最終更新：" + last_update.getFullYear() + "/" + (last_update.getMonth() + 1) + "/" + last_update.getDate() + " " + last_update.getHours() + ":" + last_update_minute);
-    $("#change").text("前日比：" + data.dod);
+    $("#change").text("前日比：" + data.dod + "人");
     if (data.signal == "yellow") {
       $("#signal_frame").html("<div class=\"signal_off\"></div><div class=\"signal_yerrow\"></div><div class=\"signal_off\"></div>")
     } else if (data.signal == "green") {
