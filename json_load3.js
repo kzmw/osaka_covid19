@@ -173,8 +173,8 @@ function getJsonp_GAS() {
             },
             ticks: {
               min: 0,
-              max: 50,
-              stepSize: 5
+              max: 60,
+              stepSize: 6
             }
           }]
         },
